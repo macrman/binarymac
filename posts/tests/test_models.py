@@ -27,3 +27,13 @@ class PostModelTest(TestCase):
         self.assertEquals(only_post_in_db.title, post.title)
         self.assertEquals(only_post_in_db.pub_date, post.pub_date)
         self.assertEquals(only_post_in_db.content, post.content)
+
+    def test_verbose_name_for_pub_date(self):
+        for field in Post._meta.fields:
+            if field.name == 'pub_date':
+                self.assertEquals(field.verbose_name, "Date published")
+
+    def test_post_objects_are_named_after_title(self):
+        p = Post()
+        p.title = "This is a blog post"
+        self.assertEquals(unicode(p), "This is a blog post")
