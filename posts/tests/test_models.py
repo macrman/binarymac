@@ -7,10 +7,11 @@ class PostModelTest(TestCase):
 
     def test_can_create_new_post_and_save_to_db(self):
         # Create a new post object
-        post = Post()
-        post.title = "Hello World"
-        post.pub_date = timezone.now()
-        post.content = "Hello everybody, this is a new blog post"
+        post = Post(
+            title = "Hello World",
+            pub_date = timezone.now(),
+            content = "Hello everybody, this is a new blog post",
+        )
 
         # check that we can save the post
         post.save()

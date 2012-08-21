@@ -13,7 +13,7 @@ class SiteTest(LiveServerTestCase):
     def tearDown(self):
         self.browser.quit()
 
-    def test_can_create_blog_post(self):
+    def _create_blog_post(self):
         # admin wants to create a post, goes to admin site
         self.browser.get(self.live_server_url + '/admin/')
 
@@ -33,7 +33,6 @@ class SiteTest(LiveServerTestCase):
         # she sees 2 links for posts
         posts_links = self.browser.find_elements_by_link_text('Posts')
         self.assertEquals(len(posts_links), 2)
-
 
         # she clicks on the 2nd one
         posts_links[1].click()
@@ -72,21 +71,16 @@ class SiteTest(LiveServerTestCase):
         )
         save_button.click()
 
-    def NOTtest_can_create_new_poll_via_admin_site(self):
+        # She goes back to the root of the admin site
+        self.browser.get(self.live_server_url + '/admin/')
 
-        # She types in her username and passwords and hits return
-        username_field = self.browser.find_element_by_name('username')
-        username_field.send_keys('admin')
+        # She logs out of the admin site
+        self.browser.find_element_by_link_text('Log out').click()
 
-        password_field = self.browser.find_element_by_name('password')
-        password_field.send_keys('adm1n')
-        password_field.send_keys(Keys.RETURN)
+    def test_can_view_blog_post(self):
+        # Karen logs into admin, creates a blog post, logs out.
+        self._create_blog_post()
 
-
-
-
-
-    def NOTtest_can_post_comment_on_blog(self):
         # Jim goes to the the home page
         self.browser.get(self.live_server_url)
 
@@ -94,7 +88,9 @@ class SiteTest(LiveServerTestCase):
         blog_link = self.browser.find_element_by_link_text('Blog')
         blog_link.click()
 
-        # He sees a list of blog posts, clicks on the first one
-        blog_post_link = self.browser.find_element_by_class()
+        # He sees a list of blog posts
+        # clicks on the first one
+        first_post_link = 'My Very First Blog Post'
+        self.browser.find_elements_by_link_text(first_post_link).click()
 
         self.fail("Weeeee! Yay for self fail!!!!!")
