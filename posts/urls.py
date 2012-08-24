@@ -1,6 +1,8 @@
 from django.conf.urls import patterns, include, url
-from posts.views import PostsListView
+from posts.views import PostsListView, PostDetailView
+
 
 urlpatterns = patterns('',
-    url(r'^$', PostsListView.as_view(), name='Posts Page'),
+    url(r'^$', PostsListView.as_view(), name='posts_list'),
+    url(r'^(?P<pk>\d+)$', PostDetailView.as_view(), name='post_detail'),
 )
