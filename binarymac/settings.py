@@ -122,9 +122,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.comments',
+    'south',
     'fts',
     'posts',
-    'south',
 )
 
 
