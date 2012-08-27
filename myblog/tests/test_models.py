@@ -1,6 +1,6 @@
 from django.test import TestCase
 from django.utils import timezone
-from posts.models import Post
+from myblog.models import Post, Tag
 
 
 class PostModelTest(TestCase):
@@ -38,3 +38,45 @@ class PostModelTest(TestCase):
         p = Post()
         p.title = "This is a blog post"
         self.assertEquals(unicode(p), "This is a blog post")
+
+
+class TagModelTest(TestCase):
+
+    def test_create_tags_for_posts(self):
+        # test posts, postoadd will have odd tags, posteven will have even ones
+        postodd = Post(
+            title="testing odd tags",
+            pub_date=timezone.now(),
+            content='''hello everybody, we are testing some tagging
+                functionality here. This post should have odd tags.''',
+        )
+        posteven = Post(
+            title="test even tags",
+            pub_date=timezone.now(),
+            content ='''hello everybody, we are testing some tagging
+                functionality here. This post should have even tags.''',
+        )
+        #save them to db
+        postodd.save()
+        posteven.save()
+
+        # create the  tags
+        tag1 = Tag(name="1")
+        tag2 = Tag(name="2")
+        tag3 = Tag(name="3")
+        tag4 = Tag(name="4")
+
+        # save all tags to db
+        tag1.save()
+        tag2.save()
+        tag3.save()
+        tag4.save()
+
+        # create the many2many relationship
+        postodd.tag.add(tag1)
+
+        # check that the posteven and postodd both have 2 tags
+
+        # check that the odd posts have the tags 1 and 3
+
+        # check that the even posts have the tags 2 and 4

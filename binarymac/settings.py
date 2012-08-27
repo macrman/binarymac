@@ -124,7 +124,7 @@ INSTALLED_APPS = (
     'django.contrib.comments',
     'south',
     'fts',
-    'posts',
+    'myblog',
 )
 
 

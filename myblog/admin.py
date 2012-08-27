@@ -1,4 +1,4 @@
 from django.contrib import admin
-from posts.models import Post, Tag
+from myblog.models import Post, Tag
 
 admin.site.register(Post, Tag)

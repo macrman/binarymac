@@ -1,8 +1,8 @@
 from django.test import TestCase
 from django.core.urlresolvers import reverse
 from django.utils import timezone
-from posts.models import Post
-from posts.views import PostDetailView
+from myblog.models import Post, Tag
+from myblog.views import PostDetailView
 
 
 class TestBlogPageListView(TestCase):
