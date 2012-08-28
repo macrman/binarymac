@@ -125,6 +125,7 @@ INSTALLED_APPS = (
     'south',
     'fts',
     'myblog',
+    'simplepages',
 )
 
 

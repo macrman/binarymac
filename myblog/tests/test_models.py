@@ -43,7 +43,7 @@ class PostModelTest(TestCase):
 class TagModelTest(TestCase):
 
     def test_create_tags_for_posts(self):
-        # test posts, postoadd will have odd tags, posteven will have even ones
+        # tests posts, postodd will have odd tags, posteven will have even ones
         postodd = Post(
             title="testing odd tags",
             pub_date=timezone.now(),
@@ -76,7 +76,5 @@ class TagModelTest(TestCase):
         postodd.tag.add(tag1)
 
         # check that the posteven and postodd both have 2 tags
-
         # check that the odd posts have the tags 1 and 3
-
         # check that the even posts have the tags 2 and 4
