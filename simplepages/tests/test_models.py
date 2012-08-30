@@ -9,6 +9,7 @@ class PageModelTest(TestCase):
         samplepage = Page()
         samplepage.title = "hello, this is my first page"
         samplepage.content = "Here is some random content. Good bye"
+        samplepage.slug = "hello, this is my first page"
 
         # check we can save it
         samplepage.save()
@@ -32,5 +33,7 @@ class PageModelTest(TestCase):
     def test_page_objects_are_names_after_its_title(self):
         p = Page()
         p.title = "hello world"
+        p.content = "blah blah blah"
+        p.slug = "hello world"
         p.save()
         self.assertEquals(unicode(p), "hello world")

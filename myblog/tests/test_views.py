@@ -41,3 +41,11 @@ class TestBlogPageListView(TestCase):
 
         post2_url = reverse('post_detail', args=[post2.pk, ])
         self.assertIn(post2_url, response.content)
+
+
+#class TestBlogDetailView(TestCase):
+
+#    def test_post_url_slug(self):
+        # setup a post first
+#        post = Post()
+#

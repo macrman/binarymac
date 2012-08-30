@@ -73,8 +73,18 @@ class TagModelTest(TestCase):
         tag4.save()
 
         # create the many2many relationship
-        postodd.tag.add(tag1)
+        postodd.tag.add(tag1, tag3)
+        posteven.tag.add(tag2, tag4)
+
+        allevenposts = posteven.tag.all()
+        alloddposts = postodd.tag.all()
 
         # check that the posteven and postodd both have 2 tags
+        self.assertEquals(len(postodd.tag.all()), 2)
+        self.assertEquals(len(posteven.tag.all()), 2)
         # check that the odd posts have the tags 1 and 3
+        self.assertIn(tag1, alloddposts)
+        self.assertIn(tag3, alloddposts)
         # check that the even posts have the tags 2 and 4
+        self.assertIn(tag2, allevenposts)
+        self.assertIn(tag4, allevenposts)
