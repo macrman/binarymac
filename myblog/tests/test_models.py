@@ -53,7 +53,7 @@ class TagModelTest(TestCase):
         posteven = Post(
             title="test even tags",
             pub_date=timezone.now(),
-            content ='''hello everybody, we are testing some tagging
+            content='''hello everybody, we are testing some tagging
                 functionality here. This post should have even tags.''',
         )
         #save them to db
@@ -80,8 +80,8 @@ class TagModelTest(TestCase):
         alloddposts = postodd.tag.all()
 
         # check that the posteven and postodd both have 2 tags
-        self.assertEquals(len(postodd.tag.all()), 2)
-        self.assertEquals(len(posteven.tag.all()), 2)
+        self.assertEquals(len(allevenposts), 2)
+        self.assertEquals(len(alloddposts), 2)
         # check that the odd posts have the tags 1 and 3
         self.assertIn(tag1, alloddposts)
         self.assertIn(tag3, alloddposts)

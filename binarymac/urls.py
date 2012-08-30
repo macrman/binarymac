@@ -1,11 +1,14 @@
 from django.conf.urls import patterns, include, url
-from binarymac.views import home
+from binarymac.views import HomePageView
 from django.contrib import admin
+from simplepages.views import PageDetailView
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', home.as_view(), name='home'),
+    url(r'^$', HomePageView.as_view(), name='home'),
     url(r'^blog/', include('myblog.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^(?P<slug>[-\w\d]+)/$', PageDetailView.as_view(), name="page_detail")
 )
