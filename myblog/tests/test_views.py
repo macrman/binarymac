@@ -27,7 +27,7 @@ class TestBlogPageListView(TestCase):
         response = self.client.get('/blog/')
 
         # check we used the right template
-        self.assertTemplateUsed(response, 'posts_page.html')
+        self.assertTemplateUsed(response, 'post_list.html')
 
         # check we passed the posts to the template
 

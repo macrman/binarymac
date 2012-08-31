@@ -4,7 +4,7 @@ from myblog.models import Post
 
 class PostsListView(ListView):
     model = Post
-    template_name = 'posts_page.html'
+    template_name = 'post_list.html'
     template_object_name = 'poll'
 
 

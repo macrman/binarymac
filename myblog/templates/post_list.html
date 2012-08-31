@@ -1,0 +1,6 @@
+<h2>Blog</h2>
+
+{% for post in post_list %}
+<a href = "{% url post_detail post.pk %}">{{ post.title }}</a>
+<br>
+{% endfor %}
