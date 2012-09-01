@@ -3,6 +3,7 @@ from django.core.urlresolvers import reverse
 from django.utils import timezone
 from myblog.models import Post, Tag
 from myblog.views import PostDetailView
+from django.template.defaultfilters import slugify
 
 
 class TestBlogPageListView(TestCase):
@@ -43,9 +44,19 @@ class TestBlogPageListView(TestCase):
         self.assertIn(post2_url, response.content)
 
 
-#class TestBlogDetailView(TestCase):
+class TestBlogDetailView(TestCase):
 
-#    def test_post_url_slug(self):
+    def test_post_url_slug(self):
         # setup a post first
-#        post = Post()
-#
+        post = Post()
+        post.title = 'demo'
+        post.content = 'hello, testing slugs work'
+        post.pub_date = timezone.now()
+        post.save()
+
+        # check that the slug == a title that has been slugified
+        self.assertEquals(post.slug, slugify(post.title))
+
+        # check that the urls are "sluggy"
+
+        # check that the url goes to the post
