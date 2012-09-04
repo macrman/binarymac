@@ -25,8 +25,6 @@ class PageModelTest(TestCase):
         self.assertEquals(only_page.title, samplepage.title)
         self.assertEquals(only_page.content, samplepage.content)
 
-    #def_test_verbose_names
-
     def test_slug_is_named_after_title(self):
         # create Page object
         p = Page(title="hi there", content="wee")

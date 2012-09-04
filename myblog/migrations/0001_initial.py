@@ -21,6 +21,7 @@ class Migration(SchemaMigration):
             ('title', self.gf('django.db.models.fields.CharField')(max_length=200)),
             ('pub_date', self.gf('django.db.models.fields.DateTimeField')()),
             ('content', self.gf('django.db.models.fields.TextField')()),
+            ('slug', self.gf('django.db.models.fields.SlugField')(max_length=50)),
         ))
         db.send_create_signal('myblog', ['Post'])
 
@@ -50,6 +51,7 @@ class Migration(SchemaMigration):
             'content': ('django.db.models.fields.TextField', [], {}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'pub_date': ('django.db.models.fields.DateTimeField', [], {}),
+            'slug': ('django.db.models.fields.SlugField', [], {'max_length': '50'}),
             'tag': ('django.db.models.fields.related.ManyToManyField', [], {'to': "orm['myblog.Tag']", 'symmetrical': 'False'}),
             'title': ('django.db.models.fields.CharField', [], {'max_length': '200'})
         },
