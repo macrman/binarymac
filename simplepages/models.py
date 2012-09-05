@@ -3,7 +3,7 @@ from django.template.defaultfilters import slugify
 
 
 class Page(models.Model):
-    title = models.CharField(max_length=200, unique=True)
+    title = models.CharField(max_length=140, unique=True)
     content = models.TextField()
     slug = models.SlugField()
 

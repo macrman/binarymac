@@ -11,7 +11,7 @@ class Tag(models.Model):
 
 class Post(models.Model):
     tag = models.ManyToManyField(Tag)
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=140)
     pub_date = models.DateTimeField(verbose_name="Date published")
     content = models.TextField()
     slug = models.SlugField()

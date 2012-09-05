@@ -18,7 +18,7 @@ class Migration(SchemaMigration):
         # Adding model 'Post'
         db.create_table('myblog_post', (
             ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('title', self.gf('django.db.models.fields.CharField')(max_length=200)),
+            ('title', self.gf('django.db.models.fields.CharField')(max_length=140)),
             ('pub_date', self.gf('django.db.models.fields.DateTimeField')()),
             ('content', self.gf('django.db.models.fields.TextField')()),
             ('slug', self.gf('django.db.models.fields.SlugField')(max_length=50)),
@@ -53,7 +53,7 @@ class Migration(SchemaMigration):
             'pub_date': ('django.db.models.fields.DateTimeField', [], {}),
             'slug': ('django.db.models.fields.SlugField', [], {'max_length': '50'}),
             'tag': ('django.db.models.fields.related.ManyToManyField', [], {'to': "orm['myblog.Tag']", 'symmetrical': 'False'}),
-            'title': ('django.db.models.fields.CharField', [], {'max_length': '200'})
+            'title': ('django.db.models.fields.CharField', [], {'max_length': '140'})
         },
         'myblog.tag': {
             'Meta': {'object_name': 'Tag'},
