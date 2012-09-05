@@ -1,14 +1,12 @@
+=======
+binarymac
+=========
+The source code for my personal website
+
 todo:
     - wysiwyg editor
-    - write tests for prepopulated slugs in admin
-        - create the prepopulated slugs
-    - write test to show number of tags
-        - create that functionality in tags
+    - create the prepopulated slugs
+    - create tag counter
     - page menus.
-    - gitignore
-        - add .gondor
-
     - setup gondor
         -deploy to gondor
-    - setup github
-    - deploy to github
