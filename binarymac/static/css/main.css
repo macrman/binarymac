@@ -93,19 +93,50 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+* {
+    box-sizing: border-box;
+}
 
+.col { 
+    margin-left:0%;
+    padding:0 0.5%;
+}
 
+.row .col:first-child {
+    margin-left:0;
+}
 
+.span_1 {
+    width:12.5%;
+}
 
+.span_2 {
+    width:25%;
+}
 
+.span_3 {
+    width:37.5%;
+}
 
+.span_4 {
+    width:50%;
+}
 
+.span_5 {
+    width:62.5%;
+}
 
+.span_6 {
+    width:75%;
+}
 
+.span_7 {
+    width:87.5%;
+}
 
-
-
-
+.span_8 {
+    width:100%;
+}
 
 
 
