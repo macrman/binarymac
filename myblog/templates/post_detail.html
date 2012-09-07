@@ -4,4 +4,8 @@
 {{ object.title }}
 {{ object.pub_date }}
 {{ object.content }}
+
+{% for tag in object.tag.all %}
+{{ tag }} 
+{% endfor %}
 {% endblock %}

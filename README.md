@@ -13,12 +13,12 @@ todo:
 
         
         - diy html escaping or rebuilt app?
+        - or use pelican/rst?
     - create tag counter
     - page menus.
     - setup gondor
         -deploy to gondor
 
-    - what happened the home view?
 
     - figure out a consistent naming pattern
         - use underscores!

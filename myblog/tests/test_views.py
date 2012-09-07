@@ -37,16 +37,6 @@ class TestBlogPageListView(TestCase):
         self.assertIn(post2.title, response.content)
 
 
-
-        # This will be deprecated with the usage of sluggy urls. YAY!!!
-#        # check that the page also has links to the individual post pages
-#        post1_url = reverse('post_detail', args=[post1.pk, ])
-#        self.assertIn(post1_url, response.content)
-#
-#        post2_url = reverse('post_detail', args=[post2.pk, ])
-#        self.assertIn(post2_url, response.content)
-
-
 class TestBlogDetailView(TestCase):
 
     def test_post_url_slug(self):
@@ -56,20 +46,25 @@ class TestBlogDetailView(TestCase):
         post.content = 'hello, testing slugs work'
         post.pub_date = timezone.now()
         post.save()
+        
+        # create a tag 
+        tag = Tag()
+        tag.name = 'testing'
+        tag.save()
+
+        # add the tag to post
+        post.tag.add(tag)
 
         # check that the slug == a title that has been slugified
         self.assertEquals(post.slug, slugify(post.title))
 
-
-        # I should probably consider using pks or dates as well
-        # along with sluggy urls
-
-        # home/pk/slug
-        # home/yyyy/mm/dd/slug
-        # home/yyyy/mm/dd/pk/slug
-
         # check that the slug field is "sluggy"
         sluggy_url = reverse('post_detail', args=[post.pk, post.slug])
         response = self.client.get(sluggy_url)
-        # check that the url goes to the post
-#        self.assertIn(
+
+        # test that all the objects have been pasted to the template
+        self.assertIn(post.title, response.content)
+        self.assertIn(post.content, response.content)
+        # todo:
+        # self.assertIn(str(post.pub_date), response.content)
+        self.assertIn('testing', response.content)
