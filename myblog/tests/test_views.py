@@ -25,7 +25,7 @@ class TestBlogPageListView(TestCase):
         )
         post2.save()
 
-        response = self.client.get('/blog/index/')
+        response = self.client.get('/blog/')
 
         # check we used the right template
         self.assertTemplateUsed(response, 'post_list.html')

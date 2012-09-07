@@ -9,9 +9,6 @@ The source code for my personal website
 todo:
 
 
-    - create the prepopulated slugs
-
-
     - wysiwyg editor
 
         
@@ -29,3 +26,9 @@ todo:
         - view names
             - name them after the built-in generic views, ex: ProductsListView
         - named urls
+
+    - Pages:
+        - blog
+        - work/portfolio
+        - home?
+        - contact
