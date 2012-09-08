@@ -13,7 +13,7 @@ todo:
 
         
         - diy html escaping or rebuilt app?
-        - or use pelican/rst?
+        - or use rst?
     - create tag counter
     - page menus.
     - setup gondor
@@ -29,6 +29,11 @@ todo:
 
     - Pages:
         - blog
+            - read
         - work/portfolio
+            - see
         - home?
         - contact
+            - talk
+        - tutorials
+            - learn

@@ -23,10 +23,28 @@
 
         <header>
             <nav>
+                <a id="go" href="{% url home_view %}">
+                    <h3>Go</h3>
+                    <span>back home</span>
+                </a>
+                <a id="learn" href="{% url learn_view %}">
+                    <h3>Learn</h3>
+                    <span>with me</span>
+                </a>
+                <a id="look" href="{% url learn_view %}">
+                    <h3>Look</h3>
+                    <span>at my work</span>
+                </a>
+                <a id="read" href="{% url home_view %}">
+                    <h3>Read</h3>
+                    <span>my mind</span>
+                </a>
+                <a id="talk" href="{% url home_view %}">
+                    <h3>Talk</h3>
+                    <span>to me</span>
+                </a>
             </nav>
         </header>
-
-
         {% block main %}
 
         {% endblock %}

@@ -98,12 +98,10 @@ textarea {
 }
 
 .col { 
-    margin-left:0%;
     padding:0 0.5%;
 }
 
 .row .col:first-child {
-    margin-left:0;
 }
 
 .span_1 {
