@@ -136,7 +136,21 @@ textarea {
     width:100%;
 }
 
+.menu-item {
+    text-decoration: none;
+}
 
+.menu-big, .menu-small {
+    text-decoration: none;
+}
+
+.menu-big {
+    font-size: 2em;
+}
+
+.menu-small {
+    font-size: 1em;
+}
 
 /* ==========================================================================
    Helper classes
