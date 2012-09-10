@@ -1,11 +1,3 @@
-/*
- * HTML5 Boilerplate
- *
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -19,8 +11,8 @@ textarea {
 }
 
 body {
-    font-size: 1em;
-    line-height: 1.4;
+    font-size: 18px;
+    line-height: 1.4em;
 }
 
 /*
@@ -94,9 +86,10 @@ textarea {
    ========================================================================== */
     
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-/* ==========
-   Typography
-   ==========
+
+/* Typography
+   ----------
+
    Uses the fucntion (3/4)(x-6)^2 + 18, where x=header size number, 18 is the base height
    Exception: 16 is used for the "s" css class
 
@@ -118,6 +111,34 @@ textarea {
    n/a      small       16       .88889
    ======   =========   ======   =======
 */
+
+h1, .trenta {
+    font-size:2.04167em;
+}
+
+h2, .venti {
+    font-size:1.66667em;
+}
+
+h3, .grande {
+    font-size:1.375em;
+}
+
+h4, .tall {
+    font-size:1.16667em;
+}
+
+h5, .short {
+    font-size:1.04167em;
+}
+
+h6, .base {
+    font-size:1em;
+}
+
+small, .small {
+    font-size:.88889em;
+}
 
 .col { 
     padding:0 0.5%;
