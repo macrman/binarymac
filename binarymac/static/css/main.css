@@ -92,10 +92,32 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+    
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+/* ==========
+   Typography
+   ==========
+   Uses the fucntion (3/4)(x-6)^2 + 18, where x=header size number, 18 is the base height
+   Exception: 16 is used for the "s" css class
 
-* {
-    box-sizing: border-box;
-}
+   ======   =========   ======   =======
+   Header   CSS Class   Pixels   ems
+   ======   =========   ======   =======
+   h1       trenta      36.75    2.04167
+   ------   ---------   ------   -------
+   h2       venti       30       1.66667
+   ------   ---------   ------   -------
+   h3       grande      24.75    1.375 
+   ------   ---------   ------   -------
+   h4       tall        21       1.16667
+   ------   ---------   ------   -------
+   h5       short       18.75    1.04167
+   ------   ---------   ------   -------
+   h6       base        18       1
+   ------   ---------   ------   -------
+   n/a      small       16       .88889
+   ======   =========   ======   =======
+
 
 .col { 
     padding:0 0.5%;
@@ -137,11 +159,15 @@ textarea {
 }
 
 .menu-item {
+    width: 20%;
+    float: left;
+    text-align: center;
     text-decoration: none;
+    color: #222222;
 }
 
 .menu-big, .menu-small {
-    text-decoration: none;
+    display: block;
 }
 
 .menu-big {
