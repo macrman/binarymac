@@ -11,9 +11,10 @@ textarea {
 }
 
 body {
-    font-size: 18px;
-    line-height: 1.4;
-    font-family: "Cabin", sans-serif;
+    font-size:18px;
+    line-height:1.4;
+    font-family:"Cabin", sans-serif;
+    padding:0 2.5%;
 }
 
 /*
@@ -195,14 +196,24 @@ small, .small {
    -------
 */
 
+#main-header {
+    text-align:center;
+    font-family: 'Patua One', sans-serif;
+}
+
 #main-nav a {
     width: 20%;
     float: left;
-    text-align: center;
     text-decoration: none;
-    color: #222222;
+    color:#5E686B; 
     font-family: 'Patua One', sans-serif;
     line-height: 1.1;
+    border-right:1px solid #161514;
+    padding: 5px 0;
+}
+
+#main-nav a:nth-child(1) {
+    border-left:1px solid #161514;
 }
 
 .menu-big {
