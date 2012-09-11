@@ -12,7 +12,7 @@ textarea {
 
 body {
     font-size: 18px;
-    line-height: 1.4em;
+    line-height: 1.4;
 }
 
 /*
@@ -179,12 +179,13 @@ small, .small {
     width:100%;
 }
 
-.menu-item {
+#main-nav a {
     width: 20%;
     float: left;
     text-align: center;
     text-decoration: none;
     color: #222222;
+    font-family: 'Patua One', sans-serif;
 }
 
 .menu-big, .menu-small {
@@ -192,11 +193,9 @@ small, .small {
 }
 
 .menu-big {
-    font-size: 2em;
 }
 
 .menu-small {
-    font-size: 1em;
 }
 
 /* ==========================================================================
