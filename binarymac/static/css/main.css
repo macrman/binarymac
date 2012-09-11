@@ -13,6 +13,7 @@ textarea {
 body {
     font-size: 18px;
     line-height: 1.4;
+    font-family: "Cabin", sans-serif;
 }
 
 /*
@@ -90,55 +91,65 @@ textarea {
 /* Typography
    ----------
 
-   Uses the fucntion (3/4)(x-6)^2 + 18, where x=header size number, 18 is the base height
-   Exception: 16 is used for the "s" css class
+   Uses the fucntion (5/8)(x-7)^2 + 18, where x=header size number, 18 is the base height
+   Exception: 16 is used for the "small" css class
 
    ======   =========   ======   =======
    Header   CSS Class   Pixels   ems
    ======   =========   ======   =======
-   h1       trenta      36.75    2.04167
+   h1       trenta      40.5    
    ------   ---------   ------   -------
-   h2       venti       30       1.66667
+   h2       venti       33.625    
    ------   ---------   ------   -------
-   h3       grande      24.75    1.375 
+   h3       grande      28   
    ------   ---------   ------   -------
-   h4       tall        21       1.16667
+   h4       tall        23.625      
    ------   ---------   ------   -------
-   h5       short       18.75    1.04167
+   h5       short       20.5
    ------   ---------   ------   -------
-   h6       base        18       1
+   h6       shorter     18.625 
    ------   ---------   ------   -------
-   n/a      small       16       .88889
+   n/a      base        18 
+   ------   ---------   ------   ------- 
+   n/a      small       16
    ======   =========   ======   =======
 */
 
 h1, .trenta {
-    font-size:2.04167em;
+    font-size:40.5px;
 }
 
 h2, .venti {
-    font-size:1.66667em;
+    font-size:33.625px;
 }
 
 h3, .grande {
-    font-size:1.375em;
+    font-size:28px;
 }
 
 h4, .tall {
-    font-size:1.16667em;
+    font-size:23.625px;
 }
 
 h5, .short {
-    font-size:1.04167em;
+    font-size:20.5px;
 }
 
-h6, .base {
-    font-size:1em;
+h6, .shorter {
+    font-size:18.625px;
 }
 
+.base {
+    font-size:18px;
+}
 small, .small {
-    font-size:.88889em;
+    font-size:16px;
 }
+
+/*
+  CSS Grid
+  --------
+*/
 
 .col { 
     padding:0 0.5%;
@@ -179,6 +190,11 @@ small, .small {
     width:100%;
 }
 
+/*
+   Nav bar
+   -------
+*/
+
 #main-nav a {
     width: 20%;
     float: left;
@@ -186,16 +202,15 @@ small, .small {
     text-decoration: none;
     color: #222222;
     font-family: 'Patua One', sans-serif;
+    line-height: 1.1;
+}
+
+.menu-big {
+    text-transform: uppercase;
 }
 
 .menu-big, .menu-small {
     display: block;
-}
-
-.menu-big {
-}
-
-.menu-small {
 }
 
 /* ==========================================================================
@@ -210,7 +225,24 @@ small, .small {
     background-color: transparent;
     border: 0;
     overflow: hidden;
-    /* IE 6/7 fallback */
+    /*der   CSS Class   Pixels   ems
+     99    ======   =========   ======   =======
+     100    h1       trenta      40.5    
+     101    ------   ---------   ------   -------
+     102    h2       venti       33.625    
+     103    ------   ---------   ------   -------
+     104    h3       grande      28   
+     105    ------   ---------   ------   -------
+     106    h4       tall        23.625      
+     107    ------   ---------   ------   -------
+     108    h5       short       20.5
+     109    ------   ---------   ------   -------
+     110    h6       shorter     18.625 
+     111    ------   ---------   ------   -------
+     112    n/a      base        18 
+     113    ------   ---------   ------   ------- 
+     114    n/a      small       16
+     IE 6/7 fallback */
     *text-indent: -9999px;
 }
 
