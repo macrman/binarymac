@@ -23,11 +23,11 @@
 
         <header id="main-header">
             <nav id="main-nav" class="clearfix">
-                <a id="go" class="" href="{% url home_view %}">
-                    <span class="menu-big grande">Go</span>
-                    <span class="menu-small short">back home</span>
+                <a class="" href="{% url home_view %}">
+                    <span class="menu-big grande">Home</span>
+                    <span class="menu-small short">Sweet Home</span>
                 </a>
-                <a id="learn" class="" href="{% url learn_view %}">
+                <a class="" href="{% url learn_view %}">
                     <span class="menu-big grande">Learn</span>
                     <span class="menu-small short">with me</span>
                 </a>
@@ -44,9 +44,9 @@
                     <span class="menu-small short">to me</span>
                 </a>
             </nav>
-            <div id=masthead>
-                <h1>Hi there. I'm Mac</h1>
-                <h1>Welcome to My Internet Home</h1>
+            <div id="masthead">
+                {% block masthead %}
+                {% endblock %}
             </div>
         </header>
         {% block main %}
