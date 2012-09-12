@@ -14,7 +14,6 @@ body {
     font-size:18px;
     line-height:1.4;
     font-family:"Cabin", sans-serif;
-    padding:0 2.5%;
 }
 
 /*
@@ -212,12 +211,13 @@ h1, h2, h3, h4, h5, h6 {
     color:#5E686B; 
     font-family: 'Patua One', serif;
     line-height: 1.1;
-    border-right:1px solid #161514;
-    padding: 5px 0;
+    border-left: 1px solid #161514;
+    padding: 20px 0;
+    background-color:#1B1C1B;
 }
 
-#main-nav a:nth-child(1) {
-    border-left:1px solid #161514;
+#main-nav a:first-child {
+    border-left: none;
 }
 
 .menu-big {
