@@ -9,8 +9,7 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <link href='http://fonts.googleapis.com/css?family=Patua+One|Cabin:400,700' rel='stylesheet' type='text/css'>
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Dosis' rel='stylesheet' type='text/css'><!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         {% load static %}
         <link rel="stylesheet" href=" {% static "css/normalize.css" %}">
         <link rel="stylesheet" href=" {% static "css/main.css" %}">
@@ -24,24 +23,24 @@
         <header id="main-header">
             <nav id="main-nav" class="clearfix">
                 <a class="" href="{% url home_view %}">
-                    <span class="menu-big grande">Home</span>
-                    <span class="menu-small short">Sweet Home</span>
+                    <span class="menu-big grande">Welcome</span>
+                    <span class="menu-small short">To My Home</span>
                 </a>
                 <a class="" href="{% url learn_view %}">
                     <span class="menu-big grande">Learn</span>
-                    <span class="menu-small short">with me</span>
+                    <span class="menu-small short">Something New</span>
                 </a>
                 <a id="look" class="" href="{% url learn_view %}">
-                    <span class="menu-big grande">Look</span>
-                    <span class="menu-small short">at my work</span>
+                    <span class="menu-big grande">Checkout</span>
+                    <span class="menu-small short">Some of My Stuff</span>
                 </a>
                 <a id="read" class="" href="{% url home_view %}">
                     <span class="menu-big grande">Read</span>
-                    <span class="menu-small short">my mind</span>
+                    <span class="menu-small short">My Thoughts</span>
                 </a>
                 <a id="talk" class="" href="{% url home_view %}">
-                    <span class="menu-big grande">Talk</span>
-                    <span class="menu-small short">to me</span>
+                    <span class="menu-big grande">Tell</span>
+                    <span class="menu-small short">Me Something</span>
                 </a>
             </nav>
             <div id="masthead">
@@ -54,10 +53,7 @@
         {% endblock %}
 
         <footer>
-            <div id="short-bio">
-                <img></img>
-                <span>Hey I'm Mac, and I Solve Problems</span>
-            </div>
+            <span>This is supposed to be a footer. hi.</span>
         </footer>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>

@@ -13,7 +13,7 @@ textarea {
 body {
     font-size:18px;
     line-height:1.4;
-    font-family:"Cabin", sans-serif;
+    font-family:"Source Sans Pro", sans-serif;
 }
 
 /*
@@ -147,7 +147,7 @@ small, .small {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family:"Patua One", serif;
+    font-family:"Dosis", sans-serif;
     font-weight:400;
 }
 
@@ -208,8 +208,8 @@ h1, h2, h3, h4, h5, h6 {
     width: 20%;
     float: left;
     text-decoration: none;
-    color:#5E686B; 
-    font-family: 'Patua One', serif;
+    color:#f7f7f7; 
+    font-family: 'Dosis', serif;
     line-height: 1.1;
     border-left: 1px solid #161514;
     padding: 20px 0;
@@ -221,7 +221,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .menu-big {
-    text-transform: uppercase;
 }
 
 .menu-big, .menu-small {
