@@ -21,20 +21,20 @@
         <![endif]-->
 
         <header id="main-header">
-            <nav id="main-nav" class="clearfix">
+            <nav id="main-nav" class="clearfix card bevelled">
                 <a class="" href="{% url home_view %}">
                     <span class="menu-big grande">Welcome</span>
                     <span class="menu-small short">To My Home</span>
                 </a>
-                <a class="" href="{% url learn_view %}">
+                <a class="" href="{% url home_view %}">
                     <span class="menu-big grande">Learn</span>
                     <span class="menu-small short">Something New</span>
                 </a>
-                <a id="look" class="" href="{% url learn_view %}">
+                <a id="look" class="" href="{% url home_view %}">
                     <span class="menu-big grande">Checkout</span>
                     <span class="menu-small short">Some of My Stuff</span>
                 </a>
-                <a id="read" class="" href="{% url home_view %}">
+                <a id="read" class="" href="{% url post_list %}">
                     <span class="menu-big grande">Read</span>
                     <span class="menu-small short">My Thoughts</span>
                 </a>
@@ -43,16 +43,18 @@
                     <span class="menu-small short">Me Something</span>
                 </a>
             </nav>
-            <div id="masthead">
-                {% block masthead %}
-                {% endblock %}
-            </div>
+            <section id="masthead">
+                <div class="card">
+                    {% block masthead %}
+                    {% endblock %}
+                </div>
+            </section>
         </header>
         {% block main %}
 
         {% endblock %}
 
-        <footer>
+        <footer class="card bevelled">
             <span>This is supposed to be a footer. hi.</span>
         </footer>
 

@@ -196,24 +196,51 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*
-   Nav bar
+   OO Classes
+   ----------
+*/
+
+.bevelled {
+    -webkit-box-shadow:0 0 7px #010101 inset;
+    box-shadow:0 0 7px #010101 inset;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid #f8f8f8;
+}
+
+.floating {
+    -webkit-box-shadow:0 0 7px #676767;
+    -box-shadow:0 0 7px #676767;
+    border: 1px solid #e5e5e5;
+}
+
+.card {
+    border-radius: 7px;
+    margin: 2.5%;
+}
+
+/*
+   Nav Bar
    -------
 */
 
+
 #main-header {
     text-align:center;
+}
+
+#main-nav {
+    background-color:#252628;
 }
 
 #main-nav a {
     width: 20%;
     float: left;
     text-decoration: none;
-    color:#f7f7f7; 
-    font-family: 'Dosis', serif;
+    color:#f8f8f8; 
+    font-family: 'Dosis',sans-serif;
     line-height: 1.1;
     border-left: 1px solid #161514;
     padding: 20px 0;
-    background-color:#1B1C1B;
 }
 
 #main-nav a:first-child {
@@ -232,8 +259,8 @@ h1, h2, h3, h4, h5, h6 {
 */
 
 #masthead {
-    padding:30px 0;
 }
+
 
 /* ==========================================================================
    Helper classes
