@@ -1,20 +1,38 @@
 {% extends "base.html" %}
 
 {% block masthead %}
-    <h1>Hi There! I'm Mac</h1>
+    <h1>Hello World!</h1>
+    <h1>I'm Mac and I Solve Problems</h1>
     <h1>Welcome to My Internet Home</h1>
 {% endblock %}
 
 {% block main %}
-<section id="intro" class="clearfix">
-    <div class="card">
-        <header class="card-header">
-            <h2>so who am i?</h2>
+<section id="about" class="clearfix">
+    <header>
+        <h1>So Who Is This Kid Anyway?</h1>
+    </header>
+    <section id="whoami" class="span_1_of_2 col">
+        <header class="section-header">
+            <h2>Let Me Introduce Myself</h2>
         </header>
-        <span>some text about my self</span>
-        <span>Hey, I'm Michael Ackerman</span>
-    </div>
+        <div>
+            <p>Hey, my name is Michael Ackerman. You may know me as binarymac in the internet world, or as Mac in the physical one.</p>
+            <p>I'm a web developer currently avalible for work, whether it's a freelance job, or full time.</p>
+        </div>
+    </section>
+    <section id="skills" class="span_1_of_2 col">
+        <header>
+            <h2>Skills</h2>
+        </header>
+        <div>
+            <ul>
+                <li>html</li>
+                <li>css</li>
+                <li>python</li>
+                <li>django</li>
+                <li>jquery</li>
+            </ul>
+        </div>
 </section>
-<span>You can call me Mac</span>
 <span>I solve problems, creativly, beautifily, and efficiently</span>
 {% endblock %}

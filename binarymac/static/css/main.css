@@ -115,36 +115,21 @@ textarea {
    ======   =========   ======   =======
 */
 
-h1, .trenta {
-    font-size:40.5px;
-}
+h1, .trenta {font-size:40.5px;}
 
-h2, .venti {
-    font-size:33.625px;
-}
+h2, .venti {font-size:33.625px;}
 
-h3, .grande {
-    font-size:28px;
-}
+h3, .grande {font-size:28px;}
 
-h4, .tall {
-    font-size:23.625px;
-}
+h4, .tall {font-size:23.625px;}
 
-h5, .short {
-    font-size:20.5px;
-}
+h5, .short {font-size:20.5px;}
 
-h6, .shorter {
-    font-size:18.625px;
-}
+h6, .shorter {font-size:18.625px;}
 
-.base {
-    font-size:18px;
-}
-small, .small {
-    font-size:16px;
-}
+.base {font-size:18px;}
+
+small, .small {font-size:16px;}
 
 h1, h2, h3, h4, h5, h6 {
     font-family:"Dosis", sans-serif;
@@ -155,69 +140,47 @@ h1, h2, h3, h4, h5, h6 {
   CSS Grid
   --------
 */
-
-.col { 
-    padding:0 0.5%;
+.container {
+    width:100%;
+    padding: 2.5% 0;
 }
 
-.row .col:first-child {
-}
-
-.span_1 {
-    width:12.5%;
-}
-
-.span_2 {
-    width:25%;
-}
-
-.span_3 {
-    width:37.5%;
-}
-
-.span_4 {
-    width:50%;
-}
-
-.span_5 {
-    width:62.5%;
-}
-
-.span_6 {
-    width:75%;
-}
-
-.span_7 {
-    width:87.5%;
-}
-
-.span_8 {
+.row {
     width:100%;
 }
 
-/*
-   OO Classes
-   ----------
-*/
-
-.bevelled {
-    -webkit-box-shadow:0 0 7px #010101 inset;
-    box-shadow:0 0 7px #010101 inset;
-    border-top: 1px solid #f8f8f8;
-    border-bottom: 1px solid #f8f8f8;
+.col {
+    float:left;
+    padding: 2.5%;
 }
 
-.floating {
-    -webkit-box-shadow:0 0 7px #676767;
-    -box-shadow:0 0 7px #676767;
-    border: 1px solid #e5e5e5;
-}
 
-.card {
-    border-radius: 7px;
-    margin: 2.5%;
-}
+.span_1_of_2 { width:50%; }
+.span_2_of_2 { width:100%; }
 
+.span_1_of_3 { width:33.33333%; }
+.span_2_of_3 { width:66.66666%; }
+.span_3_of_3 { width:100%; }
+
+.span_1_of_5 { width:20%; }
+.span_2_of_5 { width:40%; }
+.span_3_of_5 { width:60%; }
+.span_4_of_5 { width:80%; }
+.span_5_of_5 { width:100%; }
+
+.span_1_of_8 { width:12.5%; }
+.span_2_of_8 { width:25%; }
+.span_3_of_8 { width:37.5%; }
+.span_4_of_8 { width:50%; }
+.span_5_of_8 { width:62.5%; }
+.span_6_of_8 { width:75%; }
+.span_7_of_8 { width:87.5%; }
+.span_8_of_8 { width:100%; }
+
+/**************************************/
+#masthead {
+    background: http://www.google.com/webfonts/placeholder.png;
+}
 /*
    Nav Bar
    -------
@@ -234,20 +197,11 @@ h1, h2, h3, h4, h5, h6 {
 
 #main-nav a {
     width: 20%;
-    float: left;
     text-decoration: none;
     color:#f8f8f8; 
     font-family: 'Dosis',sans-serif;
     line-height: 1.1;
-    border-left: 1px solid #161514;
-    padding: 20px 0;
-}
-
-#main-nav a:first-child {
-    border-left: none;
-}
-
-.menu-big {
+    text-align:center;
 }
 
 .menu-big, .menu-small {
@@ -274,24 +228,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: transparent;
     border: 0;
     overflow: hidden;
-    /*der   CSS Class   Pixels   ems
-     99    ======   =========   ======   =======
-     100    h1       trenta      40.5    
-     101    ------   ---------   ------   -------
-     102    h2       venti       33.625    
-     103    ------   ---------   ------   -------
-     104    h3       grande      28   
-     105    ------   ---------   ------   -------
-     106    h4       tall        23.625      
-     107    ------   ---------   ------   -------
-     108    h5       short       20.5
-     109    ------   ---------   ------   -------
-     110    h6       shorter     18.625 
-     111    ------   ---------   ------   -------
-     112    n/a      base        18 
-     113    ------   ---------   ------   ------- 
-     114    n/a      small       16
-     IE 6/7 fallback */
+/*     IE 6/7 fallback */
     *text-indent: -9999px;
 }
 
