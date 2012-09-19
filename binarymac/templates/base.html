@@ -19,29 +19,6 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
-
-        <nav id="main-nav" class="clearfix">
-            <a class="col span_1_of_5" href="{% url home_view %}">
-                <span class="menu-big grande">Welcome</span>
-                <span class="menu-small short">To My Home</span>
-            </a>
-            <a class="col span_1_of_5" href="{% url home_view %}">
-                <span class="menu-big grande">Learn</span>
-                <span class="menu-small short">Something New</span>
-            </a>
-            <a id="look" class="col span_1_of_5" href="{% url home_view %}">
-                <span class="menu-big grande">Checkout</span>
-                <span class="menu-small short">Some of My Stuff</span>
-            </a>
-            <a id="read" class="col span_1_of_5" href="{% url post_list %}">
-                <span class="menu-big grande">Read</span>
-                <span class="menu-small short">My Thoughts</span>
-            </a>
-            <a id="talk" class="col span_1_of_5" href="{% url home_view %}">
-                <span class="menu-big grande">Tell</span>
-                <span class="menu-small short">Me Something</span>
-            </a>
-        </nav>
         <header id="main-header">
             <section id="masthead" class="container">
                 <div class="">
@@ -49,6 +26,28 @@
                     {% endblock %}
                 </div>
             </section>
+            <nav id="main-nav" class="clearfix">
+                <a class="col span_1_of_5" href="{% url home_view %}">
+                    <span class="menu-big grande">Welcome</span>
+                    <span class="menu-small short">To My Home</span>
+                </a>
+                <a class="col span_1_of_5" href="{% url home_view %}">
+                    <span class="menu-big grande">Learn</span>
+                    <span class="menu-small short">Something New</span>
+                </a>
+                <a id="look" class="col span_1_of_5" href="{% url home_view %}">
+                    <span class="menu-big grande">Checkout</span>
+                    <span class="menu-small short">Some of My Stuff</span>
+                </a>
+                <a id="read" class="col span_1_of_5" href="{% url post_list %}">
+                    <span class="menu-big grande">Read</span>
+                <span class="menu-small short">My Thoughts</span>
+            </a>
+                <a id="talk" class="col span_1_of_5" href="{% url home_view %}">
+                    <span class="menu-big grande">Tell</span>
+                    <span class="menu-small short">Me Something</span>
+                </a>
+            </nav>
         </header>
         {% block main %}
         {% endblock %}

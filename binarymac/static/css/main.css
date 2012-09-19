@@ -12,8 +12,10 @@ textarea {
 
 body {
     font-size:18px;
-    line-height:1.4;
+    line-height:1.5;
     font-family:"Source Sans Pro", sans-serif;
+    background-color:#2D2D30;
+    color:#fefefe;
 }
 
 /*
@@ -133,10 +135,6 @@ h1, h2, h3, h4, h5, h6 {
   CSS Grid
   --------
 */
-.container {
-    width:100%;
-    padding: 2.5% 0;
-}
 
 .container-header {
     text-align: center;
@@ -147,8 +145,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .col {
-    float:left;
-    padding: 2.5%;
+    float: left;
+    padding: 0 2.5%;
 }
 
 
@@ -186,12 +184,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #main-nav {
-    background-color:#252628;
 }
 
 #main-nav a {
     text-decoration: none;
-    color:#f8f8f8; 
+    color:#fefefe; 
     font-family: 'Dosis',sans-serif;
     line-height: 1.1;
     text-align:center;
