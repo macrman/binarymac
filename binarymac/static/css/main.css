@@ -116,19 +116,12 @@ textarea {
 */
 
 h1, .trenta {font-size:40.5px;}
-
 h2, .venti {font-size:33.625px;}
-
 h3, .grande {font-size:28px;}
-
 h4, .tall {font-size:23.625px;}
-
 h5, .short {font-size:20.5px;}
-
 h6, .shorter {font-size:18.625px;}
-
 .base {font-size:18px;}
-
 small, .small {font-size:16px;}
 
 h1, h2, h3, h4, h5, h6 {
@@ -143,6 +136,10 @@ h1, h2, h3, h4, h5, h6 {
 .container {
     width:100%;
     padding: 2.5% 0;
+}
+
+.container-header {
+    text-align: center;
 }
 
 .row {
@@ -178,9 +175,6 @@ h1, h2, h3, h4, h5, h6 {
 .span_8_of_8 { width:100%; }
 
 /**************************************/
-#masthead {
-    background: http://www.google.com/webfonts/placeholder.png;
-}
 /*
    Nav Bar
    -------
@@ -196,7 +190,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #main-nav a {
-    width: 20%;
     text-decoration: none;
     color:#f8f8f8; 
     font-family: 'Dosis',sans-serif;

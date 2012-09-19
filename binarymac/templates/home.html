@@ -7,24 +7,26 @@
 {% endblock %}
 
 {% block main %}
-<section id="about" class="clearfix">
-    <header>
+<section id="about" class="clearfix container">
+    <header class="container-header">
         <h1>So Who Is This Kid Anyway?</h1>
     </header>
-    <section id="whoami" class="span_1_of_2 col">
-        <header class="section-header">
-            <h2>Let Me Introduce Myself</h2>
-        </header>
-        <div>
-            <p>Hey, my name is Michael Ackerman. You may know me as binarymac in the internet world, or as Mac in the physical one.</p>
-            <p>I'm a web developer currently avalible for work, whether it's a freelance job, or full time.</p>
-        </div>
-    </section>
-    <section id="skills" class="span_1_of_2 col">
-        <header>
-            <h2>Skills</h2>
-        </header>
-        <div>
+    <div class="row clearfix">
+        <section id="whoami" class="span_1_of_2 col">
+            <header class="section-header">
+                <h2>Let Me Introduce Myself</h2>
+            </header>
+            <div>
+                <p>Hey, my name is Michael Ackerman. You may know me as binarymac in the internet world, or as Mac in the physical one.</p>
+                <p>I'm a web developer currently avalible for work, whether it's a freelance job, or full time.</p>
+                <p>I have been working with HTML and CSS for over a year, and a little less than a year ago, I started learning python and django.</p>
+            </div>
+        </section>
+        <section id="skills" class="span_1_of_2 col">
+            <header>
+                <h2>Skills</h2>
+            </header>
+            <div>
             <ul>
                 <li>html</li>
                 <li>css</li>
@@ -32,7 +34,19 @@
                 <li>django</li>
                 <li>jquery</li>
             </ul>
-        </div>
+            </div>
+        </section>
+    </div>
+    <section id="current-goal">
+        <header>
+            <h2>Current Goal</h2>
+        </header>
+    </section>
+    <section id="long-term-goal">
+        <header>
+            <h2>Long Term Goal</h2>
+        </header>
+    </section>
 </section>
 <span>I solve problems, creativly, beautifily, and efficiently</span>
 {% endblock %}

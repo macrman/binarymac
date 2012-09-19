@@ -21,29 +21,29 @@
         <![endif]-->
 
         <nav id="main-nav" class="clearfix">
-            <a class="col" href="{% url home_view %}">
+            <a class="col span_1_of_5" href="{% url home_view %}">
                 <span class="menu-big grande">Welcome</span>
                 <span class="menu-small short">To My Home</span>
             </a>
-            <a class="col" href="{% url home_view %}">
+            <a class="col span_1_of_5" href="{% url home_view %}">
                 <span class="menu-big grande">Learn</span>
                 <span class="menu-small short">Something New</span>
             </a>
-            <a id="look" class="col" href="{% url home_view %}">
+            <a id="look" class="col span_1_of_5" href="{% url home_view %}">
                 <span class="menu-big grande">Checkout</span>
                 <span class="menu-small short">Some of My Stuff</span>
             </a>
-            <a id="read" class="col" href="{% url post_list %}">
+            <a id="read" class="col span_1_of_5" href="{% url post_list %}">
                 <span class="menu-big grande">Read</span>
                 <span class="menu-small short">My Thoughts</span>
             </a>
-            <a id="talk" class="col" href="{% url home_view %}">
+            <a id="talk" class="col span_1_of_5" href="{% url home_view %}">
                 <span class="menu-big grande">Tell</span>
                 <span class="menu-small short">Me Something</span>
             </a>
         </nav>
         <header id="main-header">
-            <section id="masthead" class="row">
+            <section id="masthead" class="container">
                 <div class="">
                     {% block masthead %}
                     {% endblock %}
@@ -53,7 +53,7 @@
         {% block main %}
         {% endblock %}
 
-        <footer class="">
+        <footer class="container">
             <span>This is supposed to be a footer. hi.</span>
         </footer>
 
