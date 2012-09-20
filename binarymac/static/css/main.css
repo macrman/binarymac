@@ -146,7 +146,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .col {
     float: left;
-    padding: 0 2.5%;
+    padding: 2.5%;
 }
 
 
@@ -190,14 +190,27 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     color:#fefefe; 
     font-family: 'Dosis',sans-serif;
-    line-height: 1.1;
     text-align:center;
 }
 
 .menu-big, .menu-small {
     display: block;
 }
-
+#welcome{
+    background:#264964;
+}
+#learn{
+    background:#266464;
+}
+#look{
+    background:#266448;
+}
+#read{
+    background:#276426;
+}
+#talk{
+    background:#436425;
+}
 /*
    Masthead
 */
