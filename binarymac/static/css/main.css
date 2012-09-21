@@ -184,13 +184,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #main-nav {
+    display: table;
+    width: 100%;
 }
 
+
 #main-nav a {
+    display: table-cell;
     text-decoration: none;
-    color:#fefefe; 
+    color: #fefefe; 
     font-family: 'Dosis',sans-serif;
-    text-align:center;
+    text-align: center;
+    padding: 2.5%;
 }
 
 .menu-big, .menu-small {
