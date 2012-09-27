@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+{% if tutorials %}
+    {{ tutorial }}
+{% else %}
+    <p>I guess I havn't written any tutorials yet..... Tell me to hurry up!!</p>
+{% endif %}
+
+{% endblock %}

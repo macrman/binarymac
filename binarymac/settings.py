@@ -126,6 +126,7 @@ INSTALLED_APPS = (
     'south',
     'fts',
     'myblog',
+    'tutorials',
 )
 
 
