@@ -3,9 +3,13 @@
 {% block main %}
 <h2>Blog</h2>
 
-{% for post in post_list %}
-<a href = "{% url post_detail post.pk post.slug %}">{{ post.title }}</a>
-<br>
-{% endfor %}
+{% if post_list %}
+    {% for post in post_list %}
+    <a href = "{% url post_detail post.pk post.slug %}">{{ post.title }}</a>
+    <br>
+    {% endfor %}
+{% else %}
+    <p>I apparently havn't written anything blog posts yet. Don't worry, I'll get to it soon! =]</p>
+{% endif %}
 
 {% endblock %}
