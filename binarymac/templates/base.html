@@ -21,7 +21,8 @@
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
         <header id="main-header">
-        {% include "includes/main-nav.html" %}
+        {% block main_nav %}
+        {% endblock %}
             <section id="masthead" class="container">
                 <div class="">
                     {% block masthead %}

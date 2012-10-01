@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block main_nav %}
+    {% include "includes/main_nav.html" with active_tab="home" %}
+{% endblock %}
+
 {% block masthead %}
     <h1>Hello World!</h1>
     <h1>I'm Mac and I Solve Problems</h1>

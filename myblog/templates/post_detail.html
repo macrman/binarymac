@@ -1,11 +1,15 @@
 {% extends "base.html" %}
 
+{% block main_nav %}
+    {% include "includes/main_nav.html" with active_tab="blog" %} 
+{% endblock %}
+
 {% block main %}
 {{ object.title }}
 {{ object.pub_date }}
 {{ object.content }}
 
 {% for tag in object.tag.all %}
-{{ tag }} 
+    {{ tag }} 
 {% endfor %}
 {% endblock %}
