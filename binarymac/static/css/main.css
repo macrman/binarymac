@@ -13,9 +13,10 @@ textarea {
 body {
     font-size:18px;
     line-height:1.5;
-    font-family:"Source Sans Pro", sans-serif;
-    background-color:#2D2D30;
-    color:#fefefe;
+    font-family:"Signika Negative", sans-serif;
+    font-weight:300;
+    background-color:#fefefe;
+    color:#2D2D30;
 }
 
 /*
@@ -127,7 +128,6 @@ h6, .shorter {font-size:18.625px;}
 small, .small {font-size:16px;}
 
 h1, h2, h3, h4, h5, h6 {
-    font-family:"Dosis", sans-serif;
     font-weight:400;
 }
 
@@ -146,7 +146,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .col {
     float: left;
-    padding: 2.5%;
+    padding: 3%;
 }
 
 
@@ -186,36 +186,23 @@ h1, h2, h3, h4, h5, h6 {
 #main-nav {
     display: table;
     width: 100%;
+    border-bottom:1px solid #DBDBDB;
 }
 
 
 #main-nav a {
     display: table-cell;
     text-decoration: none;
-    color: #fefefe; 
-    font-family: 'Dosis',sans-serif;
     text-align: center;
-    padding: 2.5%;
+    padding: 1.5%;
+    color: #333;
+    font-weight: 400;
 }
 
 .menu-big, .menu-small {
     display: block;
 }
-#welcome{
-    background:#264964;
-}
-#learn{
-    background:#266464;
-}
-#look{
-    background:#266448;
-}
-#read{
-    background:#276426;
-}
-#talk{
-    background:#436425;
-}
+
 /*
    Masthead
 */

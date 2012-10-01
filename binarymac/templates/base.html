@@ -9,7 +9,8 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Dosis' rel='stylesheet' type='text/css'><!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link href='http://fonts.googleapis.com/css?family=Signika+Negative:300,400,600' rel='stylesheet' type='text/css'>
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         {% load static %}
         <link rel="stylesheet" href=" {% static "css/normalize.css" %}">
         <link rel="stylesheet" href=" {% static "css/main.css" %}">
@@ -20,34 +21,13 @@
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
         <header id="main-header">
+        {% include "includes/main-nav.html" %}
             <section id="masthead" class="container">
                 <div class="">
                     {% block masthead %}
                     {% endblock %}
                 </div>
             </section>
-            <nav id="main-nav" class="clearfix">
-                <a id="welcome" class="span_1_of_5" href="{% url home_view %}">
-                    <span class="menu-big grande">Welcome</span>
-                    <span class="menu-small short">To My Home</span>
-                </a>
-                <a id="learn" class="span_1_of_5" href="{% url tutorial_list %}">
-                    <span class="menu-big grande">Learn</span>
-                    <span class="menu-small short">Something New</span>
-                </a>
-                <a id="look" class="span_1_of_5" href="{% url home_view %}">
-                    <span class="menu-big grande">Checkout</span>
-                    <span class="menu-small short">Some of My Stuff</span>
-                </a>
-                <a id="read" class="span_1_of_5" href="{% url post_list %}">
-                    <span class="menu-big grande">Read</span>
-                <span class="menu-small short">My Thoughts</span>
-            </a>
-                <a id="talk" class="span_1_of_5" href="{% url home_view %}">
-                    <span class="menu-big grande">Tell</span>
-                    <span class="menu-small short">Me Something</span>
-                </a>
-            </nav>
         </header>
         {% block main %}
         {% endblock %}
