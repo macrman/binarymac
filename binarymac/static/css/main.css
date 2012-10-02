@@ -11,12 +11,13 @@ textarea {
 }
 
 body {
-    font-size:18px;
-    line-height:1.5;
-    font-family:"Signika Negative", sans-serif;
+    font-size:21px;
+    line-height:1.4;
+    font-family:"Signika", sans-serif;
     font-weight:300;
     background-color:#fefefe;
     color:#2D2D30;
+    text-rendering: optimizelegibility;
 }
 
 /*
@@ -118,13 +119,13 @@ textarea {
    ======   =========   ======   =======
 */
 
-h1, .trenta {font-size:40.5px;}
-h2, .venti {font-size:33.625px;}
-h3, .grande {font-size:28px;}
-h4, .tall {font-size:23.625px;}
-h5, .short {font-size:20.5px;}
-h6, .shorter {font-size:18.625px;}
-.base {font-size:18px;}
+h1, .trenta {font-size:48px;}
+h2, .venti {font-size:36px;}
+h3, .grande {font-size:32px;}
+h4, .tall {font-size:28px;}
+h5, .short {font-size:24px;}
+h6, .shorter {font-size:21px;}
+.base {font-size:21px;}
 small, .small {font-size:16px;}
 
 h1, h2, h3, h4, h5, h6 {
@@ -140,15 +141,22 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+.container {
+    padding: 0 3%;
+}
+
 .row {
     width:100%;
 }
 
 .col {
     float: left;
-    padding: 3%;
+    padding-left:3%;
 }
 
+.row .col:first-child {
+    padding-left:0;
+}
 
 .span_1_of_2 { width:50%; }
 .span_2_of_2 { width:100%; }
@@ -171,6 +179,11 @@ h1, h2, h3, h4, h5, h6 {
 .span_6_of_8 { width:75%; }
 .span_7_of_8 { width:87.5%; }
 .span_8_of_8 { width:100%; }
+
+.l_max_text_width {
+    margin: 0 auto;
+    max-width: 31em;
+}
 
 /**************************************/
 /*
@@ -195,8 +208,8 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     text-align: center;
     padding: 1.5%;
-    color: #333;
-    font-weight: 400;
+    color: #777;
+    font-weight: 300;
 }
 
 .menu-big, .menu-small {
@@ -211,8 +224,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .active {
-    color: blue;
-    background:red;
+    font-weight: 400;
+    color: #222;
+}
+
+
+.pub_date {
+    display:block;
 }
 /* ==========================================================================
    Helper classes
