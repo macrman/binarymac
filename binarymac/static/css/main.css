@@ -199,27 +199,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #main-nav {
-    width: 100%;
     border-bottom:1px solid #DBDBDB;
     background: #FFFFFF;
 }
 
 
-#main-nav a {
+.menu_item {
+    transition: color 1s linear;
+    -moz-transition: color 1s linear;
+    -webkit-transition: color 1s linear;
+    -o-transition: color 1s linear;
     text-decoration: none;
-    text-align: center;
     color: #777;
     font-weight: 300;
-    padding: 1em 0 1em 2em;
+    margin: 1em 0 1em 2em;
     display: inline-block;
 }
 
-#main-nav a:first-child{
-    padding-left:0;
+.menu_item:hover {
+    transition: color 0.4s ease;
+    -moz-transition: color 0.4s ease;
+    -webkit-transition: color 0.4s ease;
+    -o-transition: color 0.4s ease;
+    color:#2D2D30;
 }
 
-.menu-big, .menu-small {
-    display: block;
+.menu_item:first-child{
+    margin-left:0;
 }
 
 /*
