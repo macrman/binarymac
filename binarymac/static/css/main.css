@@ -15,7 +15,7 @@ body {
     line-height:1.4;
     font-family:"Signika", sans-serif;
     font-weight:300;
-    background-color:#fefefe;
+    background-color:#FCFCFC;
     color:#2D2D30;
     text-rendering: optimizelegibility;
 }
@@ -126,7 +126,7 @@ h4, .tall {font-size:28px;}
 h5, .short {font-size:24px;}
 h6, .shorter {font-size:21px;}
 .base {font-size:21px;}
-small, .small {font-size:16px;}
+small, .small {font-size:18px;}
 
 h1, h2, h3, h4, h5, h6 {
     font-weight:400;
@@ -137,8 +137,13 @@ h1, h2, h3, h4, h5, h6 {
   --------
 */
 
-.container-header {
+.post_header {
     text-align: center;
+    margin: 1em 0;
+}
+
+.post_title {
+    margin:0;
 }
 
 .container {
@@ -200,6 +205,7 @@ h1, h2, h3, h4, h5, h6 {
     display: table;
     width: 100%;
     border-bottom:1px solid #DBDBDB;
+    background: #FFFFFF;
 }
 
 
@@ -207,9 +213,10 @@ h1, h2, h3, h4, h5, h6 {
     display: table-cell;
     text-decoration: none;
     text-align: center;
-    padding: 1.5%;
     color: #777;
     font-weight: 300;
+    padding: 1em;
+    display: inline-block;
 }
 
 .menu-big, .menu-small {
@@ -223,7 +230,7 @@ h1, h2, h3, h4, h5, h6 {
 #masthead {
 }
 
-.active {
+#main-nav a.active {
     font-weight: 400;
     color: #222;
 }
@@ -231,6 +238,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .pub_date {
     display:block;
+    font-size:18px;
+    text-transform: uppercase;
 }
 /* ==========================================================================
    Helper classes

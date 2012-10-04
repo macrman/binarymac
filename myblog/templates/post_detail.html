@@ -6,8 +6,10 @@
 
 {% block main %}
 <article class="l_max_text_width">
-    <h2 class="container-header">{{ object.title }}</h2>
-    <span class="pub_date">{{ object.pub_date }}</span>
+    <header class="post_header">
+        <h2 class="post_title">{{ object.title }}</h2>
+        <span class="pub_date">{{ object.pub_date }}</span>
+    </header>
     {{ object.content }}
 
 {% for tag in object.tag.all %}
