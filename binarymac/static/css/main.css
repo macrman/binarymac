@@ -94,28 +94,22 @@ textarea {
 
 /* Typography
    ----------
-
-   Uses the fucntion (5/8)(x-7)^2 + 18, where x=header size number, 18 is the base height
-   Exception: 16 is used for the "small" css class
-
    ======   =========   ======   =======
    Header   CSS Class   Pixels   ems
    ======   =========   ======   =======
-   h1       trenta      40.5    
+   h1       trenta      48    
    ------   ---------   ------   -------
-   h2       venti       33.625    
+   h2       venti       36 
    ------   ---------   ------   -------
-   h3       grande      28   
+   h3       grande      32
    ------   ---------   ------   -------
-   h4       tall        23.625      
+   h4       tall        28 
    ------   ---------   ------   -------
-   h5       short       20.5
+   h5       short       24
    ------   ---------   ------   -------
-   h6       shorter     18.625 
+   h6       base        21 
    ------   ---------   ------   -------
-   n/a      base        18 
-   ------   ---------   ------   ------- 
-   n/a      small       16
+   n/a      small       18
    ======   =========   ======   =======
 */
 
@@ -124,18 +118,17 @@ h2, .venti {font-size:36px;}
 h3, .grande {font-size:32px;}
 h4, .tall {font-size:28px;}
 h5, .short {font-size:24px;}
-h6, .shorter {font-size:21px;}
-.base {font-size:21px;}
+h6, .base {font-size:21px;}
 small, .small {font-size:18px;}
 
 h1, h2, h3, h4, h5, h6 {
     font-weight:400;
 }
 
-/*
-  CSS Grid
-  --------
-*/
+/******************************************************
+  Layout
+  ------
+******************************************************/
 
 .post_header {
     text-align: center;
@@ -190,7 +183,11 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 31em;
 }
 
-/**************************************/
+/**************************************
+    Modules
+    -------
+**************************************/
+
 /*
    Nav Bar
    -------
@@ -202,7 +199,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #main-nav {
-    display: table;
     width: 100%;
     border-bottom:1px solid #DBDBDB;
     background: #FFFFFF;
@@ -210,13 +206,16 @@ h1, h2, h3, h4, h5, h6 {
 
 
 #main-nav a {
-    display: table-cell;
     text-decoration: none;
     text-align: center;
     color: #777;
     font-weight: 300;
-    padding: 1em;
+    padding: 1em 0 1em 2em;
     display: inline-block;
+}
+
+#main-nav a:first-child{
+    padding-left:0;
 }
 
 .menu-big, .menu-small {
