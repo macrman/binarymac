@@ -15,9 +15,9 @@ body {
     line-height:1.4;
     font-family:"Signika", sans-serif;
     font-weight:300;
-    background-color:#FCFCFC;
-    color:#2D2D30;
+    color:#222222;
     text-rendering: optimizelegibility;
+    background-color: #222;
 }
 
 /*
@@ -131,9 +131,6 @@ h1, h2, h3, h4, h5, h6 {
 ******************************************************/
 
 
-.post_title {
-    margin:0;
-}
 
 .container {
     padding: 0 3%;
@@ -180,6 +177,10 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 31em;
 }
 
+.content {
+    background-color:#FCFCFC;
+}
+    
 /**************************************
     Modules
     -------
@@ -245,6 +246,10 @@ h1, h2, h3, h4, h5, h6 {
     margin: 1em 0;
 }
 
+.post_title {
+    margin:0;
+}
+
 .pub_date {
     display:block;
     font-size:18px;
@@ -262,6 +267,21 @@ h1, h2, h3, h4, h5, h6 {
     padding:0 .5em;
     color: #222;
 }
+
+.post {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+/* 
+   Footer
+   ------
+*/
+
+.main_footer {
+    color: #fcfcfc;
+}
+
 
 /* ==========================================================================
    Helper classes
