@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Base styles: opinionated defaults
+Base styles: opinionated defaults
    ========================================================================== */
 
 html,
@@ -130,10 +130,6 @@ h1, h2, h3, h4, h5, h6 {
   ------
 ******************************************************/
 
-.post_header {
-    text-align: center;
-    margin: 1em 0;
-}
 
 .post_title {
     margin:0;
@@ -147,36 +143,37 @@ h1, h2, h3, h4, h5, h6 {
     width:100%;
 }
 
-.col {
+[class*='col_'] {
     float: left;
-    padding-left:3%;
+    padding-left: 3%;
 }
 
-.row .col:first-child {
-    padding-left:0;
+.row [class*='col_']:first-of-type {
+    padding-left: 0;
 }
 
-.span_1_of_2 { width:50%; }
-.span_2_of_2 { width:100%; }
+.col_1_2 { width:50%; }
+.col_2_2 { width:100%; }
 
-.span_1_of_3 { width:33.33333%; }
-.span_2_of_3 { width:66.66666%; }
-.span_3_of_3 { width:100%; }
+.col_1_3 { width:33.33333%; }
+.col_2_3 { width:66.66666%; }
+.col_3_3 { width:100%; }
 
-.span_1_of_5 { width:20%; }
-.span_2_of_5 { width:40%; }
-.span_3_of_5 { width:60%; }
-.span_4_of_5 { width:80%; }
-.span_5_of_5 { width:100%; }
+.col_1_5 { width:20%; }
+.col_2_5 { width:40%; }
+.col_3_5 { width:60%; }
+.col_4_5 { width:80%; }
+.col_5_5 { width:100%; }
 
-.span_1_of_8 { width:12.5%; }
-.span_2_of_8 { width:25%; }
-.span_3_of_8 { width:37.5%; }
-.span_4_of_8 { width:50%; }
-.span_5_of_8 { width:62.5%; }
-.span_6_of_8 { width:75%; }
-.span_7_of_8 { width:87.5%; }
-.span_8_of_8 { width:100%; }
+.col_1_8 { width:12.5%; }
+.col_2_8 { width:25%; }
+.col_3_8 { width:37.5%; }
+.col_4_8 { width:50%; }
+.col_5_8 { width:62.5%; }
+.col_6_8 { width:75%; }
+.col_7_8 { width:87.5%; }
+.col_8_8 { width:100%; }
+
 
 .l_max_text_width {
     margin: 0 auto;
@@ -240,12 +237,32 @@ h1, h2, h3, h4, h5, h6 {
     color: #222;
 }
 
+/* 
+   Post
+*/
+.post_header {
+    text-align: center;
+    margin: 1em 0;
+}
 
 .pub_date {
     display:block;
     font-size:18px;
     text-transform: uppercase;
 }
+
+.post_tag_list {
+    text-align: center;
+}
+.post_tag {
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding:0 .5em;
+    color: #222;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

@@ -9,8 +9,12 @@
 
 {% if post_list %}
     {% for post in post_list %}
-    <a href = "{% url post_detail post.pk post.slug %}">{{ post.title }}</a>
-    <br>
+    <div class="post_header">
+        <a href="{% url post_detail post.pk post.slug %}" class="post_title">
+            {{ post.title }}
+        </a>
+        <span class="pub_date">{{ post.pub_date }}</span>
+    </div>
     {% endfor %}
 {% else %}
     <p>I apparently havn't written anything blog posts yet. Don't worry, I'll get to it soon! =]</p>

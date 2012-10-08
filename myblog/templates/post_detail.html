@@ -7,13 +7,14 @@
 {% block main %}
 <article class="l_max_text_width">
     <header class="post_header">
-        <h2 class="post_title">{{ object.title }}</h2>
-        <span class="pub_date">{{ object.pub_date }}</span>
+        <h2 class="post_title">{{ post.title }}</h2>
+        <span class="pub_date">{{ post.pub_date }}</span>
+        <div class="post_tag_list">
+            {% for tag in post.tag.all %}
+                <a href="" class="post_tag">{{ tag }}</a>
+            {% endfor %}
+        </div>
     </header>
     {{ object.content }}
-
-{% for tag in object.tag.all %}
-    {{ tag }} 
-{% endfor %}
-{% endblock %}
 </article>
+{% endblock %}
