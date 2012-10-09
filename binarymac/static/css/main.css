@@ -212,7 +212,7 @@ h1, h2, h3, h4, h5, h6 {
     -o-transition: color 1s linear;
     color: #777;
     font-weight: 300;
-    margin: 1em 0 1em 2em;
+    margin: 1em;
     display: inline-block;
 }
 
@@ -224,9 +224,6 @@ h1, h2, h3, h4, h5, h6 {
     color:#2D2D30;
 }
 
-.menu_item:first-child{
-    margin-left:0;
-}
 
 /*
    Masthead
