@@ -19,6 +19,7 @@
                     {% include "includes/post_header.html" %}
                     <div class="post_content">
                         {{ post.content|truncatewords_html:50 }}
+                        <a href="{% url post_detail post.pk post.slug %}" class="read_more">Read More</a>
                     </div>
                 </div>
             {% endfor %}

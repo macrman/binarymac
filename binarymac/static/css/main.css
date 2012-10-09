@@ -110,6 +110,8 @@ textarea {
    h6       base        21 
    ------   ---------   ------   -------
    n/a      small       18
+   -----    ---------   ------   -------
+   n/a      smaller     16       
    ======   =========   ======   =======
 */
 
@@ -120,6 +122,7 @@ h4, .tall {font-size:28px;}
 h5, .short {font-size:24px;}
 h6, .base {font-size:21px;}
 small, .small {font-size:18px;}
+.smaller {font-size:16px;}
 
 h1, h2, h3, h4, h5, h6 {
     font-weight:400;
@@ -248,23 +251,28 @@ h1, h2, h3, h4, h5, h6 {
     margin:0;
 }
 
+.post_title_link {
+    font-weight: 400;
+}
+
+.pub_date, .post_author, .post_tag {
+    text-transform: uppercase;
+    line-height:1.1;
+}
+
 .pub_date {
     display:block;
-    font-size:18px;
-    text-transform: uppercase;
+}
+
+.post_author {
+    vertical-align: bottom;
 }
 
 .post_tag_list {
-    text-align: center;
 }
+
 .post_tag {
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: 400;
     padding:0 .5em;
-    color: #fff;
-    background-color: #555;
-    display: inline-block;
     vertical-align: top;
 }
 
@@ -289,6 +297,19 @@ h1, h2, h3, h4, h5, h6 {
     color: #fcfcfc;
 }
 
+
+
+
+
+/*  =====================
+        Theme Classes
+    ===================== */
+
+.read_more {
+    font-size: 21px;
+    padding:0 .5em;
+    vertical-align: top;
+}
 
 /* ==========================================================================
    Helper classes

@@ -1,13 +1,12 @@
 <header class="post_header">
     <h2 class="post_title">
-        <a href="{% url post_detail post.pk post.slug %}">
-            {{ post.title }}
-        </a>
+        <a class="post_title_link" href="{% url post_detail post.pk post.slug %}">{{ post.title }}</a>
     </h2>
-    <span class="pub_date">{{ post.pub_date }}</span>
+    <span class="post_author small">by Mac</span>
+    <span class="pub_date smaller">{{ post.pub_date }}</span>
     <div class="post_tag_list clearfix">
         {% for tag in post.tag.all %}
-            <a href="" class="post_tag">{{ tag }}</a>
+            <a href="" class="post_tag smaller">{{ tag }}</a>
         {% endfor %}
     </div>
 </header>
