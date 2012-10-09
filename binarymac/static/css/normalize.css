@@ -96,6 +96,11 @@ body {
    Links
    ========================================================================== */
 
+a {
+    font-weight: 400;
+    text-decoration: none;
+    color: #222;
+}
 /*
  * Addresses `outline` inconsistency between Chrome and other browsers.
  */

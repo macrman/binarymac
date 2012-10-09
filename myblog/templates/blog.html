@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block main_nav %}
+    {% include "includes/main_nav.html" with active_tab="blog" %} 
+{% endblock %}
+
+{% block main %}
+    <article class="l_max_text_width clearfix">
+        {% if post %}
+            <div class="post">
+                {% include "includes/post_header.html" %}
+                <section class="post_content">
+                    {{ post.content }}
+                </section>
+            </div>
+        {% elif post_list %}
+            {% for post in post_list %}
+                <div class="post">
+                    {% include "includes/post_header.html" %}
+                    <div class="post_content">
+                        {{ post.content|truncatewords_html:50 }}
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>I apparently havn't written anything blog posts yet. Don't worry, I'll get to it soon! =]</p>
+        {% endif %}
+    </article>
+{% endblock %}
