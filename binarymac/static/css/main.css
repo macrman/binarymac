@@ -285,6 +285,17 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 3em;
 }
 
+.pagination {
+    padding-bottom: 1em;
+}
+
+.previous_page {
+    float: left;
+}
+
+.next_page {
+    float: right;
+}
 /* 
    Footer
    ------
