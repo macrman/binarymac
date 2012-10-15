@@ -89,6 +89,3 @@ class TagModelTest(TestCase):
         self.assertIn(tag2, allevenposts)
         self.assertIn(tag4, allevenposts)
         
-        # check that we can query posts by tag
-
-        postswithtag1= tag1.post.all()

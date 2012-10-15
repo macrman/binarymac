@@ -9,7 +9,7 @@ urlpatterns = patterns('',
         name="post_list",
     ),
     url(
-        r'^tag/(?P<tag>[-\w\d]+)/$',
+        r'^tag/(\w+)/$',
         TaggedPostsListView.as_view(), 
         name='tagged_post_list'
     ),

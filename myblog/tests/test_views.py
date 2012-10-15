@@ -8,7 +8,7 @@ from django.template.defaultfilters import slugify
 
 class TestBlogPageListView(TestCase):
 
-    def test_blog_url_shows_links_to_all_posts(self):
+    def test_blog_url_shows_links_to_posts(self):
         # setup a post
         post1 = Post(
             title="First Post Title",
@@ -28,13 +28,15 @@ class TestBlogPageListView(TestCase):
         response = self.client.get('/blog/')
 
         # check we used the right template
-        self.assertTemplateUsed(response, 'post_list.html')
+        self.assertTemplateUsed(response, 'blog.html')
 
         # check we passed the posts to the template
 
         # check that the post titles appear on page
         self.assertIn(post1.title, response.content)
         self.assertIn(post2.title, response.content)
+
+        # test pagination
 
 
 class TestBlogDetailView(TestCase):
@@ -65,6 +67,48 @@ class TestBlogDetailView(TestCase):
         # test that all the objects have been pasted to the template
         self.assertIn(post.title, response.content)
         self.assertIn(post.content, response.content)
-        # todo:
-        # self.assertIn(str(post.pub_date), response.content)
         self.assertIn('testing', response.content)
+
+
+class TestPostListByTag(TestCase):
+
+    def test_page_shows_post_by_tag(self):
+        post1 = Post()
+        post1.title = 'hello'
+        post1.content = "hi"
+        post1.pub_date = timezone.now()
+        post1.save()
+        
+        post2 = Post()
+        post2.title = "world"
+        post2.content = "earth"
+        post2.pub_date = timezone.now()
+        post2.save()
+
+        # create a tag
+        hellotag = Tag()
+        hellotag.name = 'hello'
+        hellotag.save()
+        
+        worldtag = Tag()
+        worldtag.name = 'world'
+        worldtag.save()
+
+        # create the relationship between tag and post
+        post1.tag.add(hellotag)
+        post2.tag.add(worldtag)
+
+        # go to the page that only shows posts that are tagged "hello"
+        posts_tagged_as_hello_response = reverse('tagged_post_list', args=[hellotag.name])
+        # check that post1 is on that page
+        self.assertIn(post1.title, posts_tagged_as_hello_response)
+        # check that post2 is not on the page
+        self.assertNotIn(post2.title, posts_tagged_as_hello_response)
+        # go to the page that shows posts which are tagged "world"
+        posts_tagged_as_world_response = reverse('tagged_post_list', args=[worldtag.name])
+        # check that post2 is shows up on that page
+        self.assertIn(post2.title, posts_tagged_as_world_response)
+        # check that post1 is not on the page
+        self.assertNotIn(post1.title, posts_tagged_as_world_response)
+
+

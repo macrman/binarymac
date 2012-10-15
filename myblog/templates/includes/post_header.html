@@ -6,7 +6,7 @@
     <span class="pub_date smaller">{{ post.pub_date }}</span>
     <div class="post_tag_list clearfix">
         {% for tag in post.tag.all %}
-            <a href="" class="post_tag smaller">{{ tag }}</a>
+        <a href="{% url tagged_post_list tag %}" class="post_tag smaller">{{ tag }}</a>
         {% endfor %}
     </div>
 </header>

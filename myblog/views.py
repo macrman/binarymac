@@ -1,5 +1,6 @@
 from django.views.generic import ListView, DetailView, TemplateView
-from myblog.models import Post
+from django.shortcuts import get_object_or_404
+from myblog.models import Post, Tag
 
 
 class PostListView(ListView):
@@ -16,5 +17,11 @@ class PostDetailView(DetailView):
     context_object_name = "post"
 
 
-class TaggedPostsListView(TemplateView):
+class TaggedPostsListView(ListView):
     template_name = 'blog.html'
+    context_object_name = 'post_list'
+    paginate_by = '2'
+
+    def get_queryset(self):
+        self.tag = get_object_or_404(Tag, name__iexact=self.args[0])
+        return Post.objects.filter(tag=self.tag)
