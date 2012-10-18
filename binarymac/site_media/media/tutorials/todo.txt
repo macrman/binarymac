@@ -1,0 +1,16 @@
+- sql the hard way
+    - combine the sql
+        -see if there is a combined source file from the tutorial
+    - goal: 10 lessons
+
+- mysite
+    - tutorials app
+        - see if there is an app
+        - tutorials have parts.
+
+- popup pantry job opening
+    - create resume
+    - email katherine
+
+- udacity
+    - goal: 10 lessons

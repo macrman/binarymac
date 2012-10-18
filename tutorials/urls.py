@@ -1,7 +1,15 @@
 from django.conf.urls import patterns, include, url
-from django.views.generic import TemplateView
-
+from tutorials.views import TutorialListView
 
 urlpatterns = patterns('',
-    url(r'^$', TemplateView.as_view(template_name="tutorial_list.html"), name="tutorial_list"),
+    url(
+        regex=r'^$',
+        view=TutorialListView.as_view(), 
+        name="tutorial_list"
+    ),
+    url(
+        regex=r'^+\w$',
+        view=TutorialDetailview.as_view(),
+        name="tutorial_detail"
+    ),
 )
