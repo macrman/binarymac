@@ -9,7 +9,7 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <link href='http://fonts.googleapis.com/css?family=Signika:300,400,600' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Merriweather:300,300italic,400,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         {% load static %}
         <link rel="stylesheet" href=" {% static "css/normalize.css" %}">
@@ -20,20 +20,16 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
-        <header id="main-header">
+        <header class="clearfix">
         {% block main_nav %}
         {% endblock %}
-            <section id="masthead" class="container">
-                <div class="">
-                    {% block masthead %}
-                    {% endblock %}
-                </div>
-            </section>
         </header>
-        <div id="content" class="content container">
+
+        <div class="content clearfix">
         {% block main %}
         {% endblock %}
         </div>
+
         <footer class="container main_footer">
             <span>This is supposed to be a footer. hi.</span>
         </footer>

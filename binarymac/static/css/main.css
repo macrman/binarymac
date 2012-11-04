@@ -1,5 +1,13 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
 /* ==========================================================================
-Base styles: opinionated defaults
+   Base styles: opinionated defaults
    ========================================================================== */
 
 html,
@@ -11,13 +19,9 @@ textarea {
 }
 
 body {
-    font-size:21px;
-    line-height:1.4;
-    font-family:"Signika", sans-serif;
-    font-weight:300;
-    color:#222222;
-    text-rendering: optimizelegibility;
-    background-color: #222;
+    font-size: 21px;
+    line-height: 1.3;
+    font-family: 'Merriweather', serif;
 }
 
 /*
@@ -89,235 +93,39 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-    
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-/* Typography
-   ----------
-   ======   =========   ======   =======
-   Header   CSS Class   Pixels   ems
-   ======   =========   ======   =======
-   h1       trenta      48    
-   ------   ---------   ------   -------
-   h2       venti       36 
-   ------   ---------   ------   -------
-   h3       grande      32
-   ------   ---------   ------   -------
-   h4       tall        28 
-   ------   ---------   ------   -------
-   h5       short       24
-   ------   ---------   ------   -------
-   h6       base        21 
-   ------   ---------   ------   -------
-   n/a      small       18
-   -----    ---------   ------   -------
-   n/a      smaller     16       
-   ======   =========   ======   =======
-*/
+/* base styles */
 
-h1, .trenta {font-size:48px;}
-h2, .venti {font-size:36px;}
-h3, .grande {font-size:32px;}
-h4, .tall {font-size:28px;}
-h5, .short {font-size:24px;}
-h6, .base {font-size:21px;}
-small, .small {font-size:18px;}
-.smaller {font-size:16px;}
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight:400;
+strong {
+    font-weight: 900
 }
 
-/******************************************************
-  Layout
-  ------
-******************************************************/
+.container { padding: 0 5%; }
 
-
-
-.container {
-    padding: 0 5%;
+.wrapper{
+    margin: 8%;
 }
 
-.row {
-    width:100%;
-}
-
-[class*='col_'] {
-    float: left;
-    padding-left: 3%;
-}
-
-.row [class*='col_']:first-of-type {
-    padding-left: 0;
-}
-
-.col_1_2 { width:50%; }
-.col_2_2 { width:100%; }
-
-.col_1_3 { width:33.33333%; }
-.col_2_3 { width:66.66666%; }
-.col_3_3 { width:100%; }
-
-.col_1_5 { width:20%; }
-.col_2_5 { width:40%; }
-.col_3_5 { width:60%; }
-.col_4_5 { width:80%; }
-.col_5_5 { width:100%; }
-
-.col_1_8 { width:12.5%; }
-.col_2_8 { width:25%; }
-.col_3_8 { width:37.5%; }
-.col_4_8 { width:50%; }
-.col_5_8 { width:62.5%; }
-.col_6_8 { width:75%; }
-.col_7_8 { width:87.5%; }
-.col_8_8 { width:100%; }
-
-
-.l_max_text_width {
-    margin: 0 auto;
-    max-width: 34em;
-}
-
-.content {
-    background-color:#FCFCFC;
-}
-    
-/**************************************
-    Modules
-    -------
-**************************************/
-
-/*
-   Nav Bar
-   -------
-*/
-
-
-#main-header {
-    text-align:center;
-}
-
-#main-nav {
-    border-bottom:1px solid #DBDBDB;
-    background: #FFFFFF;
-}
-
-
-.menu_item {
-    transition: color 1s linear;
-    -moz-transition: color 1s linear;
-    -webkit-transition: color 1s linear;
-    -o-transition: color 1s linear;
-    color: #777;
-    font-weight: 300;
-    margin: 1em;
-    display: inline-block;
-}
-
-.menu_item:hover {
-    transition: color 0.4s ease;
-    -moz-transition: color 0.4s ease;
-    -webkit-transition: color 0.4s ease;
-    -o-transition: color 0.4s ease;
-    color:#2D2D30;
-}
-
-
-/*
-   Masthead
-*/
-
-#masthead {
-}
-
-#main-nav a.active {
-    font-weight: 400;
-    color: #222;
-}
-
-/* 
-   Post
-*/
-.post_header {
+.block-text { 
+    margin: 0;
     text-align: center;
 }
 
-.post_title {
-    margin:0;
-}
+h1 { font-size: 48px; }
+h2 { font-size: 42px; }
+h3 { font-size: 36px; }
+h4 { font-size: 32px; }
+h5 { font-size: 28px; }
+h6 { font-size: 24px; }
 
-.post_title_link {
-    font-weight: 400;
-}
+.large { font-size: 64px; }
+.x-large { font-size: 72px; }
+.xx-large { font-size: 96px; }
+.xxx-large { font-size: 128px; }
+.super-large { font-size: 144px; }
+.ginormous { font-size: 192px;}
 
-.pub_date, .post_author, .post_tag {
-    text-transform: uppercase;
-    line-height:1.1;
-}
-
-.pub_date {
-    display:block;
-}
-
-.post_author {
-    vertical-align: bottom;
-}
-
-.post_tag_list {
-}
-
-.post_tag {
-    padding:0 .5em;
-    vertical-align: top;
-}
-
-.post_content {
-    padding-top: 1em;
-}
-
-.post {
-    padding-bottom: 3em;
-}
-
-.content .post:first-of-type {
-    padding-top: 3em;
-}
-
-.pagination {
-    padding-bottom: 1em;
-}
-
-.previous_page {
-    float: left;
-}
-
-.next_page {
-    float: right;
-}
-/* 
-   Footer
-   ------
-*/
-
-.main_footer {
-    color: #fcfcfc;
-}
-
-
-
-
-
-/*  =====================
-        Theme Classes
-    ===================== */
-
-.read_more {
-    font-size: 21px;
-    padding:0 .5em;
-    vertical-align: top;
-}
+/* page styles */
 
 /* ==========================================================================
    Helper classes
@@ -331,7 +139,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: transparent;
     border: 0;
     overflow: hidden;
-/*     IE 6/7 fallback */
+    /* IE 6/7 fallback */
     *text-indent: -9999px;
 }
 
@@ -444,7 +252,7 @@ h1, h2, h3, h4, h5, h6 {
     * {
         background: transparent !important;
         color: #000 !important; /* Black prints faster: h5bp.com/s */
-        box-shadow:none !important;
+        box-shadow: none !important;
         text-shadow: none !important;
     }
 

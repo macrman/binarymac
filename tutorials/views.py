@@ -1,10 +1,11 @@
 from tutorials.models import Tutorial
-from django.views.generic import DetailView, ListView
+from django.views.generic import DetailView, ListView, TemplateView
 
 
-class TutorialDetailView(DetailView):
-    template_name = "tutorial_detail.html"
-    model = Tutorial
+class TutorialDetailView(TemplateView):
+    template_name="home.html"
+    #    template_name = "tutorial_detail.html"
+#    model = Tutorial
 # Detail View
 
 #     get the path to the object
@@ -15,3 +16,7 @@ class TutorialDetailView(DetailView):
 #     return the objects to context
 
 #        convert to html if needed
+
+
+class TutorialListView(TemplateView):
+    template_name="home.html"
