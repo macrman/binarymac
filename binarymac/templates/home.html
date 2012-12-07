@@ -1,75 +1,20 @@
 {% extends "base.html" %}
 
-{% block main_nav %}
-    {% include "includes/main_nav.html" with active_tab="home" %}
+{% block title %}Michael Ackerman {% endblock %}
+
+{% block site_nav %}
+    {% include "includes/site_nav.html" with active_tab="home" %}
+{% endblock %}
+
+{% block content_header %}
+        Hello, I'm Mac and I am a Creator and I Create Solutions to Problems. 
+        Below Are Some of My Latest Creations.
 {% endblock %}
 
 {% block main %}
-<div class="cleafix">
-    <div class="wrapper clearfix">
-        <p class="super-large block-text marginless">Hello, My Name is <b>Mac</b></p>
-        <p class="block-text">(aka Michael Ackerman, or binarymac on the internet)</p>
-    </div>
-</div>
-
-<div class="clearfix">
-    <div class="wrapper clearfix">
-        <p class="xxx-large block-text">..and I am a
-        <strong><em class="ginormous">Creator</em></strong>
-        </p>
-    </div>
-</div>
-
-<div class="clearfix">
-    <div class="wrapper clearfix">
-        <p class="block-text xx-large">I create <strong class="ginormous">Solutions</strong> to <strong class="ginormous">Problems</strong></p>
-    </div>
-</div>
-
-<div class="clearfix">
-    <div class="wrapper clearfix">
-        <p>These solutions are usually technological, and can come in the form of websites.</p>
-    </div>
-</div>
-
-<div class="clearfix">
-    <div class="wrapper clearfix">
-        <h2 class="block-text">Here are some of my creations</h2>
-    </div>
-</div>
-
-<div class="clearfix">
-    <div class="wrapper clearfix">
-        <p>My toolset consists of:<p>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Python</li>
-            <li>Django</li>
-            <li>Jquery</li>
-        </ul>
-    </div>
-</div>
-
-<div class="">
-    <div class="wrapper clearfix">
-        <p class="xxx-large block-text">So What's Your Problem?</p>
-    </div>
-</div>
-
-<div class="clearfix">
-    <div class="wrapper clearfix">
-        <p class="large block-text">Tell Me About It</p>
-    </div>
-</div>
-
+    <header class="clearfix">
+    </header>
 {% endblock %}
-
-<!--
-I create solutions to problems
-These solutions are usually technological,
-and can come in the form of websites.
---!>
 
 
 
