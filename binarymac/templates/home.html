@@ -1,20 +1,16 @@
 {% extends "base.html" %}
 
-{% block title %}Michael Ackerman {% endblock %}
+{% block title %}Michael Ackermna | Home {% endblock %}
 
 {% block site_nav %}
     {% include "includes/site_nav.html" with active_tab="home" %}
 {% endblock %}
 
-{% block content_header %}
-        Hello, I'm Mac and I am a Creator and I Create Solutions to Problems. 
-        Below Are Some of My Latest Creations.
-{% endblock %}
+{% block content_title %}Latest Creations{% endblock %}
 
-{% block main %}
-    <header class="clearfix">
-    </header>
-{% endblock %}
+{% block content_description %}
+    I create solutions to problems, hopefully without introducting more problems.
+    Here are some of my latest stuff.
+{% endblock %} 
 
-
-
+{% block content %}Some stuff goes here {% endblock %}

@@ -1,28 +1,31 @@
 {% extends "base.html" %}
 
-{% block title %} {% endblock %}
+{% block title %}Blog{% endblock %}
 
 {% block site_nav %}
     {% include "includes/site_nav.html" with active_tab="blog" %}
 {% endblock %}
 
-{% block content_header %}
-{% endblock %}
+{% block content_title %}Latest Articles{% endblock %}
 
-{% block main %}
-    <article class="l_max_text_width clearfix">
+{% block content_description %}
+WARNING: Diving into my Mind may be damaging to your health. Proceed with cation.
+{% endblock %} 
+
+{% block content %}
+    <article class="clearfix">
         {% if post %}
-            <div class="post">
+            <div class="">
                 {% include "blog/includes/post_header.html" %}
-                <section class="post_content">
+                <section class="">
                     {{ post.content }}
                 </section>
             </div>
         {% elif post_list %}
             {% for post in post_list %}
-                <div class="post">
+                <div class="">
                     {% include "blog/includes/post_header.html" %}
-                    <div class="post_content">
+                    <div class="">
                         {{ post.content|truncatewords_html:50 }}
                         <a href="{% url post_detail post.pk post.slug %}" class="read_more">Read More</a>
                     </div>

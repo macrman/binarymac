@@ -1,4 +1,4 @@
-from django.views.generic import ListView, DetailView, TemplateView
+from django.views.generic import ListView, DetailView
 from django.shortcuts import get_object_or_404
 from myblog.models import Post, Tag
 
@@ -6,19 +6,19 @@ from myblog.models import Post, Tag
 class PostListView(ListView):
     model = Post
     queryset = Post.objects.order_by("-pub_date")
-    paginate_by = '2' 
+    paginate_by = '2'
     context_object_name = 'post_list'
-    template_name = 'blog.html'
+    template_name = 'blog/blog.html'
 
 
 class PostDetailView(DetailView):
     model = Post
-    template_name = "blog.html"
+    template_name = "blog/blog.html"
     context_object_name = "post"
 
 
 class TaggedPostsListView(ListView):
-    template_name = 'blog.html'
+    template_name = 'blog/blog.html'
     context_object_name = 'post_list'
     paginate_by = '2'
 

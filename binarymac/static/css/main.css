@@ -165,50 +165,13 @@ textarea {
 
 /* Typography */
 
-h6 { font-size: 20px; margin: 1.5em 0; }
-h5 { font-size: 20px; margin: 1.5em 0; }
-h4 { font-size: 20px; margin: 1.5em 0; }
-h3 { font-size: 40px; margin: 1.5em 0; }
-h2 { font-size: 60px; margin: 1.5em 0; }
-h1 { font-size: 80px; margin: 1.5em 0; }
+h6 { font-size: 18px; line-height: 27px; margin: 0; }
+h5 { font-size: 18px; line-height: 54px; margin: 0; }
+h4 { font-size: 27px; line-height: 81px; margin: 0; }
+h3 { font-size: 36px; line-height: 108px; margin: 0; }
+h2 { font-size: 45px; line-height: 135px; margin: 0; }
+h1 { font-size: 54px; line-height: 162px; margin: 0; }
 
-.base { font-size: 20px; }
-.large {font-size: 59.719px; }
-.big { font-size: 85.996px; }
-.huge { font-size: 123.834px; }
-
-/* Grid and Page Layout */
-.col_1 { width: 100% }
-
-.col_1_2 { width: 50% }
-.col_2_2 { width: 100% }
-
-.col_1_3 { width: 33.33333% }
-.col_2_3 { width: 66.66666% }
-.col_3_3 { width: 100% }
-
-.col_1_5 { width: 20% }
-.col_2_5 { width: 40% }
-.col_3_5 { width: 60% }
-.col_4_5 { width: 80% }
-.col_5_5 { width: 100% }
-
-.col_1_8 { width: 12.5% }
-.col_2_8 { width: 25% }
-.col_3_8 { width: 37.5% }
-.col_4_8 { width: 50% }
-.col_5_8 { width: 62.5% }
-.col_6_8 { width: 75% }
-.col_7_8 { width: 87.5% }
-.col_8_8 { width: 100 }
-
-[class*="col_"] {
-    float: left;
-}
-
-.site_header {
-    text-align: center;
-}
 
 /* page styles */
 
