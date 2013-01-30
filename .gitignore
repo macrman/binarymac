@@ -2,6 +2,8 @@
 *.db
 *.py[co]
 *.gondor
+*.swp
+*.un
 
 # Packages
 *.egg

@@ -1,0 +1,5 @@
+Django==1.4.3
+Pillow==1.7.8
+South==0.7.6
+django-ckeditor==3.6.2.1
+wsgiref==0.1.2
