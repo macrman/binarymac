@@ -129,6 +129,7 @@ INSTALLED_APPS = [
 
     # project
     "binarymac",
+    "creative",
 ]
 
 # A sample logging configuration. The only tangible logging
