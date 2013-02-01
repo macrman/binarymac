@@ -1,9 +1,9 @@
 from django.db import models
 
 
-class Post(models.Model):
+class Idea(models.Model):
     title = models.CharField(max_length=100)
-    stage = models.ForeignKey('Stage')
+    stage = models.ForeignKey('Stage', blank=True)
     project = models.ManyToManyField('Project')
 
     def __unicode__(self):

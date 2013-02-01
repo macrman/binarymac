@@ -8,21 +8,21 @@ from django.db import models
 class Migration(SchemaMigration):
 
     def forwards(self, orm):
-        # Adding model 'Post'
-        db.create_table('creative_post', (
+        # Adding model 'Idea'
+        db.create_table('creative_idea', (
             ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('title', self.gf('django.db.models.fields.CharField')(max_length=100)),
             ('stage', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['creative.Stage'])),
         ))
-        db.send_create_signal('creative', ['Post'])
+        db.send_create_signal('creative', ['Idea'])
 
-        # Adding M2M table for field project on 'Post'
-        db.create_table('creative_post_project', (
+        # Adding M2M table for field project on 'Idea'
+        db.create_table('creative_idea_project', (
             ('id', models.AutoField(verbose_name='ID', primary_key=True, auto_created=True)),
-            ('post', models.ForeignKey(orm['creative.post'], null=False)),
+            ('idea', models.ForeignKey(orm['creative.idea'], null=False)),
             ('project', models.ForeignKey(orm['creative.project'], null=False))
         ))
-        db.create_unique('creative_post_project', ['post_id', 'project_id'])
+        db.create_unique('creative_idea_project', ['idea_id', 'project_id'])
 
         # Adding model 'Project'
         db.create_table('creative_project', (
@@ -40,11 +40,11 @@ class Migration(SchemaMigration):
 
 
     def backwards(self, orm):
-        # Deleting model 'Post'
-        db.delete_table('creative_post')
+        # Deleting model 'Idea'
+        db.delete_table('creative_idea')
 
-        # Removing M2M table for field project on 'Post'
-        db.delete_table('creative_post_project')
+        # Removing M2M table for field project on 'Idea'
+        db.delete_table('creative_idea_project')
 
         # Deleting model 'Project'
         db.delete_table('creative_project')
@@ -54,8 +54,8 @@ class Migration(SchemaMigration):
 
 
     models = {
-        'creative.post': {
-            'Meta': {'object_name': 'Post'},
+        'creative.idea': {
+            'Meta': {'object_name': 'Idea'},
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'project': ('django.db.models.fields.related.ManyToManyField', [], {'to': "orm['creative.Project']", 'symmetrical': 'False'}),
             'stage': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['creative.Stage']"}),
