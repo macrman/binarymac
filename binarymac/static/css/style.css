@@ -23,10 +23,14 @@ textarea {
     box-sizing: border-box;
 }
 
-body {
+html, body {
     font-family: 'Asap', sans-serif;
     font-size: 18px;
-    line-height: 1.66667;
+    line-height: 1.77778;
+    height: auto !important%;
+    height: 100%;
+    position: relative;
+    background: #f4f4f4;
 }
 
 /*
@@ -99,12 +103,88 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+h1 { font-size: 36px; line-height: 1.25; margin: 1em 0;}
+h2 { font-size: 32px; line-height: 1.33333; margin: 1em 0;}
+h3 { font-size: 28px; line-height: 1.41421; margin: 1em 0;}
+h4 { font-size: 24px; line-height: 1.5; margin: 1em 0;}
+h5 { font-size: 21px; line-height: 1.6; margin: 1em 0;}
+h6 { font-size: 18px; line-height: 1.66667; margin: 1em 0;}
+
+.page_wrap {
+    height: 100%;
+}
+
+.bio {
+    width: 25%;
+    text-align: center;
+    background: #112;
+    color: #dde;
+}
+
+.idea_list, .content_plane, .bio {
+    float: left;
+    display: block;
+    height: auto !important;
+    min-height: 100%;
+}
+
+.idea_list {
+    padding-left: 0px;
+    list-style-type: none;
+    margin: 0px;
+    width: 25%;
+}
+
+.idea_list_item {
+    margin: 0;
+    display: table;
+    vertical-align: top;
+}
 
 
+.meta_bar {
+    background: #454545;
+    display: table-cell;
+    width: 48px;
+}
+.idea_main {
+    display: table-cell;
+    background: #ffffff;
+    padding: 6px 20px;
+}
 
+.experimentation .meta_bar {
+    background: #11b;
+}
+.documentation .meta_bar {
+    background: #51a;
+}
+.incubation .meta_bar {
+    background: #0a6;
+}
+.implementation .meta_bar {
+    background: #6e0;
+}
 
+.idea_title {
+    font-size: 16px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
 
+.idea_project_list {
+    font-size: 14px;
+    line-height: 1.77778;
+}
 
+.content_plane {
+    width: 50%;
+    padding: 1.5em;
+}
+
+.featured_image {
+    width: 100%;
+}
 
 
 

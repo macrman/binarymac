@@ -13,6 +13,9 @@ class Migration(SchemaMigration):
             ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('title', self.gf('django.db.models.fields.CharField')(max_length=100)),
             ('stage', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['creative.Stage'])),
+            ('published', self.gf('django.db.models.fields.BooleanField')(default=False)),
+            ('last_updated', self.gf('django.db.models.fields.DateTimeField')(auto_now=True, blank=True)),
+            ('featured_image', self.gf('django.db.models.fields.files.ImageField')(max_length=100, blank=True)),
         ))
         db.send_create_signal('creative', ['Idea'])
 
@@ -56,8 +59,11 @@ class Migration(SchemaMigration):
     models = {
         'creative.idea': {
             'Meta': {'object_name': 'Idea'},
+            'featured_image': ('django.db.models.fields.files.ImageField', [], {'max_length': '100', 'blank': 'True'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'project': ('django.db.models.fields.related.ManyToManyField', [], {'to': "orm['creative.Project']", 'symmetrical': 'False'}),
+            'last_updated': ('django.db.models.fields.DateTimeField', [], {'auto_now': 'True', 'blank': 'True'}),
+            'project': ('django.db.models.fields.related.ManyToManyField', [], {'to': "orm['creative.Project']", 'symmetrical': 'False', 'blank': 'True'}),
+            'published': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
             'stage': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['creative.Stage']"}),
             'title': ('django.db.models.fields.CharField', [], {'max_length': '100'})
         },

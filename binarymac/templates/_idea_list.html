@@ -1,0 +1,28 @@
+<ul class="idea_list">
+    {% for idea in idea_list %}     
+    <li class="idea_list_item {{ idea.stage|lower }}">
+            <h1 class ="idea_title">
+                {{ idea.title }}
+            </h1>
+            {% if idea.featured_image %}
+                <img src="" class=featured_image>
+            {% endif %}
+            <div class="idea_project_list">
+                Project:
+                {% if idea.project %}
+                    {% for project in idea.project.all %}
+                        <a>{{ project }}</a>
+                    {% endfor %}
+                {% else %} none
+                {% endif %}
+            </div>
+        </li>
+    {% endfor %}
+</ul>
+
+
+
+
+
+                   
+

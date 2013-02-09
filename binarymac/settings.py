@@ -126,6 +126,7 @@ INSTALLED_APPS = [
 
     # external
     "south",
+    "dajaxice",
 
     # project
     "binarymac",

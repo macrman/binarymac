@@ -1,15 +1,41 @@
 {% extends 'base.html' %}
 
 {% block title %}
-{% endblock %}
-
-{% block style %}
+blah blah blah
 {% endblock %}
 
 {% block main %}
-<div class='page-wrap clearfix'>
-    {% include '_post_list.html' %}
+<div class='page_wrap clearfix'>
+    {% include '_bio.html' %}
     {% include '_content_plane.html' %}
-    {% include '_search_plane.html' %}
+    <ul class="idea_list">
+        {% for idea in idea_list %}     
+            <li class="idea_list_item {{ idea.stage|lower }}">
+
+                <div class="meta_bar">
+                </div>
+                <div class="idea_main">
+                    <h1 class ="idea_title">
+                        {{ idea.title }}
+                    </h1>
+                    {% if idea.featured_image %}
+                    {% load static %}
+                    <img src="{% get_media_prefix %}{{ idea.featured_image }}" class=featured_image>
+                    {% endif %}
+                    <div class="idea_project_list">
+                        Project:
+                        {% if idea.project %}
+                            {% for project in idea.project.all %}
+                                <a>{{ project }}</a>
+                            {% endfor %}
+                        {% else %} none
+                        {% endif %}
+                    </div>
+                </div>
+
+
+            </li>
+        {% endfor %}
+    </ul>
 </div>
 {% endblock %}
