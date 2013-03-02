@@ -1,5 +1,5 @@
 from django.contrib import admin
-from creative.models import Idea, Project, Stage
+from .models import Idea, Project, Stage
 
 
 admin.site.register(Idea)

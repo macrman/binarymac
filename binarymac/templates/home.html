@@ -6,36 +6,36 @@ blah blah blah
 
 {% block main %}
 <div class='page_wrap clearfix'>
-    {% include '_bio.html' %}
-    {% include '_content_plane.html' %}
-    <ul class="idea_list">
+    <div class="top_bar">
+    </div>
+    <button class="prev"><</button>
+    <div class="idea_list">
         {% for idea in idea_list %}     
-            <li class="idea_list_item {{ idea.stage|lower }}">
-
-                <div class="meta_bar">
-                </div>
-                <div class="idea_main">
-                    <h1 class ="idea_title">
-                        {{ idea.title }}
-                    </h1>
+            <div class="idea_list_item_wrapper {{ idea.stage|lower }}">
+                <div class="idea_list_item clearfix {{ idea.stage|lower }}">
                     {% if idea.featured_image %}
                     {% load static %}
                     <img src="{% get_media_prefix %}{{ idea.featured_image }}" class=featured_image>
                     {% endif %}
-                    <div class="idea_project_list">
-                        Project:
-                        {% if idea.project %}
-                            {% for project in idea.project.all %}
-                                <a>{{ project }}</a>
-                            {% endfor %}
-                        {% else %} none
-                        {% endif %}
-                    </div>
+                    <img class="stage_icon hidden" src="{% get_media_prefix %}{{ idea.stage.icon }}"></img>
+                    <header class="idea_header">
+                        <h1 class ="idea_title">
+                            {{ idea.title }}
+                        </h1>
+                        <div class="idea_project_list">
+                            Project:
+                            {% if idea.project %}
+                                {% for project in idea.project.all %}
+                                    <a>{{ project }}</a>
+                                {% endfor %}
+                            {% else %} none
+                            {% endif %}
+                        </div>
+                    </header>
                 </div>
-
-
-            </li>
+            </div>
         {% endfor %}
-    </ul>
+    </div>
+    <button class="next">></button>
 </div>
 {% endblock %}

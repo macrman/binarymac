@@ -1,5 +1,5 @@
-from creative.models import Idea
 from django.views.generic import ListView
+from .models import Idea
 
 
 class IdeaListView(ListView):
