@@ -23,17 +23,17 @@ blah blah blah
     <div class="idea_list">
         {% for idea in idea_list %}     
             <div class="idea_list_item clearfix {{ idea.stage|lower }}">
-                <div class="stage">{{ idea.stage }}</div>
                 {% if idea.featured_image %}
                 <img src="http://lorempixel.com/600/400/" class=featured_image />
                 {% endif %}
-
-
+                    <div class="idea_meta clearfix">
+                        <div class="date">{{ idea.last_updated|date:"M d, Y" }}</div>
+                        <div class="stage">{{ idea.stage }}</div>
+                    </div>
                 <header class="idea_header clearfix">
                     <div class="stage_icon_wrapper ">    
                         <span class="stage_icon icon_{{ idea.stage|lower }}"></span>
                     </div>
-                    <div class="date">{{ idea.last_updated }}</div>
                     <h1 class ="idea_title">
                         {{ idea.title }}
                     </h1>

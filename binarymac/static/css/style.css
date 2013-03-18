@@ -177,12 +177,6 @@ h6 { font-size: 18px; line-height: 1.66667; margin: 1em 0;}
 .implementation {
 }
 
-.stage {
-    padding: 0 8px;
-    text-align: center;
-    font-size: 16px;
-    line-height: 2.5;
-}
 
 .featured_image {
     width: 100%;
@@ -194,19 +188,20 @@ h6 { font-size: 18px; line-height: 1.66667; margin: 1em 0;}
     display: block;
     left: 50%;
     margin-left: -24px;
-    top: -24px;
+    top: -48px;
     position: absolute;
     z-index: 999;
     border-radius: 100%;
     text-align: center;
-    color: #fff;
+    color: rgba(255,255,255,1); 
     line-height: 48px;
-    background: blue;
-    box-shadow: 0px 0px 0px 7px #fff;
+    background: rgb(59, 147, 234);
+    box-shadow: 0px 0px 0px 6px #FBFBFB;
 }
 
 .stage_icon {
     vertical-align: sub;
+    font-size: 25px;
 }
 
 @font-face {
@@ -247,6 +242,26 @@ h6 { font-size: 18px; line-height: 1.66667; margin: 1em 0;}
 .icon_implementation:before {
     content:"\72";
 }
+
+.idea_meta {
+    text-align: center;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.stage, .date {
+    width: 50%;
+    float: left;
+}
+
+.stage {
+    padding-left: 32px;
+}
+
+.date {
+    padding-right: 32px;
+}
+
 
 .idea_header {
     position: relative;
