@@ -3,7 +3,7 @@
 *.py[co]
 *.gondor
 *.swp
-*.un
+*.un*
 
 # Packages
 *.egg

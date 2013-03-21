@@ -7,7 +7,7 @@ button,
 input,
 select,
 textarea {
-    color: #222;
+    color: #333;
 }
 
 * {
@@ -20,9 +20,8 @@ body {
     font-family: 'Merriweather Sans', sans-serif;
     font-size: 18px;
     line-height: 1.77778;
-    background: rgb(23,35,57);
     font-weight: 300;
-    font-weight: 300;
+    background: #ebebeb;
 }
 
 /*
@@ -95,6 +94,10 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.pad {
+    padding:0 18px;
+}
+
 h1 { font-size: 36px; line-height: 1.25; margin: 1em 0;}
 h2 { font-size: 32px; line-height: 1.33333; margin: 1em 0;}
 h3 { font-size: 28px; line-height: 1.41421; margin: 1em 0;}
@@ -108,64 +111,28 @@ h6 { font-size: 18px; line-height: 1.66667; margin: 1em 0;}
 .top_bar {
     position: fixed;
     top: 0px;
-    background: #eee;
+    background: #fff;
     height: 50px;
     width: 100%;
     z-index: 1687;
+    box-shadow: 0px 0px 1px 1px #ddd;
 }
 
-.bio_wrapper {
-    padding: 16px;
-}
-
-.bio {
-    background: #fff;
-    margin-top: 16px;
-}
-
-.username {
-    text-align: center;
-}
-
-.header_img {
+.idea_list {
     width: 100%;
+    margin-top: 50px;
+    padding: 18px;
 }
 
-.intro {
-    position: relative;
-    padding: 0 18px;
-}
-
-.profile_img {
-    border-radius: 100%;
-    position: absolute;
-    left: 50%;
-    text-align: center;
-    margin-left: -36px;
-    top: -36px; 
-    width: 72px;
-    border: 6px solid #fff;
-    
-}
-
-.name {
-    text-align: center;
-    font-weight: 400;
-}
-
-.about {
-    font-size: 20px;
-}
-
-.idea_list, .bio_wrapper {
-    width: 50%;
-    padding-top: 50px;
-    float:left;
+.idea_list_item_wrapper {
+    width: 33.33%;
+    padding: 18px;
+    float: left;
 }
 
 .idea_list_item {
-    margin: 16px;
-    background: #fbfbfb;
+    background: #fff;
+    box-shadow: 0px 0px 3px 0px rgba(50,50,50,.7);
 }
 
 .experimentation {
@@ -182,13 +149,14 @@ h6 { font-size: 18px; line-height: 1.66667; margin: 1em 0;}
     width: 100%;
 }
 
+
 .stage_icon_wrapper {
     width: 48px;
     height: 48px;
     display: block;
     left: 50%;
     margin-left: -24px;
-    top: -48px;
+    top: -24px;
     position: absolute;
     z-index: 999;
     border-radius: 100%;
@@ -196,7 +164,6 @@ h6 { font-size: 18px; line-height: 1.66667; margin: 1em 0;}
     color: rgba(255,255,255,1); 
     line-height: 48px;
     background: rgb(59, 147, 234);
-    box-shadow: 0px 0px 0px 6px #FBFBFB;
 }
 
 .stage_icon {
@@ -249,13 +216,12 @@ h6 { font-size: 18px; line-height: 1.66667; margin: 1em 0;}
     line-height: 2;
 }
 
-.stage, .date {
-    width: 50%;
-    float: left;
-}
-
 .stage {
-    padding-left: 32px;
+    text-align: center; 
+    padding-top: 24px;
+    color: #3B93EA;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .date {
@@ -265,22 +231,30 @@ h6 { font-size: 18px; line-height: 1.66667; margin: 1em 0;}
 
 .idea_header {
     position: relative;
-    padding: 0px 18px 18px 18px;
+}
+
+.featured_image + .idea_header > .idea_title {
+    font-size: 28px;
 }
 
 .idea_title {
-margin-top: .5em;
-margin-bottom: .5em;
-text-align: center;
-font-size: 30px;
-font-weight: 400;
+    margin-top: 18px;
+    margin-bottom: 36px;
+    font-weight: 400;
+    text-align: center;
 }
 
 
+.post {
+    font-size: 16px;
+    color: #333;
+    text-overflow: ellipsis;
+}
+
 .idea_project_list {
-font-size: 14px;
-line-height: 1.77778;
-display: none;
+    font-size: 14px;
+    line-height: 1.77778;
+    display: none;
 }
 
 
@@ -402,9 +376,6 @@ Modify as content requires.
 
 @media only screen and (min-width: 500px) {
 /* Style adjustments for viewports that meet the condition */
-.bio_wrapper, .idea_list {
-    max-width: 400px;
-}
 }
 
 @media print,

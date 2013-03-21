@@ -8,6 +8,7 @@ class Idea(models.Model):
     published = models.BooleanField()
     last_updated = models.DateTimeField(auto_now=True, blank=True)
     featured_image = models.ImageField(upload_to="featured", blank=True)
+    content = models.TextField()
 
     def __unicode__(self):
         return self.title

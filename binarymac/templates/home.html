@@ -9,45 +9,21 @@ blah blah blah
 <div class='page_wrap clearfix'>
     <div class="top_bar">
     </div>
-    <div class="bio_wrapper clearfix">
-        <div class="bio clearfix">
-            <div class="username">binarymac</div>
-            <img class="header_img" src="http://lorempixel.com/1600/900/city"></img>
-            <div class="intro clearfix">
-                <img class="profile_img" src="http://lorempixel.com/100/100/people/9/" />
-                <h1 class="name">Your Name</h1>
-                <p class="about">Hello, I'm Mac and I'm a Creator</p>
-            </div>
-        </div>
-    </div>
     <div class="idea_list">
         {% for idea in idea_list %}     
-            <div class="idea_list_item clearfix {{ idea.stage|lower }}">
-                {% if idea.featured_image %}
-                <img src="http://lorempixel.com/600/400/" class=featured_image />
-                {% endif %}
-                    <div class="idea_meta clearfix">
-                        <div class="date">{{ idea.last_updated|date:"M d, Y" }}</div>
-                        <div class="stage">{{ idea.stage }}</div>
+        <div class="idea_list_item_wrapper clearfix">
+            {% if idea.featured_image %}
+                <div class="idea_list_item clearfix image {{ idea.stage|lower }}">
+                    <img src="http://lorempixel.com/600/400/" class=featured_image />
+            {% else %}
+                <div class="idea_list_item clearfix {{ idea.stage|lower }}">
+            {% endif %}
+                    {% include "_idea_header.html" %}
+                    <div class="post pad hidden">
+                        <p>Uhm... Well hello there world, I'm just testing to see what this is going to look like.</p>
                     </div>
-                <header class="idea_header clearfix">
-                    <div class="stage_icon_wrapper ">    
-                        <span class="stage_icon icon_{{ idea.stage|lower }}"></span>
-                    </div>
-                    <h1 class ="idea_title">
-                        {{ idea.title }}
-                    </h1>
-                    <div class="idea_project_list">
-                        Project:
-                        {% if idea.project %}
-                            {% for project in idea.project.all %}
-                                <a>{{ project }}</a>
-                            {% endfor %}
-                        {% else %} none
-                        {% endif %}
-                    </div>
-                </header>
-            </div>
+                </div>
+        </div>
         {% endfor %}
     </div>
 </div>
