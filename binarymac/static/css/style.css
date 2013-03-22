@@ -125,11 +125,12 @@ h6 { font-size: 18px; line-height: 1.66667; margin: 1em 0;}
 }
 
 .idea_list_item_wrapper {
-    width: 33.33%;
-    padding: 18px;
-    float: left;
 }
 
+.col {
+    width: 33.33333%;
+    float: left;
+}
 .idea_list_item {
     background: #fff;
     box-shadow: 0px 0px 3px 0px rgba(50,50,50,.7);
@@ -137,18 +138,14 @@ h6 { font-size: 18px; line-height: 1.66667; margin: 1em 0;}
 
 .experimentation {
 }
-.documentation {
-}
 .incubation {
 }
 .implementation {
 }
 
-
 .featured_image {
     width: 100%;
 }
-
 
 .stage_icon_wrapper {
     width: 48px;
@@ -228,7 +225,6 @@ h6 { font-size: 18px; line-height: 1.66667; margin: 1em 0;}
     padding-right: 32px;
 }
 
-
 .idea_header {
     position: relative;
 }
@@ -244,7 +240,6 @@ h6 { font-size: 18px; line-height: 1.66667; margin: 1em 0;}
     text-align: center;
 }
 
-
 .post {
     font-size: 16px;
     color: #333;
@@ -256,16 +251,6 @@ h6 { font-size: 18px; line-height: 1.66667; margin: 1em 0;}
     line-height: 1.77778;
     display: none;
 }
-
-
-
-
-
-
-
-
-
-
 
 /* ==========================================================================
 Helper classes

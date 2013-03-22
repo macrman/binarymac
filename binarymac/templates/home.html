@@ -10,21 +10,26 @@ blah blah blah
     <div class="top_bar">
     </div>
     <div class="idea_list">
-        {% for idea in idea_list %}     
         <div class="idea_list_item_wrapper clearfix">
-            {% if idea.featured_image %}
-                <div class="idea_list_item clearfix image {{ idea.stage|lower }}">
-                    <img src="http://lorempixel.com/600/400/" class=featured_image />
-            {% else %}
-                <div class="idea_list_item clearfix {{ idea.stage|lower }}">
-            {% endif %}
-                    {% include "_idea_header.html" %}
-                    <div class="post pad hidden">
-                        <p>Uhm... Well hello there world, I'm just testing to see what this is going to look like.</p>
-                    </div>
-                </div>
+            <div class="incubation col">
+                <span>Incubation</span>
+                {% for idea in incubation_list %}
+                    {{ idea }}
+                {% endfor %}
+            </div>
+            <div class="experimentation col">
+                {% for idea in experimentation_list %}
+                    {{ idea }}
+                {% endfor %}
+                <span>Experimentation</span>
+            </div>
+            <div class="implementation col">
+                <span>Implementation</span>
+                {% for idea in implementation_list %}
+                    {{ idea }}
+                {% endfor %}
+            </div>
         </div>
-        {% endfor %}
     </div>
 </div>
 {% endblock %}
