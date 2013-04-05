@@ -24,6 +24,7 @@ class Project(models.Model):
 class Stage(models.Model):
     name = models.CharField(max_length=100)
     icon = models.ImageField(upload_to="stage_icons", blank=True)
+    info = models.TextField()
 
     def __unicode__(self):
         return self.name

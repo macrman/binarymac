@@ -1,7 +1,6 @@
 <header class="idea_header clearfix">
 <div class="idea_meta clearfix hidden">
         <div class="date">{{ idea.last_updated|date:"M d, Y" }}</div>
-    </div>
     <div class="stage_icon_wrapper">    
         <span class="stage_icon icon_{{ idea.stage|lower }}"></span>
     </div>
@@ -18,4 +17,5 @@
         {% else %} none
         {% endif %}
     </div>
+</div>
 </header>
