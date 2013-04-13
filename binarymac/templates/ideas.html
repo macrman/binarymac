@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+blah blah blah
+{% endblock %}
+
+{% block left_bar %}
+    {% include "_left_bar.html" %}
+{% endblock %}
+
+{% block main %}
+    <section class="ideas_wrapper clearfix">
+        <h3 class="ideas_heading">
+            {{ stage_detail.name }}
+        </h3>
+        <div class="ideas clearfix">
+            {% include "_idea_list.html" %}
+        </div>
+    </section>
+     <div class="stage_detail right_pane">
+        {{ stage_detail.name }}
+        {{ stage_detail.info }}
+    </div>
+    {% block idea_detail %}
+    {% endblock %}
+{% endblock %}

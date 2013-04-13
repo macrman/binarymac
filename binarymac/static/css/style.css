@@ -21,7 +21,6 @@ body {
     font-size: 18px;
     line-height: 1.77778;
     font-weight: 300;
-    background: #ebebeb;
 }
 
 /*
@@ -105,6 +104,15 @@ h4 { font-size: 24px; line-height: 1.5; margin: 1em 0;}
 h5 { font-size: 21px; line-height: 1.6; margin: 1em 0;}
 h6 { font-size: 18px; line-height: 1.66667; margin: 1em 0;}
 
+.global_nav {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 64px;
+    border-bottom: 1px solid #888;
+}
+
 .page_wrap {
     position: absolute;
     top: 0px;
@@ -113,60 +121,109 @@ h6 { font-size: 18px; line-height: 1.66667; margin: 1em 0;}
     right: 0px;
 }
 
+.site_title {
+    margin-top: 0px;
+    margin-bottom: 18px;
+    font-weight: 400;
+    text-align: center;
+}
+
 
 .left_bar {
     font-size: 16px;
-    padding: 18px;
     left: 0px;
     top: 0px;
     width: 16%;
     bottom: 0px;
-    background: #222;
     position: absolute;
-    color: #eee;
 }
 
-.bio_pic {
-    width :100%;
-    border-radius: 100%;
-    border: 3px solid #fff;
-    box-shadow: 0px 0px 0px 1px #000;
+.creations_nav {
+
 }
 
-.global_nav {
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.global_link {
+.nav_link {
+    color: #333;
+    width: 100%;
+    font-size: 16px;
+    height: 48px;
     text-decoration: none;
-    color: #eee;
-    display: block;
+    display: table;
 }
 
-.ideas {
+
+.glyph {
+    text-align: left;
+    display: table-cell;
+    width: 32px;
+    padding-left: 4px;
+    z-index: 120;
+    font-size: 21px;
+}
+
+.link_text{
+    vertical-align: center;
+    display: table-cell;
+    text-transform: capitalize;
+    z-index: 120;
+}
+
+.stage_list {
+    vertical-align: center;
+    list-style-type: none;
+    padding-left: 32px;
+}
+
+.ideas_wrapper {
     width: 24%;
     top: 0px;
     bottom: 0px;
     left: 16%;
-    overflow: auto;
     position: absolute;
+    z-index: 90;
+    border-right: 1px solid #888;
+    border-left: 1px solid #888;
 }
 
-.ideas::-moz-scrollbar {
-    display: none;
+.ideas_heading {
+    padding-left: 18px;
+    font-size: 18px;
+    margin: 0 0;
+    font-weight: 400;
+    line-height: 2;
+    border-bottom: 1px solid #888;
+    text-transform: capitalize;
+}
+
+.ideas {
+    overflow: auto;
+    position: absolute;
+    top: 38px;
+    bottom: 0px;
 }
 
 .idea_wrapper {
-    padding: 1px;
+    border-bottom: 1px solid #888;
 }
 
 .idea {
     padding: 18px;
-    background: #f9f9f9;
     height: 100%;
 }
 
+.idea .date {
+    font-size: 14px;
+    font-weight: 400;
+}
+
 .img_post .idea_title {
-    font-size: 21px;
+    font-size: 24px;
 }
 
 .no_img .idea_title {
@@ -175,33 +232,39 @@ h6 { font-size: 18px; line-height: 1.66667; margin: 1em 0;}
 
 .idea_title {
     margin-top: 0px;
-    margin-bottom: 8px;
+    margin-bottom: 0px;
     font-weight: 400;
 }
 
 .featured_image {
     width: 100%;
+    margin-bottom: 8px;
 }
 
-.stage_icon_wrapper {
-    width: 48px;
-    height: 48px;
-    display: block;
-    left: 50%;
-    margin-left: -24px;
-    top: -24px;
+.right_pane {
     position: absolute;
-    z-index: 999;
-    border-radius: 100%;
-    text-align: center;
-    color: rgba(255,255,255,1); 
-    line-height: 48px;
-    background: rgb(59, 147, 234);
+    left: 40%;
+    width: 60%;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    overflow: auto;
 }
 
-.stage_icon {
-    vertical-align: sub;
-    font-size: 25px;
+.stage_detail {
+    z-index:70;
+}
+
+.idea_detail {
+    padding: 18px;
+    z-index:80;
+    background: #fff;
+    font-size: 18px;
+}
+
+.content {
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 @font-face {

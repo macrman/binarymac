@@ -1,0 +1,14 @@
+{% extends "ideas.html" %}
+
+{% block idea_detail %}
+<div class="idea_detail right_pane">
+    <section class="content">
+        {% if current_idea.featured_image %}
+            <img class=featured_image src="https://www.lorempixel.com/900/600/"></img>
+        {% endif %}
+        <h1>{{ current_idea.title }}</h1>
+        <p>{{ current_idea.last_updated }}</p>
+        <p>{{ current_idea.content }}</p>
+    </section>
+</div>
+{% endblock %}
