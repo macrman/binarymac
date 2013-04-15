@@ -1,5 +1,6 @@
 {% for idea in idea_list %}
-    <div class="idea_wrapper clearfix">
+    <a class="idea_wrapper clearfix"
+        href="{% url 'idea_detail' stage=idea.stage pk=idea.pk %}">
         {% if idea.featured_image %}
             <article class="idea img_post clearfix">
                 <img 
@@ -17,5 +18,5 @@
                 <div class="date">{{ idea.last_updated }}</div>
             </article>
         {% endif %}
-    </div>
+    </a>
 {% endfor %}

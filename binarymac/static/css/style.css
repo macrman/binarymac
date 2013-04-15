@@ -104,15 +104,6 @@ h4 { font-size: 24px; line-height: 1.5; margin: 1em 0;}
 h5 { font-size: 21px; line-height: 1.6; margin: 1em 0;}
 h6 { font-size: 18px; line-height: 1.66667; margin: 1em 0;}
 
-.global_nav {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    height: 64px;
-    border-bottom: 1px solid #888;
-}
-
 .page_wrap {
     position: absolute;
     top: 0px;
@@ -136,10 +127,6 @@ h6 { font-size: 18px; line-height: 1.66667; margin: 1em 0;}
     width: 16%;
     bottom: 0px;
     position: absolute;
-}
-
-.creations_nav {
-
 }
 
 .nav {
@@ -209,7 +196,10 @@ h6 { font-size: 18px; line-height: 1.66667; margin: 1em 0;}
 }
 
 .idea_wrapper {
+    display: block;
     border-bottom: 1px solid #888;
+    text-decoration: none;
+    color: #333;
 }
 
 .idea {
