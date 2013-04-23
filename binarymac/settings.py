@@ -131,7 +131,6 @@ INSTALLED_APPS = [
     # project
     "binarymac",
     "creative",
-    "djangit",
 ]
 
 # A sample logging configuration. The only tangible logging

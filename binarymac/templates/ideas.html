@@ -10,18 +10,16 @@ blah blah blah
 {% endblock %}
 
 {% block main %}
-    <section class="ideas_wrapper clearfix">
-        <h3 class="ideas_heading">
-            {{ stage_detail.name }}
-        </h3>
-        <div class="ideas clearfix">
             {% include "_idea_list.html" %}
-        </div>
-    </section>
-     <div class="stage_detail right_pane">
-        {{ stage_detail.name }}
-        {{ stage_detail.info }}
+<div class="detail_o_wrap">
+     <div class="stage_detail">
+         <section class="stage_detail_content">
+            <div class="icon_{{ stage_detail.name|lower }} stage_detail_icon"></div>
+            <h1 class="stage_detail_header">{{ stage_detail.name }}</h1>
+            <p>{{ stage_detail.info }}</p>
+        </section>
     </div>
     {% block idea_detail %}
     {% endblock %}
+</div>
 {% endblock %}

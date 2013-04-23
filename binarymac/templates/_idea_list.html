@@ -1,22 +1,31 @@
-{% for idea in idea_list %}
-    <a class="idea_wrapper clearfix"
-        href="{% url 'idea_detail' stage=idea.stage pk=idea.pk %}">
-        {% if idea.featured_image %}
-            <article class="idea img_post clearfix">
-                <img 
-                    class="featured_image" 
-                    src="https://www.lorempixel.com/900/600/"
-                </img>
-                <h1 class="idea_title">
-                    {{ idea }}
-                </h1>
-                <div class="date">{{ idea.last_updated }}</div>
-            </article>
-        {% else %}
-            <article class="idea clearfix no_img">
-                <h1 class="idea_title">{{ idea }}</h1>
-                <div class="date">{{ idea.last_updated }}</div>
-            </article>
-        {% endif %}
-    </a>
-{% endfor %}
+<div class="idea_list_o_wrap">
+    <section class="idea_list_wrap clearfix">
+        <h3 class="idea_list_heading">
+            {{ stage_detail.name }}
+        </h3>
+        <div class="idea_list clearfix">
+        {% for idea in idea_list %}
+            <a class="idea_wrap clearfix"
+                href="{% url 'idea_detail' stage=idea.stage pk=idea.pk %}">
+                {% if idea.featured_image %}
+                    <article class="idea img_post clearfix">
+                        <img 
+                            class="featured_image" 
+                            src="https://www.lorempixel.com/900/600/"
+                        </img>
+                        <h1 class="idea_title">
+                            {{ idea }}
+                        </h1>
+                        <div class="date">{{ idea.last_updated|date:"M d, Y" }}</div>
+                    </article>
+                {% else %}
+                    <article class="idea clearfix no_img">
+                        <h1 class="idea_title">{{ idea }}</h1>
+                        <div class="date">{{ idea.last_updated|date:"M d, Y" }}</div>
+                    </article>
+                {% endif %}
+            </a>
+        {% endfor %}
+        </div>
+    </section>
+</div>
