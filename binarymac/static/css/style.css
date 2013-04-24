@@ -291,6 +291,31 @@ a {
     margin-bottom: 8px;
 }
 
+.idea_search {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display: table;
+    height: 45px;
+}
+
+.search_form {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.search_form span {
+    display: block;
+    padding: 0 18px;
+}
+
+.search_input {
+    width: 100%;
+    font-size: 15px;
+    border: 1px solid #cacaca;
+    height: 28px;
+}
+
 .detail_o_wrap {
     overflow: auto;
     position: absolute;
