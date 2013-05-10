@@ -10,7 +10,7 @@ class DetailAndListMixin(object):
         passed, it will get all ideas.
         '''
         all_ideas = Idea.objects.order_by('-last_updated')
-        if stage == "all" or None:
+        if stage == "everything":
             idea_list = all_ideas
         else:
             idea_list = all_ideas.filter(stage__name__iexact=stage)

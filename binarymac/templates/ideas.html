@@ -10,13 +10,77 @@ blah blah blah
 {% endblock %}
 
 {% block main %}
-            {% include "_idea_list.html" %}
+
+<div class="idea_list_o_wrap">
+    <section class="idea_list_wrap clearfix">
+        <h3 class="idea_list_heading">
+            {{ stage_detail.name }}
+        </h3>
+        <div class="idea_list clearfix">
+            <div class="newer_link">Check For Load Newer Items</div>
+            {% for idea in idea_list %}
+                <a class="idea_wrap clearfix"
+                    href="{% url 'idea_detail' stage=idea.stage pk=idea.pk %}">
+                    {% if idea.featured_image %}
+                        <article class="idea img_post clearfix">
+                            <img 
+                                class="featured_image" 
+                                src="https://www.lorempixel.com/900/600/"
+                            </img>
+                            <h1 class="idea_title">
+                                {{ idea }}
+                            </h1>
+                            <div class="date">{{ idea.last_updated|date:"M d, Y" }}</div>
+                        </article>
+                    {% else %}
+                        <article class="idea clearfix no_img">
+                            <h1 class="idea_title">{{ idea }}</h1>
+                            <div class="date">{{ idea.last_updated|date:"M d, Y" }}</div>
+                        </article>
+                    {% endif %}
+                </a>
+            {% endfor %}
+            <div class="older_link">Check For Load Older Items</div>
+        </div>
+        <div class="idea_search">
+            <form 
+                class="search_form" 
+                action="http://" 
+                method="get">
+                <span>
+                    <input 
+                        class="search_input" 
+                        type="text" 
+                        placeholder="Search" 
+                        value="">
+                    </input>
+                </span>
+            </form>
+        </div>
+    </section>
+</div>
+
+
 <div class="detail_o_wrap">
      <div class="stage_detail">
          <section class="stage_detail_content">
-            <div class="icon_{{ stage_detail.name|lower }} stage_detail_icon"></div>
-            <h1 class="stage_detail_header">{{ stage_detail.name }}</h1>
-            <p>{{ stage_detail.info }}</p>
+            {% with stg=stage|lower %}
+                <div class="icon_{{ stg }} stage_detail_icon"></div>
+                <h1 class="stage_detail_header">{{ stg }}</h1>
+                {% if stg == "everything" %}
+                    <p>Something about Everything</p>
+                {% elif stg == "incubation" %}
+                    <p>Something about Inucbation</p>
+                {% elif stg == "analyzation" %}
+                    <p>Something about Analyzation</p>
+                {% elif stg == "experimentation" %}
+                    <p>Something about Experimentation</p>
+                {% elif stg == "implementation" %}
+                    <p>Something about Implementation</p>
+                {% elif stg == "documentation" %}
+                    <p>Something about Documentation</p>
+                {% endif %}
+            {% endwith %}
         </section>
     </div>
     {% block idea_detail %}
