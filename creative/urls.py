@@ -1,16 +1,16 @@
 from django.conf.urls import url, patterns
-from .views import IdeaListView, IdeaListAndDetailView
+from .views import (IdeaDetailView, IdeaListView)
 
 urlpatterns = patterns(
     '',
     url(
         r'(?P<stage>\w+)/(?P<pk>\d+)/$',
-        IdeaListAndDetailView.as_view(),
-        name="idea_detail",
+        IdeaDetailView.as_view(),
+        name='idea_detail',
     ),
     url(
         r'(?P<stage>\w+)/$',
         IdeaListView.as_view(),
-        name="idea_list",
+        name='Idea_list',
     ),
 )

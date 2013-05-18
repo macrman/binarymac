@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+blah blah blah
+{% endblock %}
+
+
+{% block menu %}
+    {% include 'menu.html' %}
+{% endblock %}
+
+{% block main %}
+<div class="idea_list_o_wrap">
+    <div class="content_heading clearfix">
+        <div class='action_button_wrap'>
+            <div class="action_button">
+                <span>Refresh</span>
+            </div>
+            <div class="action_button">
+                <span>Sort by: Newest</span>
+            </div>
+            <div class="action_button">
+                <span>View as: Cards</span>
+            </div>
+        </div>
+    </div>
+    <div class="idea_list clearfix">
+        {% for idea in idea_list %}
+        <a class="idea_wrap " href="{% url 'idea_detail' stage=idea.get_stage_display|lower pk=idea.pk %}">
+                <article 
+                    class="idea img_post"
+                >
+                    <div class="idea_header">
+                        <span class="icon_{{ idea.get_stage_display|lower }}"></>
+                        <span class="idea_stage" >
+                            {{ idea.get_stage_display }}
+                        </span>
+                    </div>
+                    <div class='idea_content'>
+                        <img 
+                            class="featured_image" 
+                            src="https://www.lorempixel.com/900/600/">
+                        </img>
+                        <h1 class="idea_title">
+                            {{ idea }}
+                        </h1>
+                        <div class="date">
+                            {{ idea.last_updated|date:"M d, Y" }}
+                        </div>
+                    </div>
+                </article>
+            </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

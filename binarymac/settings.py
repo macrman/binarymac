@@ -127,7 +127,6 @@ INSTALLED_APPS = [
 
     # external
     "south",
-    "dajaxice",
     "debug_toolbar",
 
     # project
