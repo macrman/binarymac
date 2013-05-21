@@ -5,15 +5,18 @@
 blah blah blah
 {% endblock %}
 
-
 {% block menu %}
     {% include 'menu.html' %}
 {% endblock %}
 
 {% block main %}
-<div class="idea_list_o_wrap">
-    <div class="content_heading clearfix">
-        <div class='action_button_wrap'>
+<div class="content_wrap">
+    <div class="content_header clearfix">
+        <div class="content_heading ">
+            <span class="icon_{{ stage|lower }}"></span>
+            <span>{{ stage|capfirst }}</span>
+        </div>
+        <div class='action_buttons_wrap '>
             <div class="action_button">
                 <span>Refresh</span>
             </div>
@@ -25,16 +28,16 @@ blah blah blah
             </div>
         </div>
     </div>
-    <div class="idea_list clearfix">
+    <div class="content clearfix">
         {% for idea in idea_list %}
-        <a class="idea_wrap " href="{% url 'idea_detail' stage=idea.get_stage_display|lower pk=idea.pk %}">
-                <article 
-                    class="idea img_post"
-                >
-                    <div class="idea_header">
-                        <span class="icon_{{ idea.get_stage_display|lower }}"></>
+        {% with thestage=idea.get_stage_display %}
+        <div class="idea_wrap">
+            <article class="idea img_post">
+                <a class="idea_link" href="{% url 'idea_detail' stage=thestage|lower pk=idea.pk %}">
+                    <div class="content_header">
+                        <span class="icon_{{ thestage|lower }}"></span>
                         <span class="idea_stage" >
-                            {{ idea.get_stage_display }}
+                            {{ thestage|capfirst }}
                         </span>
                     </div>
                     <div class='idea_content'>
@@ -49,9 +52,12 @@ blah blah blah
                             {{ idea.last_updated|date:"M d, Y" }}
                         </div>
                     </div>
-                </article>
-            </a>
+                </a>
+            </article>
+        </div>
+        {% endwith %}
         {% endfor %}
     </div>
 </div>
+
 {% endblock %}

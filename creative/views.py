@@ -8,6 +8,12 @@ class IdeaDetailView(DetailView):
     model = Idea
     allow_empty = False
 
+    def get_context_data(self, **kwargs):
+        context = super(IdeaDetailView, self).get_context_data(**kwargs)
+        kwargs = self.kwargs
+        context.update(kwargs)
+        return context
+
 
 class IdeaListView(ListView):
 
@@ -21,8 +27,14 @@ class IdeaListView(ListView):
                 return dehumanized
 
     def get_queryset(self):
-        if self.kwargs.get('stage') == 'all':
+        if self.kwargs.get('stage') == 'everything':
             queryset = Idea.objects.all()
         else:
             queryset = Idea.objects.filter(stage=self.dehumanize())
         return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super(IdeaListView, self).get_context_data(**kwargs)
+        kwargs = self.kwargs
+        context.update(kwargs)
+        return context

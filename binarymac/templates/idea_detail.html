@@ -10,8 +10,16 @@ aslkfj;lkdsajflk
 {% endblock %}
 
 {% block main %}
-<div class="idea_detail_wrap">
-    <div class="idea_detail">
+<div class="content_wrap">
+    <div class="content_header">
+        <div class="content_heading">
+            <span class="icon_{{ idea.get_stage_display|lower }}"</span>
+            <span>{{ idea.get_stage_display|capfirst }}</span>
+        </div>
+        <div class="action_buttons_wrap">
+        </div>
+    </div>
+    <div class="content">
         <section class="idea_detail_content">
             <h1>{{ idea.title }}</h1>
             <p>{{ idea.last_updated }}</p>
