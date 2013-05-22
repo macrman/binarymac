@@ -8,7 +8,7 @@ class Idea(models.Model):
     DOCUMENTATION = 'DO'
     STAGE_CHOICES = (
         (INCUBATION, 'incubation'),
-        (ANALYZATION, 'analyzatoin'),
+        (ANALYZATION, 'analyzation'),
         (EXPERIMENTATION, 'experimentation'),
         (DOCUMENTATION, 'documentation'),
     )

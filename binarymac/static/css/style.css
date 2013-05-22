@@ -109,10 +109,59 @@ a {
 .white { background: #fff; }
 .near_white { background: #f8f8f8 }
 .grey { background: #eee;}
+.dark_grey { background: #888; }
+.darker_grey { background: #666; }
 
 .dark { background: #333; }
 .near_black { background: #222; }
 .black { background: #111;}
+
+
+.everything_lighter { background: #C6E6E4; }
+.incubation_lighter { background: #C5E0F3; }
+.analyzation_lighter { background: #D8D9EF; }
+.experimentation_lighter { background: #F3C9DE; }
+.implementation_lighter { background: #F6C8C8; }
+.documentation_lighter { background: #F1CFC1; }
+
+.everything_light { background: #79C4BE; }
+.incubation_light { background: #76B6E3; }
+.analyzation_light { background: #A2A5DA; }
+.experimentation_light { background: #E380B0; }
+.implementation_light { background: #E97E7C; }
+.documentation_light { background: #DE8D6C; }
+
+.everything { background: #2AA198; }
+.incubation { background: #268BD2; }
+.analyzation { background: #6C71C4; }
+.experimentation { background: #D33682; }
+.implementation { background: #DC322F; }
+.documentation { background: #CB4B16; }
+
+.everything_dark { background: #1B6660; }
+.incubation_dark { background: #185885; }
+.analyzation_dark { background: #44477C; }
+.experimentation_dark { background: #852252; }
+.implementation_dark { background: #8B201E; }
+.documentation_dark { background: #802F0E; }
+
+.everything_darker { background: #0B2B29; }
+.incubation_darker { background: #0A2538; }
+.analyzation_darker { background: #1D1E34; }
+.experimentation_darker { background: #380E23; }
+.implementation_darker { background: #3B0D0D; }
+.documentation_darker { background: #361406; }
+
+
+
+
+
+.everything_co { color: #2AA198; }
+.incubation_co { color: #268BD2; }
+.analyzation_co { color: #6C71C4; }
+.experimentation_co { color: #D33682; }
+.implementation_co { color: #DC322F; }
+.documentation_co { color: #CB4B16; }
 
 .active {
 }
@@ -133,7 +182,6 @@ a {
     width: 20%;
     bottom: 0px;
     position: absolute;
-    border-right: 1px solid #222;
 }
 
 .first_tier, .second_tier {
@@ -147,7 +195,6 @@ a {
     display: block; 
     width: 100%;
     color: #fefefe;
-    padding-left: 14px;
     line-height: 45px;
 }
 
@@ -158,14 +205,19 @@ a {
 .menu_link {
     width: 100%;
     display: block;
+    color: #fefefe;
+    font-size: 14px;
+    background: #333;
+    padding: 0px 9px;
+    font-weight: 400;
 }
 
 .first_tier {
-    font-weight: 600;
 }
 
 .second_tier .menu_item {
     padding-left: 32px;
+    margin-top: 4px;
 }
 
 .glyph {
@@ -195,6 +247,7 @@ a {
     color: #fefefe;
     height: 45px;
     line-height: 45px;
+    padding-left: 9px;
 }
 
 .content_heading {
@@ -212,10 +265,9 @@ a {
 .action_button {
     float: left;
     padding: 0 18px;
-    border-left: 1px solid #3691AF;
     font-size: 14px;
     font-weight: 400;
-    border-left: 1px solid #2E7489;
+    border-left: 4px solid rgba( 255, 255, 255, 0.733);
 }
 
 .content {

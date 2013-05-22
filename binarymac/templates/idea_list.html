@@ -11,7 +11,7 @@ blah blah blah
 
 {% block main %}
 <div class="content_wrap">
-    <div class="content_header clearfix">
+    <div class="content_header {{ stage }} clearfix ">
         <div class="content_heading ">
             <span class="icon_{{ stage|lower }}"></span>
             <span>{{ stage|capfirst }}</span>
@@ -28,13 +28,13 @@ blah blah blah
             </div>
         </div>
     </div>
-    <div class="content clearfix">
+    <div class="content clearfix {{ stage }}_lighter">
         {% for idea in idea_list %}
         {% with thestage=idea.get_stage_display %}
         <div class="idea_wrap">
             <article class="idea img_post">
                 <a class="idea_link" href="{% url 'idea_detail' stage=thestage|lower pk=idea.pk %}">
-                    <div class="content_header">
+                    <div class="content_header {{ thestage }}">
                         <span class="icon_{{ thestage|lower }}"></span>
                         <span class="idea_stage" >
                             {{ thestage|capfirst }}

@@ -11,7 +11,7 @@ aslkfj;lkdsajflk
 
 {% block main %}
 <div class="content_wrap">
-    <div class="content_header">
+    <div class="content_header {{ stage }}">
         <div class="content_heading">
             <span class="icon_{{ idea.get_stage_display|lower }}"</span>
             <span>{{ idea.get_stage_display|capfirst }}</span>
