@@ -16,19 +16,8 @@ blah blah blah
             <span class="icon_{{ stage|lower }}"></span>
             <span>{{ stage|capfirst }}</span>
         </div>
-        <div class='action_buttons_wrap '>
-            <div class="action_button">
-                <span>Refresh</span>
-            </div>
-            <div class="action_button">
-                <span>Sort by: Newest</span>
-            </div>
-            <div class="action_button">
-                <span>View as: Cards</span>
-            </div>
-        </div>
     </div>
-    <div class="content clearfix {{ stage }}_lighter">
+    <div class="content clearfix {{ stage }}_dark">
         {% for idea in idea_list %}
         {% with thestage=idea.get_stage_display %}
         <div class="idea_wrap">

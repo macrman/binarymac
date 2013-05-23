@@ -2,6 +2,9 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+@import 'normalize.css';
+@import 'hello.css';
+
 html,
 button,
 input,
@@ -89,6 +92,11 @@ textarea {
     padding: 0.2em 0;
 }
 
+
+/* FONTS *???????/
+ */
+
+
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
@@ -105,6 +113,8 @@ a {
 }
 
 /* COLORS */
+
+/* .367 .733 */
 
 .white { background: #fff; }
 .near_white { background: #f8f8f8 }
@@ -166,9 +176,16 @@ a {
 .active {
 }
 
-.page_wrap {
+.global_nav {
     position: absolute;
     top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.page_wrap {
+    position: absolute;
+    top: 45px;
     bottom: 0px;
     left: 0px;
     right: 0px;
@@ -182,6 +199,15 @@ a {
     width: 20%;
     bottom: 0px;
     position: absolute;
+}
+
+.menu_nav {
+    padding: 2px 0px;
+    position: absolute;
+    top: 45px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
 }
 
 .first_tier, .second_tier {
@@ -199,7 +225,6 @@ a {
 }
 
 .first_tier > .menu_item {
-    margin-bottom: 9px;
 }
 
 .menu_link {
@@ -207,17 +232,18 @@ a {
     display: block;
     color: #fefefe;
     font-size: 14px;
-    background: #333;
     padding: 0px 9px;
     font-weight: 400;
+margin-bottom: 2px;
+background: #79C4BE;
+color: #0B2B29;
 }
 
 .first_tier {
 }
 
-.second_tier .menu_item {
+.second_tier .menu_link {
     padding-left: 32px;
-    margin-top: 4px;
 }
 
 .glyph {
@@ -247,7 +273,7 @@ a {
     color: #fefefe;
     height: 45px;
     line-height: 45px;
-    padding-left: 9px;
+    padding-left: 18px;
 }
 
 .content_heading {
@@ -256,18 +282,19 @@ a {
     display: block;
     font-size: 21px;
     line-height: inherit;
+    padding-right: 18px;
 }
 
 .action_buttons_wrap {
     float: right;
 }
 
-.action_button {
+.link, .action_button {
     float: left;
     padding: 0 18px;
     font-size: 14px;
     font-weight: 400;
-    border-left: 4px solid rgba( 255, 255, 255, 0.733);
+    border-left: 2px solid rgba( 0, 0, 0, 0.367);
 }
 
 .content {
@@ -334,44 +361,6 @@ a {
     margin: 0 auto;
 }
 
-@font-face {
-    font-family: 'icomoon';
-    src:url('fonts/icomoon.eot');
-    src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.woff') format('woff'),
-    url('fonts/icomoon.ttf') format('truetype'),
-    url('fonts/icomoon.svg#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-.icon_experimentation:before, .icon_incubation:before,
-.icon_documentation:before, .icon_implementation:before {
-    font-family: 'icomoon';
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-}
-
-.icon_experimentation:before {
-        content: "\66";
-}
-
-.icon_incubation:before {
-    content: "\6c";
-}
-
-.icon_documentation:before {
-    content: "\64";
-}
-
-.icon_implementation:before {
-    content:"\72";
-}
 
 
 /* ==========================================================================

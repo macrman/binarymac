@@ -1,0 +1,178 @@
+@font-face {
+	font-family: 'myfont';
+	src:url('fonts/myfont.eot');
+	src:url('fonts/myfont.eot?#iefix') format('embedded-opentype'),
+		url('fonts/myfont.woff') format('woff'),
+		url('fonts/myfont.ttf') format('truetype'),
+		url('fonts/myfont.svg#myfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'myfont';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-document, .icon-rocket, .icon-lightbulb, .icon-desklamp, .icon-flaskfull, .icon-eye, .icon-circledown, .icon-circleup, .icon-circleright, .icon-circleleft, .icon-menu, .icon-clock, .icon-clock2, .icon-home2, .icon-home, .icon-uniF488, .icon-uniF489, .icon-uniF48A, .icon-uniF48B, .icon-circleadd, .icon-circledelete, .icon-circleselect, .icon-businesscard2, .icon-forbidden, .icon-forbidden2, .icon-mailinglists, .icon-python, .icon-contact, .icon-uniF470, .icon-uniF471, .icon-uniF472, .icon-uniF473, .icon-uniF474, .icon-uniF475, .icon-uniF476, .icon-uniF478, .icon-uniF477, .icon-uniF47A, .icon-uniF47B, .icon-uniF479, .icon-wizard, .icon-backupwizard, .icon-cgi, .icon-inbox, .icon-redo, .icon-refresh, .icon-search {
+	font-family: 'myfont';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-document:before {
+	content: "\21";
+}
+.icon-rocket:before {
+	content: "\22";
+}
+.icon-lightbulb:before {
+	content: "\23";
+}
+.icon-desklamp:before {
+	content: "\24";
+}
+.icon-flaskfull:before {
+	content: "\25";
+}
+.icon-eye:before {
+	content: "\26";
+}
+.icon-circledown:before {
+	content: "\27";
+}
+.icon-circleup:before {
+	content: "\28";
+}
+.icon-circleright:before {
+	content: "\29";
+}
+.icon-circleleft:before {
+	content: "\2a";
+}
+.icon-menu:before {
+	content: "\2b";
+}
+.icon-clock:before {
+	content: "\2c";
+}
+.icon-clock2:before {
+	content: "\2d";
+}
+.icon-home2:before {
+	content: "\2e";
+}
+.icon-home:before {
+	content: "\2f";
+}
+.icon-uniF488:before {
+	content: "\30";
+}
+.icon-uniF489:before {
+	content: "\31";
+}
+.icon-uniF48A:before {
+	content: "\32";
+}
+.icon-uniF48B:before {
+	content: "\33";
+}
+.icon-circleadd:before {
+	content: "\34";
+}
+.icon-circledelete:before {
+	content: "\35";
+}
+.icon-circleselect:before {
+	content: "\36";
+}
+.icon-businesscard2:before {
+	content: "\37";
+}
+.icon-forbidden:before {
+	content: "\38";
+}
+.icon-forbidden2:before {
+	content: "\39";
+}
+.icon-mailinglists:before {
+	content: "\3a";
+}
+.icon-python:before {
+	content: "\3b";
+}
+.icon-contact:before {
+	content: "\3c";
+}
+.icon-uniF470:before {
+	content: "\3d";
+}
+.icon-uniF471:before {
+	content: "\3e";
+}
+.icon-uniF472:before {
+	content: "\3f";
+}
+.icon-uniF473:before {
+	content: "\40";
+}
+.icon-uniF474:before {
+	content: "\41";
+}
+.icon-uniF475:before {
+	content: "\42";
+}
+.icon-uniF476:before {
+	content: "\43";
+}
+.icon-uniF478:before {
+	content: "\44";
+}
+.icon-uniF477:before {
+	content: "\45";
+}
+.icon-uniF47A:before {
+	content: "\46";
+}
+.icon-uniF47B:before {
+	content: "\47";
+}
+.icon-uniF479:before {
+	content: "\48";
+}
+.icon-wizard:before {
+	content: "\49";
+}
+.icon-backupwizard:before {
+	content: "\4a";
+}
+.icon-cgi:before {
+	content: "\4b";
+}
+.icon-inbox:before {
+	content: "\4c";
+}
+.icon-redo:before {
+	content: "\4d";
+}
+.icon-refresh:before {
+	content: "\4e";
+}
+.icon-search:before {
+	content: "\4f";
+}
