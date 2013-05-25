@@ -174,6 +174,7 @@ a {
 .documentation_co { color: #CB4B16; }
 
 .active {
+    font-color: ;
 }
 
 .global_nav {
@@ -181,6 +182,35 @@ a {
     top: 0px;
     left: 0px;
     right: 0px;
+}
+
+.primary_nav {
+    position: absolute;
+    left: 0px;
+}
+
+.center {
+    position: absolute;
+    width: 100px;
+    left: 50%;
+    text-align: center;
+    margin-left: -50px;
+    font-weight: 800;
+    font-size: 24px;
+    color: #111;
+}
+
+.action_buttons_wrap {
+    position: absolute;
+    right: 0px;
+}
+
+.link, .action_button {
+    float: left;
+    padding: 0 18px;
+    font-size: 14px;
+    font-weight: 400;
+    border-left: 2px solid rgba( 0, 0, 0, 0.367);
 }
 
 .page_wrap {
@@ -204,7 +234,7 @@ a {
 .menu_nav {
     padding: 2px 0px;
     position: absolute;
-    top: 45px;
+    top: 0px;
     left: 0px;
     right: 0px;
     bottom: 0px;
@@ -221,7 +251,7 @@ a {
     display: block; 
     width: 100%;
     color: #fefefe;
-    line-height: 45px;
+    line-height: 2.25;
 }
 
 .first_tier > .menu_item {
@@ -231,12 +261,10 @@ a {
     width: 100%;
     display: block;
     color: #fefefe;
-    font-size: 14px;
+    font-size: 21px;
     padding: 0px 9px;
-    font-weight: 400;
-margin-bottom: 2px;
-background: #79C4BE;
-color: #0B2B29;
+    font-weight: 300;
+    margin-bottom: 2px;
 }
 
 .first_tier {
@@ -244,6 +272,8 @@ color: #0B2B29;
 
 .second_tier .menu_link {
     padding-left: 32px;
+    font-size: 14px;
+    line-height: 40px;
 }
 
 .glyph {
@@ -285,22 +315,11 @@ color: #0B2B29;
     padding-right: 18px;
 }
 
-.action_buttons_wrap {
-    float: right;
-}
-
-.link, .action_button {
-    float: left;
-    padding: 0 18px;
-    font-size: 14px;
-    font-weight: 400;
-    border-left: 2px solid rgba( 0, 0, 0, 0.367);
-}
 
 .content {
     overflow: auto;
     position: absolute;
-    top: 45px;
+    top: 0px;
     bottom: 0px;
     width: 100%;
     padding: 18px;
