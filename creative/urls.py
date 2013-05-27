@@ -11,6 +11,6 @@ urlpatterns = patterns(
     url(
         r'(?P<stage>\w+)/$',
         IdeaListView.as_view(),
-        name='Idea_list',
+        name='idea_list',
     ),
 )

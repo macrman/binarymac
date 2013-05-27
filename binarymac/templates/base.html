@@ -21,17 +21,17 @@
     <body>
         <nav class='global_nav content_header dark'>
             <div class="primary_nav">
-                <div class="link icon-home2">
-                </div>
-                <div class="link">
-                    About
-                </div>
-                <div class="link">
+                <a class="link icon-home2" href="">
+                </a>
+                <a class="link" href="{% url "creative_method" %}">
+                    Creative Method
+                </a>
+                <a class="link" href="{% url "idea_list" stage='everything' %}">
                     Ideas & Creations
-                </div>
-                <div class="link">
+                </a>
+                <a class="link" href="{% url "contact" %}">
                     Contact
-                </div>
+                </a>
             </div>
             <div class="center">
                 Mac
