@@ -173,9 +173,6 @@ a {
 .implementation_co { color: #DC322F; }
 .documentation_co { color: #CB4B16; }
 
-.active {
-    font-color: ;
-}
 
 .global_nav {
     position: absolute;
@@ -206,11 +203,16 @@ a {
 }
 
 .link, .action_button {
+    color: #fefefe;
     float: left;
     padding: 0 18px;
     font-size: 14px;
     font-weight: 400;
     border-left: 2px solid rgba( 0, 0, 0, 0.367);
+}
+
+.active {
+    color: blue;
 }
 
 .page_wrap {

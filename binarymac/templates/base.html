@@ -20,19 +20,8 @@
     </head>
     <body>
         <nav class='global_nav content_header dark'>
-            <div class="primary_nav">
-                <a class="link icon-home2" href="">
-                </a>
-                <a class="link" href="{% url "creative_method" %}">
-                    Creative Method
-                </a>
-                <a class="link" href="{% url "idea_list" stage='everything' %}">
-                    Ideas & Creations
-                </a>
-                <a class="link" href="{% url "contact" %}">
-                    Contact
-                </a>
-            </div>
+            {% block primary_nav %}
+            {% endblock %}
             <div class="center">
                 Mac
             </div>

@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block primary_nav %}
+{% include "primary_nav.html" with active="creative_method" %}
+{% endblock %}
+
 {% block main %}
 <div>
     <p>hello, something about me </p>

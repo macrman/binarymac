@@ -5,6 +5,10 @@
 blah blah blah
 {% endblock %}
 
+{% block primary_nav %}
+    {% include "primary_nav.html" with active="idea_list" %}
+{% endblock %}
+
 {% block menu %}
     {% include 'menu.html' %}
 {% endblock %}
