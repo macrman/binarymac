@@ -19,25 +19,17 @@
         <script href=" {{ STATIC_URL }}js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-        <nav class='global_nav content_header dark'>
+        <header class='global_nav content_header dark'>
             {% block primary_nav %}
             {% endblock %}
             <div class="center">
                 Mac
             </div>
             <div class='action_buttons_wrap '>
-                <span class='action_button icon-search' ></span>
-                <div class="action_button">
-                    <span class='icon-refresh'></span>
-                </div>
-                <div class="action_button">
-                    <span>Sort by: Newest</span>
-                </div>
-                <div class="action_button">
-                    <span>View as: Cards</span>
-                </div>
+                {% block action_buttons %}
+                {% endblock %}
             </div>
-        </nav>
+        </header>
 
         <div class='page_wrap clearfix'>
             {% block menu %}

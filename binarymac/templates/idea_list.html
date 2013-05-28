@@ -9,6 +9,19 @@ blah blah blah
     {% include "primary_nav.html" with active="idea_list" %}
 {% endblock %}
 
+{% block action_buttons %}
+<span class='action_button icon-search' ></span>
+<div class="action_button">
+    <span class='icon-refresh'></span>
+</div>
+<div class="action_button">
+    <span>Sort by: Newest</span>
+</div>
+<div class="action_button">
+    <span>View as: Cards</span>
+</div>
+{% endblock %}
+
 {% block menu %}
     {% include 'menu.html' %}
 {% endblock %}
