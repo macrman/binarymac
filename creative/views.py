@@ -1,5 +1,10 @@
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, TemplateView
 from .models import Idea
+
+
+class ImplementationListView(TemplateView):
+
+    template_name = 'implementation_list.html'
 
 
 class IdeaDetailView(DetailView):

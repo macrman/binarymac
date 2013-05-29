@@ -23,17 +23,17 @@ blah blah blah
 {% endblock %}
 
 {% block menu %}
-    {% include 'menu.html' %}
+    {% include 'menu.html' with a=idea.get_stage_display %}
 {% endblock %}
 
 {% block main %}
 <div class="content_wrap">
-    <div class="content clearfix {{ stage }}_dark">
+    <div class="content clearfix {{ stage }}_lighter">
         {% for idea in idea_list %}
         {% with thestage=idea.get_stage_display %}
         <div class="idea_wrap">
-            <article class="idea img_post">
-                <a class="idea_link" href="{% url 'idea_detail' stage=thestage|lower pk=idea.pk %}">
+            <a class="idea img_post" href="{% url 'idea_detail' stage=thestage|lower pk=idea.pk %}">
+                <article class="idea_link" >
                     <div class='idea_content'>
                         <img 
                             class="featured_image" 
@@ -46,8 +46,8 @@ blah blah blah
                             {{ idea.last_updated|date:"M d, Y" }}
                         </div>
                     </div>
-                </a>
-            </article>
+                </article>
+            </a>
         </div>
         {% endwith %}
         {% endfor %}
