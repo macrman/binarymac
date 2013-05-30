@@ -1,53 +1,25 @@
 <div class="menu_wrap">
     <nav class="clearfix everything_darker menu_nav">
         <ul class="first_tier">
-            <li class="menu_item clearfix">
-                <a class="menu_link clearfix ">
-                    <span class="link_text ">Type</span>
-                </a>
-            </li>
-            <li class="menu_item clearfix">
-                <a class="menu_link clearfix ">
-                    <span class="link_text ">Stage</span>
-                </a>
-                <ul class="second_tier">
-                    <li class="menu_item clearfix">
-                        <a class="menu_link clearfix " href="/creations/everything">
-                            <span class="glyph icon_incubation"></span>
-                            <span class="link_text">everything</span>
-                        </a>
-                    </li>
-                    <li class="menu_item clearfix">
-                        <a class="menu_link clearfix" href="/creations/incubation">
-                            <span class="glyph icon_incubation"></span>
-                            <span class="link_text">incubation</span>
-                        </a>
-                    </li>
-                    <li class="menu_item clearfix">
-                        <a class="menu_link clearfix" href="/creations/analyzation">
-                            <span class="glyph icon_experimentation"></span>
-                            <span class="link_text">analyzation</span>
-                        </a>
-                    </li>
-                    <li class="menu_item clearfix">
-                        <a class="menu_link clearfix" href="/creations/experimentation">
-                            <span class="glyph icon_experimentation"></span>
-                            <span class="link_text">experimentation</span>
-                        </a>
-                    </li>
-                    <li class="menu_item clearfix">
-                        <a class="menu_link clearfix" href="/creations/implementation">
-                            <span class="glyph icon_implementation"></span>
-                            <span class="link_text">implementation</span>
-                        </a>
-                    </li>
-                    <li class="menu_item clearfix">
-                        <a class="menu_link clearfix" href="/creations/documentation">
-                            <span class="glyph icon_implementation"></span>
-                            <span class="link_text">Documentation</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
+            {% for item in menu %}
+                <li class="menu_item clearfix">
+                    <a class="menu_link clearfix" href="{{ item.url }}">
+                        <span class="link_text ">{{ item.name }}</span>
+                    </a>
+                    {% if item.nested %}
+                        <ul class="second_tier">
+                            {% for obj in item.nested %}
+                                <li class="menu_item clearfix">
+                                    <a class="menu_link clearfix " href="{{ obj.url }}">
+                                        <span class="glyph icon_incubation"></span>
+                                        <span class="link_text">{{ obj.name }}</span>
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
     </nav>
 </div>

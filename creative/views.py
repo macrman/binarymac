@@ -2,9 +2,52 @@ from django.views.generic import ListView, DetailView, TemplateView
 from .models import Idea
 
 
+def menulist():
+    nested = [
+        {'name': "Incubation", 'url': '/creations/incubation', 'active': False, },
+        {'name': "Analyzation", 'url': '/creations/analyzation', 'active': False, },
+        {'name': "Experimentation", 'url': '/creations/experimentation', 'active': False, },
+        {'name': "Implementation", 'url': '/creations/implementation', 'active': False, },
+        {'name': "Documentation", 'url': '/creations/documentation', 'active': False, },
+    ]
+
+    menu = [
+        {
+            'name': "Home",
+            'url': '/',
+            'active': False,
+            'nested': None,
+        },
+        {
+            'name': "Creative Method",
+            'url': '/creative_method',
+            'active': False,
+            'nested': None,
+        },
+        {
+            'name': "Ideas & Creations",
+            'url': '/creations',
+            'active': False,
+            'nested': nested,
+        },
+        {
+            'name': "Contact",
+            'url': '/contact',
+            'active': False,
+            'nested': None,
+        },
+    ]
+    return menu
+
+
 class ImplementationListView(TemplateView):
 
     template_name = 'implementation_list.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(ImplementationListView, self).get_context_data(**kwargs)
+        context["menu"] = menulist()
+        return context
 
 
 class IdeaDetailView(DetailView):
@@ -17,6 +60,7 @@ class IdeaDetailView(DetailView):
         context = super(IdeaDetailView, self).get_context_data(**kwargs)
         kwargs = self.kwargs
         context.update(kwargs)
+        context["menu"] = menulist()
         return context
 
 
@@ -42,4 +86,5 @@ class IdeaListView(ListView):
         context = super(IdeaListView, self).get_context_data(**kwargs)
         kwargs = self.kwargs
         context.update(kwargs)
+        context['menu'] = menulist()
         return context
