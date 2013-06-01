@@ -23,7 +23,7 @@ blah blah blah
 {% endblock %}
 
 {% block menu %}
-    {% include 'menu.html' with a=idea.get_stage_display %}
+    {% include 'menu.html' %}
 {% endblock %}
 
 {% block main %}
@@ -32,7 +32,7 @@ blah blah blah
         {% for idea in idea_list %}
         {% with thestage=idea.get_stage_display %}
         <div class="idea_wrap">
-            <a class="idea img_post" href="{% url 'idea_detail' stage=thestage|lower pk=idea.pk %}">
+            <a class="idea img_post" href="{% url 'idea_detail' primary='creations' stage=thestage|lower pk=idea.pk %}">
                 <article class="idea_link" >
                     <div class='idea_content'>
                         <img 

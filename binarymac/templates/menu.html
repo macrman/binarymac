@@ -3,14 +3,14 @@
         <ul class="first_tier">
             {% for item in menu %}
                 <li class="menu_item clearfix">
-                    <a class="menu_link clearfix" href="{{ item.url }}">
+                <a class="menu_link clearfix {% if item.active == True %}active{% endif %}" href="{{ item.url }}">
                         <span class="link_text ">{{ item.name }}</span>
                     </a>
                     {% if item.nested %}
                         <ul class="second_tier">
                             {% for obj in item.nested %}
                                 <li class="menu_item clearfix">
-                                    <a class="menu_link clearfix " href="{{ obj.url }}">
+                                <a class="menu_link clearfix " href="{{ item.url }}">
                                         <span class="glyph icon_incubation"></span>
                                         <span class="link_text">{{ obj.name }}</span>
                                     </a>

@@ -11,10 +11,10 @@ urlpatterns = patterns(
     url(r'^$', HomeView.as_view(), name="home"),
     url(r'^admin/', include(admin.site.urls)),
     url(
-        r'^creative_method/',
+        r'^(?P<primary>creative_method)/',
         CreativeMethodView.as_view(),
         name="creative_method",
     ),
-    url(r'contact/', ContactView.as_view(), name="contact",),
-    url(r'^creations/', include('creative.urls')),
+    url(r'^(?P<primary>contact)/', ContactView.as_view(), name="contact",),
+    url(r'^(?P<primary>creations)/', include('creative.urls')),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

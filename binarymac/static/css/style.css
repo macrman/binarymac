@@ -211,10 +211,6 @@ a {
     border-left: 2px solid rgba( 0, 0, 0, 0.367);
 }
 
-.active {
-    color: blue;
-}
-
 .page_wrap {
     position: absolute;
     top: 45px;
@@ -228,7 +224,7 @@ a {
     font-size: 16px;
     left: 0px;
     top: 0px;
-    width: 20%;
+    width: 300px;
     bottom: 0px;
     position: absolute;
 }
@@ -292,11 +288,15 @@ a {
     float: left;
 }
 
+.active {
+    color: blue;
+}
+
 .content_wrap {
     right: 0px;
     top: 0px;
     bottom: 0px;
-    left: 20%;
+    left: 300px;
     position: absolute;
     z-index: 90;
 }
