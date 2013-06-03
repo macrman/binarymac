@@ -9,7 +9,8 @@ class ImplementationListView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(ImplementationListView, self).get_context_data(**kwargs)
-        context["menu"] = menulist()
+        active = ["/creations", "/creations/implementation"]
+        context["menu"] = menulist(active)
         return context
 
 
@@ -23,7 +24,8 @@ class IdeaDetailView(DetailView):
         context = super(IdeaDetailView, self).get_context_data(**kwargs)
         kwargs = self.kwargs
         context.update(kwargs)
-        context["menu"] = menulist()
+        active = ["/creations", None]
+        context["menu"] = menulist(active)
         return context
 
 
@@ -49,5 +51,6 @@ class IdeaListView(ListView):
         context = super(IdeaListView, self).get_context_data(**kwargs)
         kwargs = self.kwargs
         context.update(kwargs)
-        context['menu'] = menulist()
+        active = ["/creations", "/creations/" + self.kwargs.get('stage')]
+        context['menu'] = menulist(active)
         return context

@@ -8,11 +8,11 @@
                     </a>
                     {% if item.nested %}
                         <ul class="second_tier">
-                            {% for obj in item.nested %}
+                            {% for nest in item.nested %}
                                 <li class="menu_item clearfix">
-                                <a class="menu_link clearfix " href="{{ item.url }}">
+                                <a class="menu_link clearfix {% if nest.active == True %}active{% endif %}" href="{{ nest.url }}">
                                         <span class="glyph icon_incubation"></span>
-                                        <span class="link_text">{{ obj.name }}</span>
+                                        <span class="link_text">{{ nest.name }}</span>
                                     </a>
                                 </li>
                             {% endfor %}

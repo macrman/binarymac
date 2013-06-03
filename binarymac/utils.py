@@ -1,4 +1,5 @@
 def menulist(active):
+
     nested = [
         {
             'name': "Incubation",
@@ -53,7 +54,12 @@ def menulist(active):
             'nested': None,
         },
     ]
+
     for item in menu:
         if active[0] == item['url']:
             item['active'] = True
+        if item['nested']:
+            for nested in item['nested']:
+                if active[1] == nested['url']:
+                    nested['active'] = True
     return menu
