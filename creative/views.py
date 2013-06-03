@@ -41,16 +41,19 @@ class IdeaListView(ListView):
                 return dehumanized
 
     def get_queryset(self):
-        if self.kwargs.get('stage') == 'everything':
-            queryset = Idea.objects.all()
-        else:
+        if self.kwargs.get('stage'):
             queryset = Idea.objects.filter(stage=self.dehumanize())
+        else:
+            queryset = Idea.objects.all()
         return queryset
 
     def get_context_data(self, **kwargs):
         context = super(IdeaListView, self).get_context_data(**kwargs)
         kwargs = self.kwargs
         context.update(kwargs)
-        active = ["/creations", "/creations/" + self.kwargs.get('stage')]
+        if self.kwargs.get('stage') is None:
+            active = ["/creations", None]
+        else:
+            active = ["/creations", "/creations/" + self.kwargs.get('stage')]
         context['menu'] = menulist(active)
         return context

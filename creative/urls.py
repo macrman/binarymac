@@ -18,4 +18,9 @@ urlpatterns = patterns(
         IdeaListView.as_view(),
         name='idea_list',
     ),
+    url(
+        r'$',
+        IdeaListView.as_view(),
+        name="idea_list",
+    )
 )
