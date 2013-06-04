@@ -213,11 +213,10 @@ a {
 
 .page_wrap {
     position: absolute;
-    top: 45px;
+    top: 0px;
     bottom: 0px;
     left: 0px;
     right: 0px;
-    bottom: 0px;
 }
 
 .menu_wrap {
@@ -238,7 +237,7 @@ a {
     width: 100px;
     height: 100px;
     display: block;
-    margin: 0 auto;
+    margin: 18px auto;
     border-radius: 50%;
 }
 
@@ -246,6 +245,8 @@ a {
     text-align: center;
     color: rgba(100%, 100%, 100%, .7);
     margin: 0px;
+    font-size: 28px;
+    line-height: 47px;
 }
 
 .menu_nav {

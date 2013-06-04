@@ -19,18 +19,6 @@
         <script href=" {{ STATIC_URL }}js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-        <header class='global_nav content_header dark'>
-            {% block primary_nav %}
-            {% endblock %}
-            <div class="center">
-                Mac
-            </div>
-            <div class='action_buttons_wrap '>
-                {% block action_buttons %}
-                {% endblock %}
-            </div>
-        </header>
-
         <div class='page_wrap clearfix'>
             {% block menu %}
             {% endblock %}
