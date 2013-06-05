@@ -5,25 +5,10 @@
 aslkfj;lkdsajflk
 {% endblock %}
 
-{% block primary_nav %}
-    {% include "primary_nav.html" %}
-{% endblock %}
-
-{% block action_buttons %}
-{% endblock %}
-
-{% block menu %}
-    {% include 'menu.html' with a=idea.get_stage_display %}
-{% endblock %}
-
 {% block main %}
-<div class="content_wrap">
-    <div class="content">
-        <section class="idea_detail_content">
-            <h1>{{ idea.title }}</h1>
-            <p>{{ idea.last_updated }}</p>
-            <p>{{ idea.content }}</p>
-        </section>
-    </div>
-</div>
+    <section class="idea_detail_content">
+        <h1>{{ idea.title }}</h1>
+        <p>{{ idea.last_updated }}</p>
+        <p>{{ idea.content }}</p>
+    </section>
 {% endblock %}

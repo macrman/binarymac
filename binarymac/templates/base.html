@@ -20,11 +20,33 @@
     </head>
     <body>
         <div class='page_wrap clearfix'>
-            {% block menu %}
-            {% endblock %}
 
-            {% block main %}
-            {% endblock %}
+            {% include "menu.html" %}
+
+            <div class="content_wrap">
+                <div class="content_header dark">
+                    <div class="action_left">
+                        <div class='action_button icon-menu'></div>
+                        {% block action_left %}
+                        {% endblock %}
+                    </div>
+                    <div class="action_center">
+                        <div class="action_center_inner">
+                            {% block action_center %}
+                            Mac
+                            {% endblock %}
+                        </div>
+                    </div>
+                    <div class="action_right">
+                        {% block action_right %}
+                        {% endblock %}
+                    </div>
+                </div>
+                <div class="content grey">
+                    {% block main %}
+                    {% endblock %}
+                </div>
+            </div>
         </div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>

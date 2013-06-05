@@ -5,17 +5,9 @@
 blah blah blah
 {% endblock %}
 
-{% block primary_nav %}
-    {% include "primary_nav.html" with active="idea_list" %}
-{% endblock %}
-
-{% block action_buttons %}
-<span class='action_button icon-search' ></span>
-<div class="action_button">
-    <span class='icon-refresh'></span>
-</div>
-<div class="action_button">
-    <span>Sort by: Newest</span>
+{% block action_right %}
+<div class='action_button icon-search' ></div>
+<div class="action_button icon-refresh">
 </div>
 <div class="action_button">
     <span>View as: Cards</span>
@@ -27,8 +19,6 @@ blah blah blah
 {% endblock %}
 
 {% block main %}
-<div class="content_wrap">
-    <div class="content clearfix {{ stage }}_lighter">
         {% for idea in idea_list %}
         {% with thestage=idea.get_stage_display %}
         <div class="idea_wrap">
@@ -51,7 +41,4 @@ blah blah blah
         </div>
         {% endwith %}
         {% endfor %}
-    </div>
-</div>
-
 {% endblock %}

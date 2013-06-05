@@ -1,4 +1,6 @@
 def menulist(active):
+    """This is some really shitty code. I don't think I'm supposed to be doing
+    this, but I am. Let's hope this doesn't break."""
 
     nested = [
         {

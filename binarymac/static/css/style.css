@@ -174,18 +174,6 @@ a {
 .documentation_co { color: #CB4B16; }
 
 
-.global_nav {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-}
-
-.primary_nav {
-    position: absolute;
-    left: 0px;
-}
-
 .center {
     position: absolute;
     width: 100px;
@@ -197,12 +185,7 @@ a {
     color: #111;
 }
 
-.action_buttons_wrap {
-    position: absolute;
-    right: 0px;
-}
-
-.link, .action_button {
+.action_button {
     color: #fefefe;
     float: left;
     padding: 0 18px;
@@ -230,7 +213,6 @@ a {
 }
 
 .intro {
-    position: relative;
 }
 
 .profile_pic {
@@ -264,7 +246,7 @@ a {
     display: block; 
     width: 100%;
     color: #fefefe;
-    line-height: 2.25;
+    line-height: 2.333;
 }
 
 .first_tier > .menu_item {
@@ -274,10 +256,9 @@ a {
     width: 100%;
     display: block;
     color: #fefefe;
-    font-size: 21px;
+    font-size: 18px;
     padding: 0px 9px;
     font-weight: 300;
-    margin-bottom: 2px;
 }
 
 .first_tier {
@@ -304,7 +285,13 @@ a {
 }
 
 .active {
+    background: #efefef;
+    color: #333; 
+}
+
+.second_tier .active {
     color: blue;
+    background: none;
 }
 
 .content_wrap {
@@ -320,23 +307,30 @@ a {
     color: #fefefe;
     height: 45px;
     line-height: 45px;
-    padding-left: 18px;
 }
 
-.content_heading {
+.action_left {
     float: left;
-    margin: 0;
-    display: block;
-    font-size: 21px;
-    line-height: inherit;
-    padding-right: 18px;
 }
 
+.action_center {
+    position: absolute;
+    left: 50%;
+}
+
+.action_center_inner {
+    position: relative;
+    left: -50%;
+}
+
+.action_right {
+    float: right;
+}
 
 .content {
     overflow: auto;
     position: absolute;
-    top: 0px;
+    top: 45px;
     bottom: 0px;
     width: 100%;
     padding: 18px;
