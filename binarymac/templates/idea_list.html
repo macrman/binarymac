@@ -19,6 +19,7 @@ blah blah blah
 {% endblock %}
 
 {% block main %}
+    <div class="idea_list">
         {% for idea in idea_list %}
         {% with thestage=idea.get_stage_display %}
         <div class="idea_wrap">
@@ -41,4 +42,5 @@ blah blah blah
         </div>
         {% endwith %}
         {% endfor %}
+    </div>
 {% endblock %}

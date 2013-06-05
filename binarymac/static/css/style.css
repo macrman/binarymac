@@ -162,10 +162,6 @@ a {
 .implementation_darker { background: #3B0D0D; }
 .documentation_darker { background: #361406; }
 
-
-
-
-
 .everything_co { color: #2AA198; }
 .incubation_co { color: #268BD2; }
 .analyzation_co { color: #6C71C4; }
@@ -174,24 +170,11 @@ a {
 .documentation_co { color: #CB4B16; }
 
 
-.center {
-    position: absolute;
-    width: 100px;
-    left: 50%;
-    text-align: center;
-    margin-left: -50px;
-    font-weight: 800;
-    font-size: 24px;
-    color: #111;
-}
-
 .action_button {
-    color: #fefefe;
     float: left;
     padding: 0 18px;
     font-size: 14px;
     font-weight: 400;
-    border-left: 2px solid rgba( 0, 0, 0, 0.367);
 }
 
 .page_wrap {
@@ -210,6 +193,7 @@ a {
     bottom: 0px;
     position: absolute;
     overflow-y: auto;
+    background: #19191C;
 }
 
 .intro {
@@ -301,12 +285,19 @@ a {
     left: 300px;
     position: absolute;
     z-index: 90;
+    overflow: hidden;
 }
 
 .content_header {
-    color: #fefefe;
+    background: #fff;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    box-shadow: 0px 0px 2px 1px #555;
     height: 45px;
     line-height: 45px;
+    z-index: 20;
 }
 
 .action_left {
@@ -336,16 +327,22 @@ a {
     padding: 18px;
 }
 
+.idea_list {
+    text-align: center;
+    font-size: 0px;
+}
+
 .idea_wrap {
-    display: block;
-    float: left;
-    padding: 18px;
+    display: inline-block;
     color: #333;
-    width: 33.33333%;
+    width: 300px; 
     height: 400px;
+    margin: 18px; 
+    box-shadow: 0px 1px 3px 1px #ccc;
 }
 
 .idea {
+    text-align: left;
     height: 100%;
     background: #fff;
     display: block;
