@@ -1,6 +1,23 @@
-from django.views.generic import ListView, DetailView, TemplateView
+from django.views.generic import ListView, DetailView
 from binarymac.utils import menulist
 from .models import Idea, Project
+
+
+class ImplementationDetailView(ListView):
+
+    template_name = 'idea_list.html'
+    context_object_name = 'post_list'
+
+    def get_queryset(self, **kwargs):
+        project = Project.objects.get(pk=self.kwargs.get('pk'))
+        queryset = Idea.objects.filter(project=project)
+        return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super(ImplementationDetailView, self).get_context_data(**kwargs)
+        active = ["/creations", "/creations/implementation"]
+        context['menu'] = menulist(active)
+        return context
 
 
 class ImplementationListView(ListView):

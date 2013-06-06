@@ -1,5 +1,7 @@
 from django.conf.urls import url, patterns
-from .views import (IdeaDetailView, IdeaListView, ImplementationListView,)
+from .views import (
+    IdeaDetailView, IdeaListView, ImplementationListView,
+    ImplementationDetailView)
 
 urlpatterns = patterns(
     '',
@@ -7,6 +9,11 @@ urlpatterns = patterns(
         r'^(?P<stage>implementation)/$',
         ImplementationListView.as_view(),
         name='implementation_list',
+    ),
+    url(
+        r'^(?P<stage>implementation)/(?P<pk>\d+)$',
+        ImplementationDetailView.as_view(),
+        name='implementation_detail',
     ),
     url(
         r'(?P<stage>\w+)/(?P<pk>\d+)/$',

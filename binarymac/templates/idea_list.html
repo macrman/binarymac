@@ -24,16 +24,16 @@ blah blah blah
         {% with thestage=post.get_stage_display %}
         <a class="post_wrap" href="{% url 'idea_detail' primary='creations' stage=thestage|lower pk=post.pk %}">
             <article class="post">
-                        <img 
-                            class="featured_image" 
-                            src="https://www.lorempixel.com/600/600/">
-                        </img>
-                        <h1 class="post_title">
-                            {{ post }}
-                        </h1>
-                        <div class="date">
-                            {{ post.last_updated|date:"M d, Y" }}
-                        </div>
+                <img 
+                    class="featured_image" 
+                    src="https://www.lorempixel.com/600/600/">
+                </img>
+                <h1 class="post_title">
+                    {{ post }}
+                </h1>
+                <div class="date">
+                    {{ post.last_updated|date:"M d, Y" }}
+                </div>
             </article>
         </a>
         {% endwith %}
