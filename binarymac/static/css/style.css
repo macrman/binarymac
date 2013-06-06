@@ -189,11 +189,12 @@ a {
     font-size: 16px;
     left: 0px;
     top: 0px;
-    width: 300px;
+    width: 280px;
     bottom: 0px;
     position: absolute;
     overflow-y: auto;
     background: #19191C;
+    box-shadow: inset -5px 0px 2px -2px #111;
 }
 
 .intro {
@@ -282,7 +283,7 @@ a {
     right: 0px;
     top: 0px;
     bottom: 0px;
-    left: 300px;
+    left: 280px;
     position: absolute;
     z-index: 90;
     overflow: hidden;
@@ -327,46 +328,39 @@ a {
     padding: 18px;
 }
 
-.idea_list {
+.post_list {
     text-align: center;
     font-size: 0px;
 }
 
-.idea_wrap {
+.post_wrap {
     display: inline-block;
     color: #333;
-    width: 300px; 
-    height: 400px;
+    width: 280px; 
+    height: 420px;
     margin: 18px; 
-    box-shadow: 0px 1px 3px 1px #ccc;
+    box-shadow: 0px 1px 2px 1px #aaa;
+    overflow: hidden;
+    color: #333;
+    padding: 18px;
+    background: #fff;
 }
 
-.idea {
+.post {
     text-align: left;
     height: 100%;
-    background: #fff;
-    display: block;
 }
 
-.idea_link {
-    color: #333
-}
-
-
-.idea_content {
-    padding: 18px;
-}
-
-.idea_stage {
+.post_stage {
     line-height: 44px; 
 }
 
-.idea .date {
+.post .date {
     font-size: 13px;
     font-weight: 400;
 }
 
-.idea_title {
+.post_title {
     margin-top: 0px;
     margin-bottom: 0px;
     font-weight: 400;
@@ -377,14 +371,14 @@ a {
     margin-bottom: 8px;
 }
 
-.idea_detail {
+.post_detail {
     padding: 18px;
     background: #fff;
     font-size: 18px;
     min-height: 100%;
 }
 
-.idea_detail_content {
+.post_detail_content {
     max-width: 700px;
     margin: 0 auto;
 }

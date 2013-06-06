@@ -19,27 +19,23 @@ blah blah blah
 {% endblock %}
 
 {% block main %}
-    <div class="idea_list">
-        {% for idea in idea_list %}
-        {% with thestage=idea.get_stage_display %}
-        <div class="idea_wrap">
-            <a class="idea img_post" href="{% url 'idea_detail' primary='creations' stage=thestage|lower pk=idea.pk %}">
-                <article class="idea_link" >
-                    <div class='idea_content'>
+    <div class="post_list">
+        {% for post in post_list %}
+        {% with thestage=post.get_stage_display %}
+        <a class="post_wrap" href="{% url 'idea_detail' primary='creations' stage=thestage|lower pk=post.pk %}">
+            <article class="post">
                         <img 
                             class="featured_image" 
-                            src="https://www.lorempixel.com/900/600/">
+                            src="https://www.lorempixel.com/600/600/">
                         </img>
-                        <h1 class="idea_title">
-                            {{ idea }}
+                        <h1 class="post_title">
+                            {{ post }}
                         </h1>
                         <div class="date">
-                            {{ idea.last_updated|date:"M d, Y" }}
+                            {{ post.last_updated|date:"M d, Y" }}
                         </div>
-                    </div>
-                </article>
-            </a>
-        </div>
+            </article>
+        </a>
         {% endwith %}
         {% endfor %}
     </div>

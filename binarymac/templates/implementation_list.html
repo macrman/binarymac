@@ -3,5 +3,15 @@
 
 {% block main %}
 
+<div class='post_list'>
+    {% for project in post_list %}
+        <a class="post_wrap">
+            <article class='post'>
+                <h1 class="post_title">{{ project }}</h1>
+            </article>
+        </a>
+    {% endfor %}
+</div>
+
 
 {% endblock %}

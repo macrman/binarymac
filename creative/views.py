@@ -1,11 +1,13 @@
 from django.views.generic import ListView, DetailView, TemplateView
 from binarymac.utils import menulist
-from .models import Idea
+from .models import Idea, Project
 
 
-class ImplementationListView(TemplateView):
+class ImplementationListView(ListView):
 
     template_name = 'implementation_list.html'
+    queryset = Project.objects.all()
+    context_object_name = 'post_list'
 
     def get_context_data(self, **kwargs):
         context = super(ImplementationListView, self).get_context_data(**kwargs)
@@ -19,6 +21,7 @@ class IdeaDetailView(DetailView):
     template_name = 'idea_detail.html'
     model = Idea
     allow_empty = False
+    context_object_name = 'post'
 
     def get_context_data(self, **kwargs):
         context = super(IdeaDetailView, self).get_context_data(**kwargs)
@@ -33,6 +36,7 @@ class IdeaListView(ListView):
 
     template_name = 'idea_list.html'
     allow_empty = False
+    context_object_name = 'post_list'
 
     def dehumanize(self):
         for choice in Idea.STAGE_CHOICES:

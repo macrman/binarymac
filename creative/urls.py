@@ -4,7 +4,7 @@ from .views import (IdeaDetailView, IdeaListView, ImplementationListView,)
 urlpatterns = patterns(
     '',
     url(
-        r'(?P<stage>implementation)/$',
+        r'^(?P<stage>implementation)/$',
         ImplementationListView.as_view(),
         name='implementation_list',
     ),
