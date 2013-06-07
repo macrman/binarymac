@@ -1,4 +1,5 @@
 from django.views.generic import ListView, DetailView
+from django.http import Http404
 from binarymac.utils import menulist
 from .models import Idea, Project
 
@@ -52,7 +53,6 @@ class IdeaDetailView(DetailView):
 class IdeaListView(ListView):
 
     template_name = 'idea_list.html'
-    allow_empty = False
     context_object_name = 'post_list'
 
     def dehumanize(self):

@@ -27,8 +27,7 @@ class Idea(models.Model):
         return self.title
 
     def save(self, *args, **kwargs):
-        if not self.pk:
-            self.slug = slugify(self.title)
+        self.slug = slugify(self.title)
         super(Idea, self).save(*args, **kwargs)
 
 
@@ -40,6 +39,5 @@ class Project(models.Model):
         return self.name
 
     def save(self, *args, **kwargs):
-        if not self.pk:
-            self.slug = slugify(self.name)
+        self.slug = slugify(self.name)
         super(Project, self).save(*args, **kwargs)
