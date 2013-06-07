@@ -11,12 +11,12 @@ urlpatterns = patterns(
         name='implementation_list',
     ),
     url(
-        r'^(?P<stage>implementation)/(?P<pk>\d+)$',
+        r'^(?P<stage>implementation)/(?P<pk>\d+)/(?P<slug>\w+)/$',
         ImplementationDetailView.as_view(),
         name='implementation_detail',
     ),
     url(
-        r'(?P<stage>\w+)/(?P<pk>\d+)/$',
+        r'(?P<stage>\w+)/(?P<pk>\d+)/(?P<slug>\w+)/$',
         IdeaDetailView.as_view(),
         name='idea_detail',
     ),

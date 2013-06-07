@@ -22,7 +22,8 @@ blah blah blah
     <div class="post_list">
         {% for post in post_list %}
         {% with thestage=post.get_stage_display %}
-        <a class="post_wrap" href="{% url 'idea_detail' primary='creations' stage=thestage|lower pk=post.pk %}">
+        <a class="post_wrap" 
+            href="{% url 'idea_detail' primary='creations' stage=thestage|lower pk=post.pk slug=post.slug %}">
             <article class="post">
                 <img 
                     class="featured_image" 
