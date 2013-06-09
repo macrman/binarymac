@@ -2,9 +2,6 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-@import 'normalize.css';
-@import 'hello.css';
-
 html,
 button,
 input,
@@ -170,12 +167,6 @@ a {
 .documentation_co { color: #CB4B16; }
 
 
-.action_button {
-    float: left;
-    padding: 0 18px;
-    font-size: 14px;
-    font-weight: 400;
-}
 
 .page_wrap {
     position: absolute;
@@ -193,7 +184,7 @@ a {
     bottom: 0px;
     position: absolute;
     overflow-y: auto;
-    background: #23232C;
+    background: #19191C;
     box-shadow: inset -5px 0px 2px -2px #111;
 }
 
@@ -297,8 +288,14 @@ a {
     right: 0px;
     box-shadow: 0px 0px 2px 1px #555;
     height: 45px;
-    line-height: 45px;
     z-index: 20;
+}
+
+.action_button {
+    float: left;
+    padding: 0 18px;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .action_left {
