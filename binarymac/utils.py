@@ -47,7 +47,7 @@ def menulist(active):
             'name': "Ideas & Creations",
             'url': '/creations',
             'active': False,
-            'nested': nested,
+            'nested': None,
         },
         {
             'name': "Contact",

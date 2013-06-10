@@ -11,7 +11,7 @@ class ImplementationDetailView(ListView):
 
     def get_queryset(self, **kwargs):
         project = Project.objects.get(pk=self.kwargs.get('pk'))
-        queryset = Idea.objects.filter(project=project)
+        queryset = Idea.objects.filter(project=project).order_by('-last_updated')
         return queryset
 
     def get_context_data(self, **kwargs):
@@ -63,9 +63,9 @@ class IdeaListView(ListView):
 
     def get_queryset(self):
         if self.kwargs.get('stage'):
-            queryset = Idea.objects.filter(stage=self.dehumanize())
+            queryset = Idea.objects.filter(stage=self.dehumanize()).order_by('-last_updated')
         else:
-            queryset = Idea.objects.all()
+            queryset = Idea.objects.all().order_by('-last_updated')
         return queryset
 
     def get_context_data(self, **kwargs):
