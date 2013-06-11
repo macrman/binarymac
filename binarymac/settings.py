@@ -128,6 +128,7 @@ INSTALLED_APPS = [
     # external
     "south",
     "debug_toolbar",
+    "easy_thumbnails",
 
     # project
     "binarymac",

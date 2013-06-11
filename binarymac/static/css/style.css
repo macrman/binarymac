@@ -322,7 +322,6 @@ a {
     top: 45px;
     bottom: 0px;
     width: 100%;
-    padding: 18px;
 }
 
 .post_list {
@@ -380,6 +379,26 @@ a {
     max-width: 700px;
     margin: 0 auto;
 }
+
+
+
+/* home */
+
+.welcome {
+    width: 100%;
+    background: url("../img/office.jpg") no-repeat center center;
+    background-size: cover;
+    height: 600px;
+}
+
+.welcome_text {
+    text-align: center;
+    line-height: 300px;
+    font-size: 64px;
+    font-weight: 700;
+    color: #fff;
+}
+
 
 
 
