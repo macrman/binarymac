@@ -169,3 +169,10 @@ LOGGING = {
 FIXTURE_DIRS = [
     os.path.join(PROJECT_ROOT, "fixtures"),
 ]
+
+
+THUMBNAIL_ALIASES = {
+    '': {
+        'thumb': {'size': (500, 500), 'crop': True, },
+    }
+}

@@ -19,10 +19,13 @@ blah blah blah
             <a class="post_wrap" 
                 href="{% url 'idea_detail' primary='creations' stage=thestage|lower pk=post.pk slug=post.slug %}">
                 <article class="post">
+                {% if post.featured_image %}
+                {% load thumbnail %}
                     <img 
                         class="featured_image" 
-                        src="https://www.lorempixel.com/600/600/">
+                        src="{{ post.featured_image|thumbnail_url:'thumb' }}">
                     </img>
+                {% endif %}
                     <h1 class="post_title">
                         {{ post }}
                     </h1>
