@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load thumbnail %}
 {% load static %}
 
 {% block title %}
@@ -16,19 +17,22 @@ blah blah blah
     <div class="post_list">
         {% for post in post_list %}
             {% with thestage=post.get_stage_display %}
-            <a class="post_wrap" 
+            <a class="post_wrap " 
                 href="{% url 'idea_detail' primary='creations' stage=thestage|lower pk=post.pk slug=post.slug %}">
                 <article class="post">
                 {% if post.featured_image %}
-                {% load thumbnail %}
                     <img 
                         class="featured_image" 
                         src="{{ post.featured_image|thumbnail_url:'thumb' }}">
                     </img>
-                {% endif %}
+                    <h1 class="post_title_small">
+                        {{ post }}
+                    </h1>
+                {% else %}
                     <h1 class="post_title">
                         {{ post }}
                     </h1>
+                {% endif %}
                     <div class="date">
                         {{ post.last_updated|date:"M d, Y" }}
                     </div>

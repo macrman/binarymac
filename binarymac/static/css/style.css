@@ -331,29 +331,25 @@ a {
 .post_list {
     text-align: center;
     font-size: 0px;
+    padding: 18px;
 }
 
 .post_wrap {
     display: inline-block;
     color: #333;
-    width: 280px; 
+    width: 320px; 
     height: 420px;
-    margin: 18px; 
-    box-shadow: 0px 1px 2px 1px #aaa;
     overflow: hidden;
     color: #333;
     background: #fff;
+    font-size: 18px;
+    margin: 18px;
 }
 
 .post {
-    text-align: left;
-    height: 384px;
-    margin: 18px;
+    margin: 24px;
     overflow: hidden;
-}
-
-.post_stage {
-    line-height: 44px; 
+    text-align: left;
 }
 
 .post .date {
@@ -364,6 +360,13 @@ a {
 .post_title {
     margin-top: 0px;
     margin-bottom: 0px;
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.post_title_small {
+    font-size: 21px;
+    margin: 0px;
     font-weight: 400;
 }
 
