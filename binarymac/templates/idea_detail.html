@@ -9,6 +9,8 @@ binarymac | {{ post.title }}
     <section class="post_detail_content">
         <h1>{{ post.title }}</h1>
         <p>{{ post.last_updated }}</p>
+        {% autoescape off %}
         <p>{{ post.content }}</p>
+        {% endautoescape %}
     </section>
 {% endblock %}

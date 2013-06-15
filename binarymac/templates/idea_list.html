@@ -37,7 +37,9 @@ blah blah blah
                         {{ post.last_updated|date:"M d, Y" }}
                     </div>
                     <div class="post_content">
+                        {% autoescape off %}
                         {{ post.content }}
+                        {% endautoescape %}
                     </div>
                 </article>
             </a>
