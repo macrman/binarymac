@@ -8,6 +8,7 @@ admin.autodiscover()
 
 urlpatterns = patterns(
     "",
+    url(r'^ckeditor/', include('ckeditor.urls')),
     url(r'^$', HomeView.as_view(), name="home"),
     url(r'^admin/', include(admin.site.urls)),
     url(

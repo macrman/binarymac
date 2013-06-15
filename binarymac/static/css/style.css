@@ -233,7 +233,7 @@ a {
     display: block;
     color: #fefefe;
     font-size: 18px;
-    padding: 0px 9px;
+    padding: 0px 18px;
     font-weight: 300;
 }
 
@@ -337,7 +337,7 @@ a {
 .post_wrap {
     display: inline-block;
     color: #333;
-    width: 248px; 
+    width: 280px; 
     height: 400px;
     overflow: hidden;
     color: #333;
@@ -373,6 +373,13 @@ a {
 .featured_image {
     width: 100%;
     margin-bottom: 8px;
+}
+
+.post_content {
+    font-size: 16px;
+    line-height: 1.5;
+    text-overflow: ellipsis;
+
 }
 
 .post_detail {

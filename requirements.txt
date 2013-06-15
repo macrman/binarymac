@@ -1,5 +1,15 @@
 Django==1.5
-Pillow==1.7.8
+GitPython==0.3.2.RC1
+Pillow==2.0.0
+Pygments==1.6
 South==0.7.6
-django-ckeditor==3.6.2.1
+async==0.6.1
+django-ckeditor==4.0.2
+django-dajaxice==0.5.5
+django-debug-toolbar==0.9.4
+dulwich==0.8.7
+easy-thumbnails==1.2
+gitdb==0.5.4
+pygit2==0.17.3
+smmap==0.8.2
 wsgiref==0.1.2

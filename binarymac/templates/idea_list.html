@@ -36,6 +36,9 @@ blah blah blah
                     <div class="date">
                         {{ post.last_updated|date:"M d, Y" }}
                     </div>
+                    <div class="post_content">
+                        {{ post.content }}
+                    </div>
                 </article>
             </a>
             {% endwith %}

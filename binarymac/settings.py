@@ -50,6 +50,8 @@ USE_TZ = True
 # Example: "/home/media/media.lawrence.com/media/"
 MEDIA_ROOT = os.path.join(PACKAGE_ROOT, "site_media", "media")
 
+CKEDITOR_UPLOAD_PATH = MEDIA_ROOT
+
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
@@ -129,6 +131,7 @@ INSTALLED_APPS = [
     "south",
     "debug_toolbar",
     "easy_thumbnails",
+    "ckeditor",
 
     # project
     "binarymac",
