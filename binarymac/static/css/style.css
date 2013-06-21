@@ -1,13 +1,12 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-
 html,
 button,
 input,
 select,
 textarea {
-    color: #333;
+    color: rgba(0,0,0,0.7);
 }
 
 * {
@@ -77,18 +76,6 @@ fieldset {
 textarea {
     resize: vertical;
 }
-
-/* ==========================================================================
-   Chrome Frame prompt
-   ========================================================================== */
-
-.chromeframe {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
 
 /* FONTS *???????/
  */
@@ -166,7 +153,33 @@ a {
 .implementation_co { color: #DC322F; }
 .documentation_co { color: #CB4B16; }
 
+.tlight { color: rgba(100%, 100%, 100%, .6); }
+.tlighter { color: rgba(100%, 100%, 100%, .8); }
+.tlightest { color: rgba(100%, 100%, 100%, 1); }
 
+.tdark { color: rgba(0, 0, 0, .6); }
+.tdarker { color: rgba(0, 0, 0, .8); }
+.tdarkest { color: rgba(0, 0, 0, 1); }
+
+.wrap480 {
+    max-width: 480px;
+}
+
+.wrap720 {
+    max-width: 720px;
+}
+
+.wrap920 {
+    max-width: 920px;
+}
+
+.wrap1200 {
+    max-width: 1200px;
+}
+
+.inner {
+    margin: 0 auto;
+}
 
 .page_wrap {
     position: absolute;
@@ -174,6 +187,7 @@ a {
     bottom: 0px;
     left: 0px;
     right: 0px;
+    min-width: 1000px;
 }
 
 .menu_wrap {
@@ -217,7 +231,6 @@ a {
     margin: 0px;
 }
 
-
 .menu_item {
     display: block; 
     width: 100%;
@@ -251,7 +264,6 @@ a {
     float: left;
     text-align: left;
     margin-right: 10px;
-
 }
 
 .link_text{
@@ -324,10 +336,6 @@ a {
     width: 100%;
 }
 
-.block {
-    padding: 18px;
-}
-
 .post_list {
     text-align: center;
     font-size: 0px;
@@ -390,11 +398,7 @@ a {
 }
 
 .post_detail_content {
-    max-width: 700px;
-    margin: 0 auto;
 }
-
-
 
 /* home */
 
@@ -412,6 +416,32 @@ a {
     font-weight: 700;
     color: #fff;
 }
+
+.block_heading {
+    text-align: center;
+}
+
+.skill_list {
+    padding: 18px;
+}
+
+.skill_list_item {
+    width: 50%;
+    float: left;
+    padding: 18px;
+    list-style-type: none;
+    font-size: 16px;
+}
+
+/* creative method */
+
+.block {
+    padding: 18px;
+}
+
+
+
+
 
 
 
