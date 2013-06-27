@@ -6,7 +6,7 @@ button,
 input,
 select,
 textarea {
-    color: rgba(0,0,0,0.7);
+    color: rgba(0,0,0,0.6);
 }
 
 * {
@@ -19,7 +19,6 @@ body {
     font-family: 'Merriweather Sans', sans-serif;
     font-size: 18px;
     line-height: 1.77778;
-    font-weight: 300;
 }
 
 /*
@@ -198,27 +197,38 @@ a {
     bottom: 0px;
     position: absolute;
     overflow-y: auto;
-    background: #19191C;
-    box-shadow: inset -5px 0px 2px -2px #111;
+    background: #F7F7F6;
+    border-right: 2px solid #ccc;
 }
 
 .intro {
+    padding: 9px 18px;
+    border-bottom: 1px solid #ddd;
 }
 
 .profile_pic {
-    width: 100px;
-    height: 100px;
+    width: 64px;
+    height: 64px;
     display: block;
-    margin: 18px auto;
-    border-radius: 50%;
+    border-radius: 2px;
+    float: left;
 }
 
 .name {
-    text-align: center;
-    color: rgba(100%, 100%, 100%, .7);
+    float: left;
+    margin-left: 12px;
+}
+
+.nick {
+    display: block;
     margin: 0px;
-    font-size: 28px;
-    line-height: 47px;
+    line-height: 1em;
+    margin-top: 5px;
+}
+
+.name_full {
+    display: block;
+    line-height: 1em;
 }
 
 .menu_nav {
@@ -232,6 +242,7 @@ a {
 }
 
 .menu_item {
+    border-bottom: 1px solid #ddd;
     display: block; 
     width: 100%;
     color: #fefefe;
@@ -244,10 +255,10 @@ a {
 .menu_link {
     width: 100%;
     display: block;
-    color: #fefefe;
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 45px;
     padding: 0px 18px;
-    font-weight: 300;
+    color: #444;
 }
 
 .first_tier {
@@ -273,8 +284,8 @@ a {
 }
 
 .active {
-    background: #efefef;
-    color: #333; 
+    color: #000;
+    font-weight: 700;
 }
 
 .second_tier .active {
@@ -352,12 +363,14 @@ a {
     background: #fff;
     font-size: 18px;
     margin: 18px;
+    border: 1px solid #bbb;
 }
 
 .post {
-    margin: 24px;
     overflow: hidden;
     text-align: left;
+    height: 362px;
+    padding: 18px;
 }
 
 .post .date {
@@ -383,13 +396,12 @@ a {
     margin-bottom: 8px;
 }
 
-.post_content {
+.read_more {
+    border-top: 1px solid #bbb;
+    background: #eee;
+    line-height: 35px;
     font-size: 16px;
-    line-height: 1.5;
-    text-overflow: ellipsis;
-
 }
-
 .post_detail {
     padding: 18px;
     background: #fff;
@@ -436,7 +448,7 @@ a {
 /* creative method */
 
 .block {
-    padding: 18px;
+    padding: 18px 2em;
 }
 
 

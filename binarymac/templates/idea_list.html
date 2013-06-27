@@ -36,12 +36,10 @@ blah blah blah
                     <div class="date">
                         {{ post.last_updated|date:"M d, Y" }}
                     </div>
-                    <div class="post_content">
-                        {% autoescape off %}
-                        {{ post.content }}
-                        {% endautoescape %}
-                    </div>
                 </article>
+                <div class="read_more">
+                    <span>Read More</span>
+                </div>
             </a>
             {% endwith %}
         {% endfor %}
