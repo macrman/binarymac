@@ -201,8 +201,8 @@ a {
 }
 
 .intro {
-    padding: 9px 18px;
-    border-bottom: 1px solid #ddd;
+    padding: 18px 18px;
+    padding-bottom: 0px;
 }
 
 .profile_pic {
@@ -221,17 +221,33 @@ a {
 .nick {
     display: block;
     margin: 0px;
-    line-height: 1em;
-    margin-top: 5px;
+    line-height: 25px;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.username {
+    display: block;
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 400;
+    font-style: oblique;
 }
 
 .name_full {
     display: block;
-    line-height: 1em;
+    line-height: 11px;
+    font-size: 12px;
 }
 
 .menu_nav {
-    padding: 2px 0px;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu_heading {
+    font-weight: 300;
+    padding: 0 18px;
+    margin-bottom: .25em;
 }
 
 .first_tier, .second_tier {
@@ -241,7 +257,7 @@ a {
 }
 
 .menu_item {
-    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
     display: block; 
     width: 100%;
     color: #fefefe;

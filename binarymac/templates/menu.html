@@ -3,11 +3,13 @@
         <img class="profile_pic" src='http://www.lorempixel.com/400/400/people'></img>
         <div class="name">
             <h1 class='nick'>Mac</h1>
+            <span class="username">@binarymac</span>
             <span class='name_full'>Michael Ackerman</span>
         </div>
     </div>
-    <nav class="clearfix  menu_nav">
+    <nav class="clearfix menu_nav">
         <ul class="first_tier">
+            <h1 class="menu_heading">Menu</h1>
             {% for item in menu %}
                 <li class="menu_item clearfix">
                 <a class="menu_link clearfix {% if item.active == True %}active{% endif %}" href="{{ item.url }}">
