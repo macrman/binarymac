@@ -160,6 +160,16 @@ a {
 .tdarker { color: rgba(0, 0, 0, .8); }
 .tdarkest { color: rgba(0, 0, 0, 1); }
 
+.center_wrap {
+    text-align: center;
+    font-size: 0px;
+    padding: 18px;
+}
+
+.wrap150 {
+    width: 150px;
+}
+
 .wrap480 {
     max-width: 480px;
 }
@@ -469,8 +479,44 @@ a {
 
 
 
+/* contact */
 
+.contact_item {
+    font-size: 16px;
+    height: 183px;
+    display: inline-block;
+    border: 1px solid #bbb;
+    margin: 18px;
+}
 
+.contact_icon {
+    font-size: 32px;
+    line-height: 148px;
+    color: #fff;
+}
+
+.contact_item_text {
+    border-top: 1px solid #bbb;
+    display: block;
+    line-height: 32px;
+    background: #eee;
+}
+
+.facebook {
+    background: #3B5998;
+}
+
+.email {
+    background: #D94A38;
+}
+
+.twitter {
+    background: #00ACEE;
+}
+
+.github {
+    background: #D26911;
+}
 
 
 
