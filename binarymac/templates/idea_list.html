@@ -18,11 +18,6 @@ blah blah blah
         {% for post in post_list %}
             <a class="post_wrap " 
                 href="{% url 'idea_detail' primary='creations' pk=post.pk slug=post.slug %}">
-                    <div class="post_meta clearfix">
-                        <div class="date">
-                            {{ post.last_updated|date:"M d, Y" }}
-                        </div>
-                    </div>
                 <article class="post">
                 {% if post.featured_image %}
                     <img 
@@ -38,6 +33,11 @@ blah blah blah
                     </h1>
                 {% endif %}
                 </article>
+                <div class="post_meta clearfix">
+                    <div class="date">
+                        {{ post.last_updated|date:"M d, Y" }}
+                    </div>
+                </div>
             </a>
         {% endfor %}
     </div>

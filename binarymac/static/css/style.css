@@ -329,46 +329,10 @@ a {
     box-shadow: 0px 0px 7px 1px #555;
 }
 
-.content_header {
-    background: #fff;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    box-shadow: 0px 0px 2px 1px #777;
-    height: 45px;
-    z-index: 20;
-    line-height: 45px;
-    font-size: 16px;
-}
-
-.action_button {
-    float: left;
-    padding: 0 18px;
-}
-
-.action_left {
-    float: left;
-}
-
-.action_center {
-    position: absolute;
-    left: 50%;
-}
-
-.action_center_inner {
-    position: relative;
-    left: -50%;
-}
-
-.action_right {
-    float: right;
-}
-
 .content {
     overflow: auto;
     position: absolute;
-    top: 45px;
+    top: 0px;
     bottom: 0px;
     width: 100%;
 }
@@ -394,7 +358,7 @@ a {
 .post {
     overflow: hidden;
     text-align: left;
-    height: 360px;
+    height: 366px;
     padding: 9px 18px;
     background: #fff;
 }
@@ -407,16 +371,12 @@ a {
     color: #777;
     display: block;
     line-height: 2.5em;
-    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
     padding: 0 18px;
     background: #fff;
 }
 
 .date {
-    float: right;
-}
-
-.stage {
     float: left;
 }
 

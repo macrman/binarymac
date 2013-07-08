@@ -23,24 +23,6 @@
             {% include "menu.html" %}
 
             <div class="content_wrap clearfix">
-                <div class="content_header">
-                    <div class="action_left">
-                        <div class='action_button icon-menu'></div>
-                        {% block action_left %}
-                        {% endblock %}
-                    </div>
-                    <div class="action_center">
-                        <div class="action_center_inner">
-                            {% block action_center %}
-                            Mac
-                            {% endblock %}
-                        </div>
-                    </div>
-                    <div class="action_right">
-                        {% block action_right %}
-                        {% endblock %}
-                    </div>
-                </div>
                 <div class="content">
                     {% block main %}
                     {% endblock %}
