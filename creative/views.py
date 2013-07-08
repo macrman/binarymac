@@ -54,27 +54,12 @@ class IdeaListView(ListView):
 
     template_name = 'idea_list.html'
     context_object_name = 'post_list'
-
-    def dehumanize(self):
-        for choice in Idea.STAGE_CHOICES:
-            if self.kwargs.get('stage') in choice:
-                dehumanized = choice[0]
-                return dehumanized
-
-    def get_queryset(self):
-        if self.kwargs.get('stage'):
-            queryset = Idea.objects.filter(stage=self.dehumanize()).order_by('-last_updated')
-        else:
-            queryset = Idea.objects.all().order_by('-last_updated')
-        return queryset
+    queryset = Idea.objects.all().order_by('-last_updated')
 
     def get_context_data(self, **kwargs):
         context = super(IdeaListView, self).get_context_data(**kwargs)
         kwargs = self.kwargs
         context.update(kwargs)
-        if self.kwargs.get('stage') is None:
-            active = ["/creations", None]
-        else:
-            active = ["/creations", "/creations/" + self.kwargs.get('stage')]
+        active = ["/creations", None]
         context['menu'] = menulist(active)
         return context

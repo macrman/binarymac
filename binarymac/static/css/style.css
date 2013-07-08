@@ -377,6 +377,7 @@ a {
     text-align: center;
     font-size: 0px;
     padding: 18px;
+    background: #eee;
 }
 
 .post_wrap {
@@ -386,48 +387,60 @@ a {
     height: 400px;
     overflow: hidden;
     color: #333;
-    background: #fff;
     font-size: 18px;
     margin: 18px;
-    border: 1px solid #bbb;
 }
 
 .post {
     overflow: hidden;
     text-align: left;
-    height: 362px;
-    padding: 18px;
+    height: 360px;
+    padding: 9px 18px;
+    background: #fff;
 }
 
-.post .date {
+.post_content {
+}
+
+.post_meta {
     font-size: 13px;
-    font-weight: 400;
+    color: #777;
+    display: block;
+    line-height: 2.5em;
+    border-bottom: 1px solid #eee;
+    padding: 0 18px;
+    background: #fff;
+}
+
+.date {
+    float: right;
+}
+
+.stage {
+    float: left;
 }
 
 .post_title {
     margin-top: 0px;
     margin-bottom: 0px;
-    font-weight: 400;
-    font-size: 28px;
+    font-weight: 300;
 }
 
 .post_title_small {
     font-size: 21px;
     margin: 0px;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .featured_image {
     width: 100%;
-    margin-bottom: 8px;
+    margin: 9px 0;
 }
 
 .read_more {
-    border-top: 1px solid #bbb;
-    background: #eee;
-    line-height: 35px;
-    font-size: 16px;
+
 }
+
 .post_detail {
     padding: 18px;
     background: #fff;

@@ -3,18 +3,6 @@ from django.utils.text import slugify
 
 
 class Idea(models.Model):
-    INCUBATION = 'IN'
-    ANALYZATION = 'AN'
-    EXPERIMENTATION = 'EX'
-    DOCUMENTATION = 'DO'
-    STAGE_CHOICES = (
-        (INCUBATION, 'incubation'),
-        (ANALYZATION, 'analyzation'),
-        (EXPERIMENTATION, 'experimentation'),
-        (DOCUMENTATION, 'documentation'),
-    )
-
-    stage = models.CharField(max_length=2, choices=STAGE_CHOICES,)
     title = models.CharField(max_length=100)
     project = models.ManyToManyField('Project', blank=True)
     published = models.BooleanField()

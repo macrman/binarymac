@@ -16,33 +16,29 @@ blah blah blah
 {% block main %}
     <div class="post_list">
         {% for post in post_list %}
-            {% with thestage=post.get_stage_display %}
             <a class="post_wrap " 
-                href="{% url 'idea_detail' primary='creations' stage=thestage|lower pk=post.pk slug=post.slug %}">
+                href="{% url 'idea_detail' primary='creations' pk=post.pk slug=post.slug %}">
+                    <div class="post_meta clearfix">
+                        <div class="date">
+                            {{ post.last_updated|date:"M d, Y" }}
+                        </div>
+                    </div>
                 <article class="post">
                 {% if post.featured_image %}
                     <img 
                         class="featured_image" 
                         src="{{ post.featured_image|thumbnail_url:'thumb' }}">
                     </img>
-                    <h1 class="post_title_small">
+                    <h3 class="post_title_small">
                         {{ post }}
                     </h1>
                 {% else %}
-                    <h1 class="post_title">
+                    <h3 class="post_title">
                         {{ post }}
                     </h1>
                 {% endif %}
-                    <div class="date">
-                        {{ post.last_updated|date:"M d, Y" }}
-                        {{ thestage }}
-                    </div>
                 </article>
-                <div class="read_more">
-                    <span>Read More</span>
-                </div>
             </a>
-            {% endwith %}
         {% endfor %}
     </div>
 {% endblock %}
