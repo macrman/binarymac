@@ -14,9 +14,9 @@ blah blah blah
 {% endblock %}
 
 {% block main %}
-    <div class="post_list">
+    <div class="center_wrap post_list">
         {% for post in post_list %}
-            <a class="post_wrap " 
+            <a class="inline_box post_wrap " 
                 href="{% url 'idea_detail' primary='creations' pk=post.pk slug=post.slug %}">
                 <article class="post">
                 {% if post.featured_image %}
@@ -33,7 +33,7 @@ blah blah blah
                     </h1>
                 {% endif %}
                 </article>
-                <div class="post_meta clearfix">
+                <div class="box_bottom post_meta clearfix">
                     <div class="date">
                         {{ post.last_updated|date:"M d, Y" }}
                     </div>

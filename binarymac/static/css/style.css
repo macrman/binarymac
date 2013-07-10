@@ -109,49 +109,6 @@ a {
 .near_black { background: #222; }
 .black { background: #111;}
 
-
-.everything_lighter { background: #C6E6E4; }
-.incubation_lighter { background: #C5E0F3; }
-.analyzation_lighter { background: #D8D9EF; }
-.experimentation_lighter { background: #F3C9DE; }
-.implementation_lighter { background: #F6C8C8; }
-.documentation_lighter { background: #F1CFC1; }
-
-.everything_light { background: #79C4BE; }
-.incubation_light { background: #76B6E3; }
-.analyzation_light { background: #A2A5DA; }
-.experimentation_light { background: #E380B0; }
-.implementation_light { background: #E97E7C; }
-.documentation_light { background: #DE8D6C; }
-
-.everything { background: #2AA198; }
-.incubation { background: #268BD2; }
-.analyzation { background: #6C71C4; }
-.experimentation { background: #D33682; }
-.implementation { background: #DC322F; }
-.documentation { background: #CB4B16; }
-
-.everything_dark { background: #1B6660; }
-.incubation_dark { background: #185885; }
-.analyzation_dark { background: #44477C; }
-.experimentation_dark { background: #852252; }
-.implementation_dark { background: #8B201E; }
-.documentation_dark { background: #802F0E; }
-
-.everything_darker { background: #0B2B29; }
-.incubation_darker { background: #0A2538; }
-.analyzation_darker { background: #1D1E34; }
-.experimentation_darker { background: #380E23; }
-.implementation_darker { background: #3B0D0D; }
-.documentation_darker { background: #361406; }
-
-.everything_co { color: #2AA198; }
-.incubation_co { color: #268BD2; }
-.analyzation_co { color: #6C71C4; }
-.experimentation_co { color: #D33682; }
-.implementation_co { color: #DC322F; }
-.documentation_co { color: #CB4B16; }
-
 .tlight { color: rgba(100%, 100%, 100%, .6); }
 .tlighter { color: rgba(100%, 100%, 100%, .8); }
 .tlightest { color: rgba(100%, 100%, 100%, 1); }
@@ -164,6 +121,23 @@ a {
     text-align: center;
     font-size: 0px;
     padding: 18px;
+}
+
+.inline_box {
+    font-size: 18px;
+    display: inline-block;
+    margin: 18px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.box_bottom {
+    background: #ddd;
+    font-size: 14px;
+    line-height: 34px;
+    display: block;
+    color: #666;
+    padding: 0 18px;
 }
 
 .wrap150 {
@@ -321,24 +295,17 @@ a {
     top: 0px;
     bottom: 0px;
     width: 100%;
-}
-
-.post_list {
-    text-align: center;
-    font-size: 0px;
-    padding: 18px;
     background: #eee;
 }
 
+.post_list {
+}
+
 .post_wrap {
-    display: inline-block;
     color: #333;
     width: 280px; 
     height: 400px;
-    overflow: hidden;
     color: #333;
-    font-size: 18px;
-    margin: 18px;
 }
 
 .post {
@@ -346,20 +313,12 @@ a {
     text-align: left;
     height: 366px;
     padding: 9px 18px;
-    background: #fff;
 }
 
 .post_content {
 }
 
 .post_meta {
-    font-size: 13px;
-    color: #777;
-    display: block;
-    line-height: 2.5em;
-    border-top: 1px solid #eee;
-    padding: 0 18px;
-    background: #fff;
 }
 
 .date {
@@ -442,11 +401,7 @@ a {
 /* contact */
 
 .contact_item {
-    font-size: 16px;
-    height: 183px;
-    display: inline-block;
-    border: 1px solid #bbb;
-    margin: 18px;
+    height: 182px;
 }
 
 .contact_icon {
@@ -456,10 +411,6 @@ a {
 }
 
 .contact_item_text {
-    border-top: 1px solid #bbb;
-    display: block;
-    line-height: 32px;
-    background: #eee;
 }
 
 .facebook {
