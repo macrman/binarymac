@@ -161,8 +161,7 @@ a {
 }
 
 .l50 {
-    width: 50%;
-    float: left;
+    display: table-cell;
 }
 
 .inner {
@@ -398,12 +397,30 @@ a {
 /* creative method */
 
 .block {
-    padding: 18px 2em;
+    padding: 36px; 
 }
 
-
-
 /* contact */
+
+.contact_heading {
+    text-align: center;
+}
+
+.contact_wrap {
+    display: table;
+}
+
+.contact_sub_head {
+    text-align: center;
+    margin: 0px;
+    padding: 18px;
+}
+
+.physical_contact {
+}
+
+.digital_contact {
+}
 
 .contact_item {
     height: 182px;

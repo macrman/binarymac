@@ -1,40 +1,37 @@
 {% extends "base.html" %}
 
 {% block main %}
-<table class="">
-    <caption><h1>Talk to me!</h1></caption>
-    <tbody>
-    <tr>
-        <th><h3>In the Digital World...</h3></th>
-        <th><h3>Or In the Physical World.</h3></th>
-    </tr>
-    <tr>
-        <td >
-        <div class="center_wrap">
-            <div class="inline_box contact_item wrap100 ">
-                <div class="contact_icon icon-facebook facebook"></div>
-                <span class="box_bottom contact_item_text">Facebook</span>
-            </div>
-            <div class="inline_box contact_item wrap100 ">
-                <div class="contact_icon icon-email email"></div>
-                <span class="box_bottom contact_item_text">Email</span>
-            </div>
-            <div class="inline_box contact_item wrap100 ">
-                <div class="contact_icon icon-twitter twitter"></div>
-                <span class="box_bottom contact_item_text">Twitter</span>
-            </div>
-            <div class="inline_box contact_item wrap100 ">
-                <div class="contact_icon icon-github github"></div>
-                <span class="box_bottom contact_item_text">Github</span>
+    <h1 class="contact_heading">Talk to me!</h1>
+    <div class="contact_wrap">
+        <div class="l50 digital_contact">
+            <h3 class="contact_sub_head">In the Digital World...</h3>
+            <div class="center_wrap ">
+                <div class="inline_box contact_item wrap100 ">
+                    <div class="contact_icon icon-facebook facebook"></div>
+                    <span class="box_bottom contact_item_text">Facebook</span>
+                </div>
+                <div class="inline_box contact_item wrap100 ">
+                    <div class="contact_icon icon-email email"></div>
+                    <span class="box_bottom contact_item_text">Email</span>
+                </div>
+                <div class="inline_box contact_item wrap100 ">
+                    <div class="contact_icon icon-twitter twitter"></div>
+                    <span class="box_bottom contact_item_text">Twitter</span>
+                </div>
+                <div class="inline_box contact_item wrap100 ">
+                    <div class="contact_icon icon-github github"></div>
+                    <span class="box_bottom contact_item_text">Github</span>
+                </div>
             </div>
         </div>
-        </td>
-        <td>
-            <p>You might also find me at one of the many meetups around Los Angeles.
-            Let me know if you wanna come say "Hi!".</p>
-        </td>
-    <tr>
-    </tbody>
-</table>
-
+        <div class="l50 physical_contact">
+            <h3 class="contact_sub_head">Or In the Physical World.</h3>
+            <div class="block">
+                <span>
+                    You might also find me at one of the many meetups around Los Angeles.
+                    Let me know if you wanna come say "Hi!".
+                </span>
+            </div>
+        </div>
+    </div>
 {% endblock %}
