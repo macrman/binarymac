@@ -181,7 +181,7 @@ a {
     bottom: 0px;
     position: absolute;
     overflow-y: auto;
-    background: #268BD2;
+    background: #36566A;
     color: #fff;
 }
 
@@ -269,8 +269,8 @@ a {
 }
 
 .active {
-    color: #268BD2;
-    background: #fff;
+    color: #fff;
+    background: #153345;
     border-radius: 3px;
 }
 
