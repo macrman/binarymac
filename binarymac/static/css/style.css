@@ -140,7 +140,7 @@ a {
     padding: 0 18px;
 }
 
-.wrap150 {
+.wrap100 {
     width: 150px;
 }
 
@@ -158,6 +158,11 @@ a {
 
 .wrap1200 {
     max-width: 1200px;
+}
+
+.l50 {
+    width: 50%;
+    float: left;
 }
 
 .inner {
