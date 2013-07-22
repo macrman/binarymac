@@ -24,7 +24,7 @@ blah blah blah
                         class="featured_image" 
                         src="{{ post.featured_image|thumbnail_url:'thumb' }}">
                     </img>
-                    <h3 class="post_title_small">
+                    <h5 class="post_title_small">
                         {{ post }}
                     </h1>
                 {% else %}
@@ -32,11 +32,12 @@ blah blah blah
                         {{ post }}
                     </h1>
                 {% endif %}
-                </article>
-                <div class="box_bottom post_meta clearfix">
                     <div class="date">
                         {{ post.last_updated|date:"M d, Y" }}
                     </div>
+                </article>
+                <div class="box_bottom post_meta clearfix">
+                    <div class="read_more">Read More</div>
                 </div>
             </a>
         {% endfor %}

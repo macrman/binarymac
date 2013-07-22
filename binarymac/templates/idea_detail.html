@@ -6,8 +6,8 @@ binarymac | {{ post.title }}
 {% endblock %}
 
 {% block main %}
-    <section class="wrap720 inner post_d clearfix">
-        <h1>{{ post.title }}</h1>
+    <section class="wrap800 inner post_d clearfix">
+        <h1 class="post_d_title">{{ post.title }}</h1>
         <p>{{ post.last_updated }}</p>
         {% autoescape off %}
         {{ post.content }}
