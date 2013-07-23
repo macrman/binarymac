@@ -184,9 +184,10 @@ a {
     right: 0px;
     height: 50px;
     position: fixed;
-    background: #36444D;
+    background: #36434D;
     z-index: 90;
     padding: 0px 64px;
+    box-shadow: 0px 0px 0px 1px #000;
 }
 
 .intro {
@@ -203,6 +204,7 @@ a {
     border-radius: 100%;
     border: 2px solid #fff;
     margin-top: 5px;
+    box-shadow: 0px 0px 0px 1px #000;
 }
 
 .name {
@@ -222,6 +224,7 @@ a {
 .menu_nav {
     float: right;
     overflow: hidden;
+    border-right: 1px solid #000;
 }
 
 .menu_link {
@@ -232,7 +235,9 @@ a {
     padding: 0px 18px;
     font-weight: 400;
     color: #ccc;
+    border-left: 1px solid #000;
 }
+
 
 .glyph {
     display: block;
@@ -247,6 +252,7 @@ a {
 
 .active {
     color: #fff;
+    background: #151F26;
 }
 
 .second_tier .active {
