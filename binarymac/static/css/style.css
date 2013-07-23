@@ -186,11 +186,13 @@ a {
     position: fixed;
     background: #36444D;
     z-index: 90;
+    padding: 0px 64px;
 }
 
 .intro {
-    padding: 9px 18px;
+    padding: 0px 18px;
     float: left;
+    line-height: 50px;
 }
 
 .profile_pic {
@@ -208,9 +210,10 @@ a {
 .nick {
     display: block;
     margin: 0px;
-    line-height: 27px;
     font-size: 21px;
     font-weight: 400;
+    line-height: 50px;
+    color: #fff;
 }
 
 .menu_nav {
@@ -263,7 +266,7 @@ a {
     top: 0px;
     bottom: 0px;
     width: 100%;
-    background: #fafafa;
+    background: #D3DDE3;
 }
 
 .post_list {
