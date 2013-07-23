@@ -6,7 +6,7 @@ button,
 input,
 select,
 textarea {
-    color: rgba(0,0,0,0.7);
+    color: rgba(0,0,0,0.8);
 }
 
 * {
@@ -190,16 +190,19 @@ a {
 }
 
 .intro {
-    padding: 0px 18px;
+    padding: 0px;
     float: left;
     line-height: 50px;
 }
 
 .profile_pic {
-    width: 27px;
-    height: 27px;
+    width: 40px;
+    height: 40px;
     display: block;
     float: left;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    margin-top: 5px;
 }
 
 .name {
