@@ -117,6 +117,11 @@ a {
 .tdarker { color: rgba(0, 0, 0, .8); }
 .tdarkest { color: rgba(0, 0, 0, 1); }
 
+.big_icon {
+    font-size: 128px;
+    margin: 0 36px;
+}
+
 .center_wrap {
     text-align: center;
     font-size: 0px;
@@ -155,6 +160,10 @@ a {
     max-width: 800px;
 }
 
+.wrap1024 {
+    max-width: 1024px;
+
+}
 .wrap1200 {
     max-width: 1200px;
 }
@@ -384,8 +393,15 @@ a {
 
 /* creative method */
 
+.creative_method {
+    text-align: center;
+}
+
+.big_icon, .stage_stuff {
+}
+
 .block {
-    padding: 36px; 
+    padding: 64px; 
 }
 
 /* contact */
