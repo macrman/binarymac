@@ -395,6 +395,35 @@ a {
 
 .creative_method {
     text-align: center;
+    color: #fff;
+}
+
+.creative_intro {
+    color: #333;
+}
+
+.incubation {
+    background: #859900;
+}
+
+.analyzation {
+    background: #B58900;
+}
+
+.experimentation {
+    background: #CB4B16;
+}
+
+.implementation {
+    background: #DC322F;
+}
+
+.documentation {
+    background: #D33682;
+}
+
+.continuous {
+    color: #333;
 }
 
 .big_icon, .stage_stuff {
