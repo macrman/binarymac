@@ -396,6 +396,7 @@ a {
 
 .creative_intro {
     color: #333;
+    background: #fff;
 }
 
 .incubation {
@@ -419,7 +420,7 @@ a {
 }
 
 .continuous {
-    color: #333;
+    background: #1F1F23;
 }
 
 .big_icon {
@@ -435,6 +436,7 @@ a {
 
 .block {
     padding: 64px; 
+    border-bottom: 1px solid #333;
 }
 
 /* contact */
