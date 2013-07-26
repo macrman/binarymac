@@ -117,10 +117,6 @@ a {
 .tdarker { color: rgba(0, 0, 0, .8); }
 .tdarkest { color: rgba(0, 0, 0, 1); }
 
-.big_icon {
-    font-size: 128px;
-    margin: 0 36px;
-}
 
 .center_wrap {
     text-align: center;
@@ -424,6 +420,14 @@ a {
 
 .continuous {
     color: #333;
+}
+
+.big_icon {
+    font-size: 100px;
+    line-height: 200px;
+    width: 216px;
+    border: 8px solid #fff;
+    border-radius: 100%;
 }
 
 .big_icon, .stage_stuff {
