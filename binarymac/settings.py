@@ -77,6 +77,7 @@ STATICFILES_DIRS = [
 STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+    "compressor.finders.CompressorFinder",
 ]
 
 # Make this unique, and don"t share it with anybody.
@@ -132,6 +133,7 @@ INSTALLED_APPS = [
     "debug_toolbar",
     "easy_thumbnails",
     "ckeditor",
+    "compressor",
 
     # project
     "binarymac",
@@ -179,3 +181,5 @@ THUMBNAIL_ALIASES = {
         'thumb': {'size': (500, 288), 'crop': True, },
     }
 }
+
+COMPRESS_ENABLED = True

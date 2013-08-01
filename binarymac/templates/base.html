@@ -8,17 +8,16 @@
         <meta name="viewport" content="width=device-width">
         <link href='http://fonts.googleapis.com/css?family=Merriweather:400,900italic,900,700italic,700,400italic,300italic,300|Merriweather+Sans:400,300italic,300,400italic,700,800,800italic,700italic'
         rel='stylesheet' type='text/css'>
+        {% load compress %}
+        {% compress css %}
         <link rel="stylesheet" href="{{ STATIC_URL }}css/normalize.css">
         <link rel="stylesheet" href="{{ STATIC_URL }}css/hello.css">
-        <link rel="stylesheet" href=" {{ STATIC_URL }}css/style.css">
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script href=" {{ STATIC_URL }}js/vendor/modernizr-2.6.2.min.js"></script>
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+        {% endcompress %}
     </head>
     <body>
         <div class='page_wrap clearfix'>
-
             {% include "menu.html" %}
-
             <div class="content_wrap clearfix">
                 <div class="content">
                     {% block main %}
@@ -26,7 +25,7 @@
                 </div>
             </div>
         </div>
-        <script src="{{ STATIC_URL }}js/main.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>
             $('html').removeClass('no-js');
         </script>
