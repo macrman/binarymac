@@ -6,7 +6,7 @@ button,
 input,
 select,
 textarea {
-    color: rgba(0,0,0,0.8);
+    color: rgba(0,0,0,0.7);
 }
 
 * {
@@ -174,21 +174,12 @@ a {
 }
 
 .page_wrap {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
     min-width: 1000px;
 }
 
 .menu_wrap {
     font-size: 16px;
-    left: 0px;
-    top: 0px;
-    right: 0px;
     height: 50px;
-    position: fixed;
     background: #36434D;
     z-index: 90;
     padding: 0px 64px;
@@ -266,21 +257,14 @@ a {
 }
 
 .content_wrap {
-    right: 0px;
-    top: 45px;
-    bottom: 0px;
-    left: 0px;
-    position: absolute;
-    overflow: hidden;
 }
 
 .content {
     overflow: auto;
-    position: absolute;
     top: 0px;
     bottom: 0px;
     width: 100%;
-    background: #D3DDE3;
+    background: #F7F2F0;
 }
 
 .post_list {
@@ -436,7 +420,7 @@ a {
 
 .block {
     padding: 64px; 
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #aaa;
 }
 
 /* contact */
