@@ -260,10 +260,7 @@ a {
 }
 
 .content {
-    overflow: auto;
-    top: 0px;
-    bottom: 0px;
-    width: 100%;
+    width: 50%;
     background: #F7F2F0;
 }
 
@@ -557,13 +554,13 @@ visibility: hidden;
 *    `:before` to contain the top-margins of child elements.
 */
 
-.clearfix:before,
-.clearfix:after {
+.cl:before,
+.cl:after {
 content: " "; /* 1 */
 display: table; /* 2 */
 }
 
-.clearfix:after {
+.cl:after {
 clear: both;
 }
 
@@ -572,7 +569,7 @@ clear: both;
 * Include this rule to trigger hasLayout and contain floats.
 */
 
-.clearfix {
+.cl {
 *zoom: 1;
 }
 

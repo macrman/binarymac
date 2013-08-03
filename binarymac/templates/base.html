@@ -10,16 +10,16 @@
         rel='stylesheet' type='text/css'>
         {% load compress %}
         {% compress css %}
-            <link type="text/less" rel="stylesheet" href="{{ STATIC_URL }}css/normalize.css">
-            <link type="text/less" rel="stylesheet" href="{{ STATIC_URL }}css/hello.css">
+            <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/normalize.css">
+            <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/hello.css">
             <link type="text/less" rel="stylesheet" href="{{ STATIC_URL }}css/style.less">
         {% endcompress %}
     </head>
     <body>
-        <div class='page_wrap clearfix'>
+        <div class='page_wrap cl'>
             {% include "menu.html" %}
             <div class="content_wrap">
-                <div class="content clearfix">
+                <div class="content cl">
                     {% block main %}
                     {% endblock %}
                 </div>
