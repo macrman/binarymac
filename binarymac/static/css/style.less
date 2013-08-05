@@ -97,26 +97,14 @@ a {
 
 /* COLORS */
 
-/* .367 .733 */
-
-.white { background: #fff; }
-.near_white { background: #f8f8f8 }
-.grey { background: #eee;}
-.dark_grey { background: #888; }
-.darker_grey { background: #666; }
-
-.dark { background: #333; }
-.near_black { background: #222; }
-.black { background: #111;}
-
-.tlight { color: rgba(100%, 100%, 100%, .6); }
-.tlighter { color: rgba(100%, 100%, 100%, .8); }
-.tlightest { color: rgba(100%, 100%, 100%, 1); }
-
-.tdark { color: rgba(0, 0, 0, .6); }
-.tdarker { color: rgba(0, 0, 0, .8); }
-.tdarkest { color: rgba(0, 0, 0, 1); }
-
+@blue: #268BD2;
+@cyan: #2AA198;
+@green: #859900;
+@yellow: #B58900;
+@orange: #CB4B16;
+@red: #DC322F;
+@magenta: #D33682;
+@violet: #6C71C4;
 
 .center_wrap {
     text-align: center;
@@ -260,7 +248,6 @@ a {
 }
 
 .content {
-    width: 50%;
     background: #F7F2F0;
 }
 
@@ -381,23 +368,23 @@ a {
 }
 
 .incubation {
-    background: #859900;
+    background: @green;
 }
 
 .analyzation {
-    background: #B58900;
+    background: @yellow;
 }
 
 .experimentation {
-    background: #CB4B16;
+    background: @orange;
 }
 
 .implementation {
-    background: #DC322F;
+    background: @red;
 }
 
 .documentation {
-    background: #D33682;
+    background: @magenta;
 }
 
 .continuous {
@@ -417,7 +404,6 @@ a {
 
 .block {
     padding: 64px; 
-    border-bottom: 1px solid #aaa;
 }
 
 /* contact */
@@ -556,8 +542,8 @@ visibility: hidden;
 
 .cl:before,
 .cl:after {
-content: " "; /* 1 */
-display: table; /* 2 */
+content: ""; /* 1 */
+display: block; /* 2 */
 }
 
 .cl:after {
