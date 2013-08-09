@@ -10,10 +10,10 @@ textarea {
 }
 
 * {
+    -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
 
 body {
     font-family: 'Merriweather Sans', sans-serif;
@@ -76,10 +76,6 @@ textarea {
     resize: vertical;
 }
 
-/* FONTS *???????/
- */
-
-
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
@@ -95,7 +91,7 @@ a {
     text-decoration: none;
 }
 
-/* COLORS */
+/* Base Classes, Variables, and Mixins */
 
 @blue: #268BD2;
 @cyan: #2AA198;
@@ -106,18 +102,19 @@ a {
 @magenta: #D33682;
 @violet: #6C71C4;
 
-.center_wrap {
-    text-align: center;
-    font-size: 0px;
-    padding: 18px;
+.centered () {
+    margin-right: auto;
+    margin-left: auto;
 }
 
-.inline_box {
-    font-size: 18px;
-    display: inline-block;
-    margin: 18px;
-    background: #fff;
-    overflow: hidden;
+.wrapx100 (@x) { max-width: (@x * 100); }
+
+.grid (@width; @height: auto; @margin:0px) {
+    display: block;
+    float: left;
+    width: ((@width*100px) - (@margin*2px));
+    height: (@height*100px);
+    margin: @margin;
 }
 
 .box_bottom {
@@ -128,42 +125,14 @@ a {
     color: #666;
 }
 
-.wrap100 {
-    width: 150px;
-}
-
-.wrap480 {
-    max-width: 480px;
-}
-
-.wrap720 {
-    max-width: 720px;
-}
-
-.wrap800 {
-    max-width: 800px;
-}
-
-.wrap1024 {
-    max-width: 1024px;
-
-}
-.wrap1200 {
-    max-width: 1200px;
-}
-
-.l50 {
-    float: left;
-    width: 50%;
-}
-
 .inner {
     margin: 0 auto;
 }
 
 .page_wrap {
-    min-width: 1000px;
 }
+
+/* Menu */
 
 .menu_wrap {
     font-size: 16px;
@@ -222,14 +191,6 @@ a {
     border-left: 1px solid #000;
 }
 
-
-.glyph {
-    display: block;
-    float: left;
-    text-align: left;
-    margin-right: 10px;
-}
-
 .link_text{
     text-transform: capitalize;
 }
@@ -252,6 +213,8 @@ a {
 }
 
 .post_list {
+    .centered ();
+    width: 1200px;
 }
 
 .post_wrap {
@@ -259,14 +222,15 @@ a {
     width: 280px; 
     height: 400px;
     color: #333;
-    border: 1px solid #ddd;
+    position: relative;
+    .grid (3; 3; 2px);
 }
 
 .post {
-    overflow: hidden;
     text-align: left;
-    height: 354px;
     padding: 9px 18px;
+    position: relative;
+    z-index: 25;
 }
 
 .post_content {
@@ -299,9 +263,13 @@ a {
     font-weight: 300;
 }
 
-.featured_image {
+.featured_img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
     width: 100%;
-    margin: 9px 0;
+    height: 100%;
+    z-index: 20;
 }
 
 /* Post detail */
@@ -357,6 +325,10 @@ a {
 
 /* creative method */
 
+.stage_wrap {
+    padding: 64px;
+}
+
 .creative_method {
     text-align: center;
     color: #fff;
@@ -400,10 +372,8 @@ a {
 }
 
 .big_icon, .stage_stuff {
-}
-
-.block {
-    padding: 64px; 
+    max-width: 700px;
+    .centered;
 }
 
 /* contact */
@@ -422,9 +392,11 @@ a {
 }
 
 .physical_contact {
+    .grid (2; 4; 2px);
 }
 
 .digital_contact {
+    .grid (2; 4; 2px);
 }
 
 .contact_item {
@@ -455,8 +427,6 @@ a {
 .github {
     background: #D26911;
 }
-
-
 
 /* ==========================================================================
 Helper classes
@@ -528,35 +498,14 @@ width: auto;
 visibility: hidden;
 }
 
-/*
-* Clearfix: contain floats
-*
-* For modern browsers
-* 1. The space content is one way to avoid an Opera bug when the
-*    `contenteditable` attribute is included anywhere else in the document.
-*    Otherwise it causes space to appear at the top and bottom of elements
-*    that receive the `clearfix` class.
-* 2. The use of `table` rather than `block` is only necessary if using
-*    `:before` to contain the top-margins of child elements.
-*/
-
 .cl:before,
 .cl:after {
-content: ""; /* 1 */
-display: block; /* 2 */
+    content: " "; /* 1 */
+    display: table; /* 2 */
 }
 
 .cl:after {
-clear: both;
-}
-
-/*
-* For IE 6/7 only
-* Include this rule to trigger hasLayout and contain floats.
-*/
-
-.cl {
-*zoom: 1;
+    clear: both;
 }
 
 /* ==========================================================================

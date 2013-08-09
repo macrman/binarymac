@@ -14,31 +14,25 @@ blah blah blah
 {% endblock %}
 
 {% block main %}
-    <div class="center_wrap post_list">
+    <div class="post_list">
         {% for post in post_list %}
-            <a class="inline_box post_wrap " 
-                href="{% url 'idea_detail' primary='creations' pk=post.pk slug=post.slug %}">
-                <article class="post">
-                {% if post.featured_image %}
-                    <img 
-                        class="featured_image" 
-                        src="{{ post.featured_image|thumbnail_url:'thumb' }}">
+            <a class="post_wrap" 
+                href="{% url 'idea_detail' primary='creations' pk=post.pk slug=post.slug %}"
+            >
+                <img 
+                    class="featured_img" 
+                    src="{{ post.featured_image|thumbnail_url:'thumb' }}" 
+                    >
                     </img>
-                    <h5 class="post_title_small">
-                        {{ post }}
-                    </h1>
-                {% else %}
+                <article 
+                    class="post"> 
                     <h3 class="post_title">
                         {{ post }}
                     </h1>
-                {% endif %}
                     <div class="date">
                         {{ post.last_updated|date:"M d, Y" }}
                     </div>
                 </article>
-                <div class="box_bottom post_meta cl">
-                    <div class="read_more">Read More</div>
-                </div>
             </a>
         {% endfor %}
     </div>
