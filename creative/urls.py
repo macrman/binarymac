@@ -1,7 +1,5 @@
 from django.conf.urls import url, patterns
-from .views import (
-    IdeaDetailView, IdeaListView, ImplementationListView,
-    ImplementationDetailView)
+from .views import IdeaDetailView, IdeaListView
 
 urlpatterns = patterns(
     '',
