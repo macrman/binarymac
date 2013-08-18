@@ -3,7 +3,6 @@
 {% load static %}
 
 {% block title %}
-blah blah blah
 {% endblock %}
 
 {% block action_right %}
@@ -17,7 +16,7 @@ blah blah blah
     <div class="post_list">
         {% for post in post_list %}
             <a class="post_wrap" 
-                href="{% url 'idea_detail' primary='creations' pk=post.pk slug=post.slug %}"
+                href="{% url 'idea_detail' pk=post.pk slug=post.slug %}"
             >
                 <img 
                     class="featured_img" 
