@@ -15,10 +15,12 @@ textarea {
     box-sizing: border-box;
 }
 
+
 body {
     font-family: 'Merriweather Sans', sans-serif;
     font-size: 18px;
     line-height: 1.55;
+    background: @darkgrey;
 }
 
 /*
@@ -101,6 +103,7 @@ a {
 @red: #DC322F;
 @magenta: #D33682;
 @violet: #6C71C4;
+@darkgrey: #1F1F23;
 
 .centered () {
     margin-right: auto;
@@ -113,7 +116,7 @@ a {
     display: block;
     float: left;
     width: ((@width*100px) - (@margin*2px));
-    height: (@height*100px);
+    height: ((@height*100px) - (@margin*2px));
     margin: @margin;
 }
 
@@ -135,10 +138,11 @@ a {
 /* Menu */
 
 .menu_wrap {
+    background: #fff;
     font-size: 16px;
     position: fixed;
     left: 0px;
-    right: 950px;
+    width: 20%;
     height: 100%;
 }
 
@@ -150,19 +154,20 @@ a {
 }
 
 .profile_pic {
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
     display: block;
-    border-radius: 100%;
+    margin: 0 auto;
     border: 2px solid #fff;
-    margin-top: 5px;
-    box-shadow: 0px 0px 0px 1px #000;
 }
 
 .name {
 }
 
 .nick {
+    margin-top: 0px;
+    padding: 0px 15px;
+    font-weight: 800;
 }
 
 .menu_nav {
@@ -175,29 +180,23 @@ a {
     text-transform: capitalize;
 }
 
-.active {
-}
-
 .content_wrap {
-    width: 950px;
+    width: 80%;
     float: right;
 }
 
 .content {
-    background: #F7F2F0;
-    background: #1F1F23;
+    padding: 20px;
 }
 
 .post_list {
     .centered ();
-    margin-top: 2px;
-    margin-bottom: 2px;
+    width: 900px;
 }
 
 .post_wrap {
     color: #333;
     width: 280px; 
-    height: 400px;
     color: #333;
     position: relative;
     .grid (3; 3; 5px);

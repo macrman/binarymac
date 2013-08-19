@@ -13,7 +13,7 @@
 {% endblock %}
 
 {% block main %}
-    <div class="post_list">
+    <div class="post_list cl">
         {% for post in post_list %}
             <a class="post_wrap" 
                 href="{% url 'idea_detail' pk=post.pk %}"
