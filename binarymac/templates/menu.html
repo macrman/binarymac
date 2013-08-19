@@ -7,11 +7,12 @@
         </div>
     </div>
     <nav class="menu_nav clearfix">
-            {% for item in menu %}
-                <a class="menu_link {% if item.active == True %}active{% endif %}" href="{{ item.url }}">
-                    <span class="link_text ">{{ item.name }}</span>
-                </a>
-            {% endfor %}
+        <a class="menu_link" href="/creative_method">
+            <span class="link_text ">Creative Method</span>
+        </a>
+        <a class="menu_link" href="/creations">
+            <span class="link_text ">Creations</span>
+        </a>
     </nav>
 </div>
 </div>
