@@ -4,7 +4,7 @@ from .views import IdeaDetailView, IdeaListView
 urlpatterns = patterns(
     '',
     url(
-        r'(?P<pk>\d+)/(?P<slug>[-\w\d]+)/$',
+        r'(?P<pk>\d+)$',
         IdeaDetailView.as_view(),
         name='idea_detail',
     ),

@@ -16,7 +16,7 @@
     <div class="post_list">
         {% for post in post_list %}
             <a class="post_wrap" 
-                href="{% url 'idea_detail' pk=post.pk slug=post.slug %}"
+                href="{% url 'idea_detail' pk=post.pk %}"
             >
                 <img 
                     class="featured_img" 
