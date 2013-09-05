@@ -6,11 +6,17 @@ binarymac | {{ post.title }}
 {% endblock %}
 
 {% block main %}
-    <section class="wrap800 inner post_d cl">
-        <h1 class="post_d_title">{{ post.title }}</h1>
-        <p>{{ post.last_updated }}</p>
-        {% autoescape off %}
-        {{ post.content }}
-        {% endautoescape %}
+    <section class="inner post_d cl">
+        <header>
+            <div class="post_d_meta">
+                <p>{{ post.last_updated }}</p>
+            </div>
+            <h1 class="post_d_title">{{ post.title }}</h1>
+        </header>
+        <div class="post_d_content">
+            {% autoescape off %}
+            {{ post.content }}
+            {% endautoescape %}
+        </div>
     </section>
 {% endblock %}

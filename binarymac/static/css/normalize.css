@@ -162,8 +162,8 @@ code,
 kbd,
 pre,
 samp {
-    font-family: monospace, serif;
-    font-size: 1em;
+    font-family: "Ubuntu Mono", monospace, serif;
+    font-size: 16px;
 }
 
 /**

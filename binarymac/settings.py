@@ -178,7 +178,7 @@ FIXTURE_DIRS = [
 
 THUMBNAIL_ALIASES = {
     '': {
-        'thumb': {'size': (600, 600), 'crop': True, },
+        'thumb': {'size': (600, 600), 'crop': True, 'bw': True},
     }
 }
 

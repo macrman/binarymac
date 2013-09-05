@@ -13,21 +13,32 @@
 {% endblock %}
 
 {% block main %}
+<section>
+    <header class="post_list_header">
+        <h1>My Creations</h1>
+        <h5>
+            A collection of what I've been working on, from projects, to
+            essays, to essays about projects
+        </h5>
+    </header>
     <div class="post_list cl">
         {% for post in post_list %}
-            <a class="post_wrap" 
+            <a 
+                class="post_wrap" 
                 href="{% url 'idea_detail' pk=post.pk %}"
+                style="
+                {% if post.featured_image %}
+                    background: url('{{ post.featured_image|thumbnail_url:'thumb' }}');
+                    background-size: 300px 300px;
+                {% endif %}
+                    background-color: #333;
+                "
             >
-                <img 
-                    class="featured_img" 
-                    src="{{ post.featured_image|thumbnail_url:'thumb' }}" 
-                    >
-                    </img>
                 <article 
                     class="post"> 
-                    <h4 class="post_title">
+                    <h5 class="post_title">
                         <span class="title_text">{{ post }}</span>
-                    </h4>
+                    </h5>
                     <div class="date">
                         {{ post.last_updated|date:"M d, Y" }}
                     </div>
@@ -35,4 +46,5 @@
             </a>
         {% endfor %}
     </div>
+</section>
 {% endblock %}
